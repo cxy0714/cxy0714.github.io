@@ -90,126 +90,313 @@
     <div class="page-main-content">
 
         <div class="page-main-content-top">
-            <header class="header-wrapper">
+            $logo-title-font-size = 2rem;
+$pc-search-icon-font-size = 1.5rem;
+$menu-bar-line-height = 2.5px;
+$logo-image-box-width = 46px;
 
-    <div class="header-content has-first-screen">
-        <div class="left">
-            
-            <a class="logo-title" href="/">
-                陈星宇
-            </a>
-        </div>
+.header-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  padding-top: $scroll-progress-bar-height;
 
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/"
-                            >
-                                首页
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                归档
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/categories"
-                            >
-                                分类
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                标签
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/links"
-                            >
-                                友链
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
-                                关于
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  hover-style(false, 0, 0);
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/">首页</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">归档</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/categories">分类</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/links">友链</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
-                </li>
-            
-        </ul>
-    </div>
+  .header-content {
+    position: relative;
+    height: 100%;
+    width: $main-content-width;
+    max-width: $content-max-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: $z-index-5;
 
-    <div class="window-mask"></div>
 
-</header>
+    &.has-first-screen {
+      max-width: $content-max-width * 1.2;
+    }
 
+    +keep-tablet() {
+      width: $main-content-width-tablet;
+    }
+
+    +keep-mobile() {
+      width: $main-content-width-mobile;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      transition-t("transform", "0", "0.2", "linear");
+
+      .header-shrink & {
+        transform: scale(0.72);
+        transform-origin: left;
+      }
+
+
+      if (hexo-config('base_info.logo_img') && hexo-config('base_info.logo_img') != '') {
+        .logo-image {
+          width: $logo-image-box-width;
+          height: $logo-image-box-width;
+          margin-right: 8px;
+
+
+          +keep-tablet() {
+            width: $logo-image-box-width * 0.9;
+            height: $logo-image-box-width * 0.9;
+          }
+
+          +keep-mobile() {
+            width: $logo-image-box-width * 0.8;
+            height: $logo-image-box-width * 0.8;
+          }
+
+          img {
+            border-radius: 6px;
+            width: 100%;
+          }
+        }
+
+      }
+
+      .logo-title {
+        font-size: $logo-title-font-size;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 1;
+        color: var(--first-text-color);
+
+        +keep-tablet() {
+          font-size: $logo-title-font-size * 0.9;
+        }
+
+        +keep-mobile() {
+          font-size: $logo-title-font-size * 0.8;
+        }
+      }
+
+    }
+
+
+    .right {
+
+      .pc {
+
+        .menu-list {
+          display: flex;
+          align-items: center;
+
+          +keep-tablet() {
+            display: none;
+          }
+
+
+          .menu-item {
+            float: left;
+            position: relative;
+            margin-left: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--default-text-color);
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+
+            a:hover, .active {
+
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                width: 100%;
+                height: 2px;
+                transform: translateX(-50%);
+                background: var(--primary-color);
+                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear");
+
+                .header-shrink & {
+                  bottom: -($header-shrink-height / 2 - 12);
+                }
+              }
+            }
+
+            &.search {
+              font-size: $pc-search-icon-font-size;
+              margin-left: 26px;
+
+              i {
+                color: var(--default-text-color);
+              }
+
+            }
+          }
+
+
+        }
+
+      }
+
+
+      .mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon-item {
+          display: none;
+          position: relative;
+          cursor: pointer;
+          font-size: 18px;
+          margin-left: 12px;
+          width: 20px;
+          height: 20px;
+          color: var(--default-text-color);
+
+          i {
+            color: var(--default-text-color);
+          }
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          +keep-tablet() {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .menu-bar {
+
+          .menu-bar-middle {
+            width: 18px;
+            height: $menu-bar-line-height;
+            position: relative;
+            background: var(--default-text-color);
+
+            .header-drawer-show & {
+              background: transparent;
+            }
+
+
+            &::before, &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: $menu-bar-line-height;
+              background: var(--default-text-color);
+              transition-t("transform", "0", "0.38", "ease");
+            }
+
+
+            &::before {
+              top: -6px;
+
+              .header-drawer-show & {
+                transform: translateY(6px) rotate(45deg);
+              }
+            }
+
+
+            &::after {
+              bottom: -6px;
+
+              .header-drawer-show & {
+                transform: translateY(-6px) rotate(-45deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .header-drawer {
+    width: 100%;
+    padding: $header-height 0 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: $z-index-2;
+    background: var(--background-color);
+    transition-t("transform", "0", "0.38", "ease");
+
+    .header-drawer-show & {
+      transform: scaleY(1);
+    }
+
+    .drawer-menu-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .drawer-menu-item {
+        font-size: 1rem;
+        margin: 6px 0;
+        height: 38px;
+
+        a {
+          padding: 6px 20px;
+          border-radius: 20px;
+          color: var(--default-text-color);
+
+          &:hover {
+            color: var(--second-text-color);
+            border: 1px solid var(--default-text-color);
+          }
+
+
+          &.active {
+            border: 1px solid var(--default-text-color);
+            color: var(--second-text-color);
+          }
+        }
+
+
+      }
+    }
+  }
+
+
+  .window-mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: $z-index-1;
+    visibility: hidden;
+    opacity: 0;
+    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease");
+
+    .header-drawer-show & {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+}
+
+.header-drawer-show {
+  overflow: hidden;
+}
 
         </div>
 
@@ -218,267 +405,120 @@
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
+                    .home-content-container {
+  background: var(--background-color);
 
-                
 
-                <h3 class="home-article-title">
-                    <a href="/2022/04/25/%E6%95%B0%E9%99%A2%E4%B8%89%E5%B9%B4%E8%AF%BE%E7%A8%8B%E8%AF%84%E4%BB%B7/">
-                        数院三年课程评价
-                    </a>
-                </h3>
+  .home-article-list {
 
-                <div class="home-article-content markdown-body">
-                    
-                        此文是大三下学期回应严凯老师对学科培养意见的调查而写作，严凯老师希望我们直抒胸臆，部分评价可能有些偏激，但是多少可以反映当时心境与认知，评价仅供参考
-前三学期数学分析老师：汤燕斌（第一学期）、黄永忠（第二、三学期）、曾昊智（习题课）教材：崔尚斌 时间...
-                    
-                </div>
+    .home-article-item {
+      position: relative;
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Apr 25 2022 14:56:57 GMT+0800">2022-04-25</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-    </div>
+      keep-container(true, 1.015, 1.015, 28px, 38px);
 
-    <a href="/2022/04/25/%E6%95%B0%E9%99%A2%E4%B8%89%E5%B9%B4%E8%AF%BE%E7%A8%8B%E8%AF%84%E4%BB%B7/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
+      .top-icon {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 1.2rem;
+        transform: rotate(45deg);
+        color: var(--third-text-color);
 
-            </li>
-        
-            <li class="home-article-item">
 
-                
+        +keep-tablet() {
+          font-size: 1.16rem;
+        }
+      }
 
-                <h3 class="home-article-title">
-                    <a href="/2021/02/23/%E5%9B%BD%E5%A5%96%E4%B9%8B%E8%B7%AF%EF%BC%88%E5%A4%A7%E4%B8%80%E7%BB%8F%E5%8E%86%EF%BC%89/">
-                        国奖之路（大一经历）
-                    </a>
-                </h3>
 
-                <div class="home-article-content markdown-body">
-                    
-                        此文是应学校还是学院宣传部门需求所写，不过未见发表~
-在刚入学时，获得国奖简直是我不敢想象的事情，我也并没有以此为目标，阴差阳错进入了数学系，刚开始时是比较迷茫的，我最开始希望转入计算机系，但是又觉得很困难，遂放弃，而后希望在研究生时跨考转入计算机系...
-                    
-                </div>
+      .home-article-title {
+        position: relative;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: var(--second-text-color);
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Feb 23 2021 12:27:43 GMT+0800">2021-02-23</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">个人经历</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-    </div>
 
-    <a href="/2021/02/23/%E5%9B%BD%E5%A5%96%E4%B9%8B%E8%B7%AF%EF%BC%88%E5%A4%A7%E4%B8%80%E7%BB%8F%E5%8E%86%EF%BC%89/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
+        +keep-tablet() {
+          font-size: 1.3rem;
+        }
 
-            </li>
-        
-            <li class="home-article-item">
 
-                
+        +keep-mobile() {
+          font-size: 1.2rem;
+        }
 
-                <h3 class="home-article-title">
-                    <a href="/2020/11/18/%E5%85%A5%E5%85%9A%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">
-                        入党个人自传
-                    </a>
-                </h3>
+        margin: 0;
 
-                <div class="home-article-content markdown-body">
-                    
-                        本文是为20年大二上学期提交预备党员材料而写作，部分信息做了隐藏
-我叫陈星宇。
-   我于2001年6月20日出生在河南省禹州市火龙镇西王庄村，是汉族人，我的父亲x时年33岁，母亲y时年35岁，哥哥z时年10岁。
-   我的父亲对我的精神和人格的影响...
-                    
-                </div>
+      }
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Nov 18 2020 14:56:13 GMT+0800">2020-11-18</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">个人经历</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-    </div>
 
-    <a href="/2020/11/18/%E5%85%A5%E5%85%9A%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
+      .home-article-content {
+        word-wrap: break-word;
+        text-align: justify;
+        margin: 20px 0;
+        color: var(--default-text-color);
+      }
 
-            </li>
-        
-            <li class="home-article-item">
 
-                
+      .home-article-meta-info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.92rem;
+        color: var(--third-text-color);
 
-                <h3 class="home-article-title">
-                    <a href="/2020/09/20/20%E7%BA%A7%E6%96%B0%E7%94%9F%E5%A4%A7%E4%BC%9A%E5%8F%91%E8%A8%80/">
-                        20级新生大会发言
-                    </a>
-                </h3>
 
-                <div class="home-article-content markdown-body">
-                    
-                        大家好，我是1902班的陈星宇同学。是你们的大二学长。我主要就是谈谈我自己的学习经验和体会，希望能给你们一些启发，并鼓舞大家在数学的道路走得更好。我最初是希望去计算机或者软件工程，因为程序员赚钱多嘛，就这一点，反正我最初就是一切向钱看的。但是分数不够...
-                    
-                </div>
+        .home-article-meta-info {
+          letter-spacing: 0.5px;
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Sep 20 2020 14:55:26 GMT+0800">2020-09-20</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">个人经历</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-    </div>
+          span {
+            margin-right: 10px;
 
-    <a href="/2020/09/20/20%E7%BA%A7%E6%96%B0%E7%94%9F%E5%A4%A7%E4%BC%9A%E5%8F%91%E8%A8%80/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
+            &:last-child {
+              margin-right: 0;
+            }
 
-            </li>
-        
-            <li class="home-article-item">
+            ul, li {
+              display: inline;
+            }
+          }
 
-                
+          .home-article-category {
+            +keep-mobile() {
+              display: none;
+            }
+          }
 
-                <h3 class="home-article-title">
-                    <a href="/2020/07/04/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
-                        大一下学习总结
-                    </a>
-                </h3>
+          .home-article-tag {
+            +keep-tablet() {
+              display: none;
+            }
+          }
+        }
 
-                <div class="home-article-content markdown-body">
-                    
-                        此文是班主任张磊老师在大一下学期的居家学习结束后为了解学生情况让学生们写的个人总结，我在此文回顾了大一下学期的学习细节。
-张老师好！    本学期的线上学习算是开拓了新天地。上学期是没有怎么想过在网上找课程资源的，都是去图书馆找书看，不知道有些书其实...
-                    
-                </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Jul 04 2020 14:55:48 GMT+0800">2020-07-04</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">个人经历</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-    </div>
+        hr {
+          border: none;
+          flex: 1;
+          height: 1px;
+          background: var(--border-color);
+          margin: 0 10px;
+        }
 
-    <a href="/2020/07/04/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
+        a {
+          color: var(--third-text-color);
 
-            </li>
-        
-            <li class="home-article-item">
+          &:hover {
+            color: var(--primary-color)
+          }
+        }
+      }
 
-                
 
-                <h3 class="home-article-title">
-                    <a href="/2019/09/03/%E5%85%A5%E6%A0%A1%E5%89%8D%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">
-                        入校前个人自传
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        本文是19年入校前因辅导员柴鹏俊老师想要了解学生情况要求学生提交自传而写作
-  自传是之前一直想写的，但却迟迟未开始，是慵懒的缘故。所以很感谢华科的这次机会，总之让我更加相信自己的选择。  我希望先从家庭对我的影响开始，我的家在河南省的某个小县城的农...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Sep 03 2019 14:56:39 GMT+0800">2019-09-03</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">个人经历</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-    </div>
-
-    <a href="/2019/09/03/%E5%85%A5%E6%A0%A1%E5%89%8D%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-    </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
-    
-
-    
-</div>
-
-    </div>
-</div>
+    }
+  }
+}
 
 
                 
