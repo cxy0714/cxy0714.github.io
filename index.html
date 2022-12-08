@@ -15,12 +15,16 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/logo.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/brands.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"cxy0714.github.io","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"欢迎来到我的主页！"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"欢迎来到我的主页！"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"code_block":{},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"CwmIxCqOt0k9a7Owzj2CISDT-gzGzoHsz","appkey":"7jDv4i8BXQYhxfYUGB6Jl9vY","placeholder":"欢迎留言~"},"gitalk":{"github_id":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null}},"post":{"word_count":{"enable":true,"wordcount":true,"min2read":true},"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect","CTO","BOSS"]}},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="陈星宇" type="application/atom+xml">
 </head>
@@ -32,9 +36,7 @@
 
     
         <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -42,52 +44,84 @@
 <main class="page-container">
 
     
-        <div class="first-screen-container flex-center fade-in-down-animation">
+        
+<div class="first-screen-container flex-center fade-in-down-animation">
     <div class="content flex-center">
-        <div class="description">
-            欢迎来到我的主页！
-        </div>
+        
+            <div class="description hitokoto">
+                
+                    <div class="desc-item">欢迎来到我的主页！</div>
+                
+            </div>
+        
+        
         
             <div class="s-icon-list">
                 
                     
                         
-                            <span class="s-icon-item weixin">
-                                <a target="_blank" href="/images/vx_QR.png">
-                                    <i class="fab fa-weixin"></i>
-                                </a>
-                            </span>
-                        
+                        <div class="tooltip s-icon-item "
+                             data-content="微信"
+                             data-name="weixin"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="/images/vx_QR.png">
+                                        <i class="fab fa-weixin"></i>
+                                    </a>
+                                
+                            
+                        </div>
                     
                 
                     
                         
-                            <span class="s-icon-item qq">
-                                <a target="_blank" href="/images/qq_QR.png">
-                                    <i class="fab fa-qq"></i>
-                                </a>
-                            </span>
-                        
+                        <div class="tooltip s-icon-item "
+                             data-content="QQ"
+                             data-name="qq"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="/images/qq_QR.png">
+                                        <i class="fab fa-qq"></i>
+                                    </a>
+                                
+                            
+                        </div>
                     
                 
                     
                         
-                            <span class="s-icon-item email">
+                        <div class="tooltip s-icon-item "
+                             data-content="Email"
+                             data-name="email"
+                             
+                        >
+                            
                                 <a href="mailto:1225778616@qq.com">
                                     <i class="fas fa-envelope"></i>
                                 </a>
-                            </span>
-                        
+                            
+                        </div>
                     
                 
                     
                         
-                            <span class="s-icon-item github">
-                                <a target="_blank" href="https://github.com/cxy0714">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </span>
-                        
+                        <div class="tooltip s-icon-item "
+                             data-content="GitHub"
+                             data-name="github"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="https://github.com/cxy0714">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                
+                            
+                        </div>
                     
                 
             </div>
@@ -97,16 +131,17 @@
 
     
 
-    <div class="page-main-content">
+    <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
-            <header class="header-wrapper">
+            
+<header class="header-wrapper">
 
     <div class="header-content has-first-screen">
         <div class="left">
             
             <a class="logo-title" href="/">
-                陈星宇
+               陈星宇
             </a>
         </div>
 
@@ -241,16 +276,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         今晚是介绍性组会后的第一次报告组会，6位学长学姐做了分享，会后刘卫东老师和毛晓军老师的点评给了我很大的启发。
 刘老师的提问一个是准备的时间，一个是看了多少相关文章。主要的点评给我启发很大，看一篇文章应该是看一个方向，摸清楚整个方向，这个方向在做什么？...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Oct 04 2022 00:13:32 GMT+0800">2022-10-04</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Oct 05 2022 16:26:27 GMT+0800">
+                2022-10-05
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -287,7 +328,7 @@
         
     </div>
 
-    <a href="/2022/10/04/22-10-3%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/04/22-10-3%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -302,16 +343,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         中午看了马督工《睡前消息440：用了十年才修改，谁在乎教科书？》有些感想。发在了睡前消息的评论区和私信。2022年11月12日1:46命名，修改和发布
 我是01年河南农村的，小初都在农村上学，高中到了县城，现在在华科读大三，理科生。我想分享一些我的经...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Jun 04 2022 13:30:00 GMT+0800">2022-06-04</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Dec 08 2022 15:40:56 GMT+0800">
+                2022-12-08
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -343,7 +390,7 @@
         
     </div>
 
-    <a href="/2022/06/04/%E6%88%91%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/06/04/%E6%88%91%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -358,16 +405,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         此文是大三下学期回应严凯老师对学科培养意见的调查而写作，严凯老师希望我们直抒胸臆，部分评价可能有些偏激，但是多少可以反映当时心境与认知，评价仅供参考
 前三学期数学分析老师：汤燕斌（第一学期）、黄永忠（第二、三学期）、曾昊智（习题课）教材：崔尚斌 时间...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Apr 25 2022 14:56:57 GMT+0800">2022-04-25</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Nov 12 2022 02:02:37 GMT+0800">
+                2022-11-12
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -389,7 +442,7 @@
         
     </div>
 
-    <a href="/2022/04/25/%E6%95%B0%E9%99%A2%E4%B8%89%E5%B9%B4%E8%AF%BE%E7%A8%8B%E8%AF%84%E4%BB%B7/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/04/25/%E6%95%B0%E9%99%A2%E4%B8%89%E5%B9%B4%E8%AF%BE%E7%A8%8B%E8%AF%84%E4%BB%B7/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -404,16 +457,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         此文是应学校还是学院宣传部门需求所写，不过未见发表~
 在刚入学时，获得国奖简直是我不敢想象的事情，我也并没有以此为目标，阴差阳错进入了数学系，刚开始时是比较迷茫的，我最开始希望转入计算机系，但是又觉得很困难，遂放弃，而后希望在研究生时跨考转入计算机系...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Feb 23 2021 12:27:43 GMT+0800">2021-02-23</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Oct 04 2022 00:49:05 GMT+0800">
+                2022-10-04
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -435,7 +494,7 @@
         
     </div>
 
-    <a href="/2021/02/23/%E5%9B%BD%E5%A5%96%E4%B9%8B%E8%B7%AF%EF%BC%88%E5%A4%A7%E4%B8%80%E7%BB%8F%E5%8E%86%EF%BC%89/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2021/02/23/%E5%9B%BD%E5%A5%96%E4%B9%8B%E8%B7%AF%EF%BC%88%E5%A4%A7%E4%B8%80%E7%BB%8F%E5%8E%86%EF%BC%89/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -450,7 +509,7 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         本文是为20年大二上学期提交预备党员材料而写作，部分信息做了隐藏
 我叫陈星宇。
@@ -459,9 +518,15 @@
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Nov 18 2020 14:56:13 GMT+0800">2020-11-18</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Sep 25 2022 03:32:46 GMT+0800">
+                2022-09-25
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -483,7 +548,7 @@
         
     </div>
 
-    <a href="/2020/11/18/%E5%85%A5%E5%85%9A%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2020/11/18/%E5%85%A5%E5%85%9A%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -498,16 +563,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         大家好，我是1902班的陈星宇同学。是你们的大二学长。我主要就是谈谈我自己的学习经验和体会，希望能给你们一些启发，并鼓舞大家在数学的道路走得更好。
 我最初是希望去计算机或者软件工程，因为程序员赚钱多嘛，就这一点，反正我最初就是一切向钱看的。但是分数不...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Sep 20 2020 14:55:26 GMT+0800">2020-09-20</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Nov 12 2022 02:12:53 GMT+0800">
+                2022-11-12
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -529,7 +600,7 @@
         
     </div>
 
-    <a href="/2020/09/20/20%E7%BA%A7%E6%96%B0%E7%94%9F%E5%A4%A7%E4%BC%9A%E5%8F%91%E8%A8%80/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2020/09/20/20%E7%BA%A7%E6%96%B0%E7%94%9F%E5%A4%A7%E4%BC%9A%E5%8F%91%E8%A8%80/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -544,16 +615,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         此文是班主任张磊老师在大一下学期的居家学习结束后为了解学生情况让学生们写的个人总结，我在此文回顾了大一下学期的学习细节。
 张老师好！    本学期的线上学习算是开拓了新天地。上学期是没有怎么想过在网上找课程资源的，都是去图书馆找书看，不知道有些书其实...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Jul 04 2020 14:55:48 GMT+0800">2020-07-04</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Nov 12 2022 02:02:37 GMT+0800">
+                2022-11-12
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -575,7 +652,7 @@
         
     </div>
 
-    <a href="/2020/07/04/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2020/07/04/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -590,16 +667,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         此文显示了对数学的决心，似乎是在室友赵煜航开启的关于前程和转专业考试的讨论后写下的，当时我在学院科协的OneEcho，其创始人郑钦城学长给我印象很深，虽然未见其面，但是他的故事专访郑钦城激励着我。-2022年9月25日3:58
 距离转专业考试报名还有...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Nov 19 2019 21:28:40 GMT+0800">2019-11-19</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Sep 25 2022 04:09:23 GMT+0800">
+                2022-09-25
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -621,7 +704,7 @@
         
     </div>
 
-    <a href="/2019/11/19/%E5%86%B3%E5%BF%83%E6%95%B0%E5%AD%A6%E4%B9%8B%E5%A4%9C%EF%BC%9F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2019/11/19/%E5%86%B3%E5%BF%83%E6%95%B0%E5%AD%A6%E4%B9%8B%E5%A4%9C%EF%BC%9F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -636,16 +719,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         本文是19年入校前因辅导员柴鹏俊老师想要了解学生情况要求学生提交自传而写作
   自传是之前一直想写的，但却迟迟未开始，是慵懒的缘故。所以很感谢华科的这次机会，总之让我更加相信自己的选择。  我希望先从家庭对我的影响开始，我的家在河南省的某个小县城的农...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Sep 03 2019 14:56:39 GMT+0800">2019-09-03</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Aug 28 2022 15:47:11 GMT+0800">
+                2022-08-28
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -667,7 +756,7 @@
         
     </div>
 
-    <a href="/2019/09/03/%E5%85%A5%E6%A0%A1%E5%89%8D%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2019/09/03/%E5%85%A5%E6%A0%A1%E5%89%8D%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -682,7 +771,7 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         高中时在感情震荡的体验中作的诗歌，这几首诗自问世起我反复看过多次，再看（2022年9月25日）不会烦说明是可以反映其时其地的心境，这段记录是出色的
 2017年3月20日（12:36）
@@ -693,9 +782,15 @@
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Mar 20 2017 12:36:00 GMT+0800">2017-03-20</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Sep 28 2022 02:02:26 GMT+0800">
+                2022-09-28
+            </span>
+        </span>
         
         
             <span class="home-article-tag">
@@ -717,7 +812,7 @@
         
     </div>
 
-    <a href="/2017/03/20/%E5%87%A0%E9%A6%96%E8%AF%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2017/03/20/%E5%87%A0%E9%A6%96%E8%AF%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -741,30 +836,32 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
+            
+<footer class="footer">
     <div class="info-container">
         <div class="copyright-info info-item">
             &copy;
             
-            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">陈星宇</a>
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">陈星宇</a>
+            
         </div>
         
-            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <div class="website-count info-item">
                 
-                    <span id="busuanzi_container_site_uv">
-                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
                 
                 
-                    <span id="busuanzi_container_site_pv">
-                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
                 
             </div>
         
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
         </div>
         
         
@@ -785,10 +882,6 @@
 
         <li class="tools-item tool-font-adjust-minus flex-center">
             <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
         </li>
 
         <li class="tools-item tool-dark-light-toggle flex-center">
@@ -828,10 +921,8 @@
 
     </div>
 
-    
-
-    <div class="image-viewer-container">
-    <img src="">
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
 </div>
 
 
@@ -852,7 +943,7 @@
                        class="search-input"
                 >
             </div>
-            <span class="popup-btn-close">
+            <span class="close-popup-btn">
                 <i class="fas fa-times"></i>
             </span>
         </div>
@@ -871,14 +962,16 @@
 
 
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/dark-light-toggle.js"></script>
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
 
 
 
@@ -888,7 +981,7 @@
 </div>
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/pjax.min.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         window.pjax = new Pjax({
