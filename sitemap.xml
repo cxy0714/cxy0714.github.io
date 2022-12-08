@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cxy0714.github.io/about/index.html</loc>
+    
+    <lastmod>2022-12-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cxy0714.github.io/2022/06/04/%E6%88%91%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/</loc>
     
     <lastmod>2022-12-08</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://cxy0714.github.io/2020/11/18/%E5%85%A5%E5%85%9A%E4%B8%AA%E4%BA%BA%E8%87%AA%E4%BC%A0/</loc>
     
     <lastmod>2022-09-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cxy0714.github.io/about/index.html</loc>
-    
-    <lastmod>2022-09-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
