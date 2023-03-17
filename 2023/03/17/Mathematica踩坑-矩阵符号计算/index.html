@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="陈星宇">
+    
+    <title>
+        
+            Mathematica踩坑-矩阵符号计算 |
+        
+        陈星宇
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/logo-(1).gi1sj2syngg.webp">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"cxy0714.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/logo-(1).gi1sj2syngg.webp","avatar":"https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/logo-(1).gi1sj2syngg.webp","favicon":"https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/logo-(1).gi1sj2syngg.webp","font_size":null,"font-family":"Noto Serif SC","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/bg.fopgxv36w3c.webp","description":"欢迎来到我的主页！","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"CwmIxCqOt0k9a7Owzj2CISDT-gzGzoHsz","appkey":"7jDv4i8BXQYhxfYUGB6Jl9vY","placeholder":"欢迎留言~"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":"flase","auto":"flase","custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":"ture","min2read":"ture"},"img_align":"left","copyright_info":false},"version":"3.5.2"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="陈星宇" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/logo-(1).gi1sj2syngg.webp">
+                </a>
+            
+            <a class="logo-title" href="/">
+               陈星宇
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">Mathematica踩坑-矩阵符号计算</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://cdn.staticaly.com/gh/cxy0714/iamge-cxy@master/logo-(1).gi1sj2syngg.webp">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">陈星宇</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-03-17 18:34:35</span>
+        <span class="mobile">2023-03-17 18:34</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-03-17 21:01:38</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%95%B0%E5%AD%A6-%E7%A8%8B%E5%BA%8F/">数学 程序</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Mathematica/">Mathematica</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%AC%A6%E5%8F%B7%E8%AE%A1%E7%AE%97/">符号计算</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF/">矩阵张量积</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/">克罗内克积</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%A4%96%E7%A7%AF/">外积</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/KroneckerProduct/">KroneckerProduct</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%9B%B4%E7%A7%AF/">直积</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%9F%A9%E9%98%B5%E5%90%91%E9%87%8F%E5%8C%96%E6%93%8D%E4%BD%9C/">矩阵向量化操作</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/vec/">vec</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Mathematica%E5%90%91%E9%87%8F%E8%BD%AC%E7%9F%A9%E9%98%B5/">Mathematica向量转矩阵</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5/">交换矩阵</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Commutation-Matrix/">Commutation Matrix</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E5%B7%AE%E6%98%AF%E5%90%A6%E4%B8%BA0/">表达式之差是否为0</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                <h2 id="问题由来"><a href="#问题由来" class="headerlink" title="问题由来"></a>问题由来</h2><p>最近为了推导公式，需要验证一些（20多个，还可以更多）高维的矩阵内积结果（手算1-3h不等，还可以更长），而且需要一个靠谱的帮助我检验计算结果的工具。所以想到了Mathematica。</p>
+<p>我的计算大概是：$k^2\times k^5 $的两个矩阵$A,B$做内积：$&lt;A,B&gt;&#x3D;Tr(A\cdot B^T)$。通过$Tr$的可交换性质可以转化为$1\times k^2$的行向量与$k^2\times k^5$的矩阵与$k^5\times 1$的列向量一个“内积”，所以就是一堆（$k^2\times k^5$）数相加，不过矩阵$A,B$都不是标量矩阵，元素都是符号。</p>
+<p>下面是矩阵大概的形式（还有更长的），其中$Dimensions[\eta_2^{-1}]&#x3D;k\times k,Dimensions[\eta_1]&#x3D;k\times 1$。$I_k$是$k$阶单位阵，$K_{k,k}$是$k^2\times k^2$矩阵，学名叫作交换矩阵（Commutation Matrix），在矩阵向量化操作和矩阵张量积里是一个重要的工具，可以简单看<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39274659/article/details/113747158">交换矩阵 commutation matrix：理论与matlab仿真_B417科研笔记的博客-CSDN博客<i class="fas fa-external-link-alt"></i></a>来了解，要了解更多Commutation Matrix可以搜英文。</p>
+<p>还有这个$vec^T \eta_2^{-1}$中的$vec():\mathbb{R}^{p\times q} \rightarrow \mathbb{R}^{pq\times1}$算子，就是把矩阵重新排序成为列向量，“拉直”，这个是定义矩阵导数的工具。</p>
+<p>（考虑矩阵函数对矩阵变元求导，得到的导数的元素如何排列？一个想法就是把矩阵都拉成向量，这样就化为了向量函数对向量变元求导，这是微积分都很熟悉的，有一些好的排布规则，并且可以证明，这种形式的矩阵导数有比较好的性质，比如简便的链式法则，以及$X$对自己求导时得到的是一个单位阵。另一个想法就是直接像矩阵张量积一样的排布导数，首先你可以想象一下$X$对自己求导的结果，它甚至不是一个单位阵，不过这只是槽点之一，我还没有了解更多。更多信息可以看这本书的$\S1.4$节：<a class="link" target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/1-4020-3419-9">Advanced Multivariate Statistics with Matrices | SpringerLink<i class="fas fa-external-link-alt"></i></a>，本书也介绍了vec和Commutation Matrix的性质，比较全面。）</p>
+<p>具体地，$vec(A)&#x3D;vec([a_1,a_2,…,a_n])&#x3D;[a_1^T,a_2^T,…,a_n^T]^T$.</p>
+<p>矩阵张量积（Tensor Product）是$A\otimes B&#x3D;[a_{i,j}B]_{(i,j)}$.也叫克罗内克积（Kronecker product），外积，直积。</p>
+<p>总之我的矩阵里充斥着矩阵张量积，vec操作和交换矩阵$K_{p,q}$。同时我预测出了这些矩阵内积的结果，我希望比较一下他们是否相等，检验我的预测。</p>
+<p>$$<br>vec^{T}(\eta_{2}^{-1}\eta_{1}\eta_{1}^{T}\eta_{2}^{-1})\otimes\eta_{2}^{-1}\otimes\eta_{2}^{-1}\cdot I_{k}\otimes K_{k,k}\otimes I_{k}<br>$$</p>
+<p>我在大一寒假时看过一些Mathematica的文章和视频，之后用它做了一些大学物理实验的一些公式的计算？但是似乎纯粹当计算器用的，没有太多复杂的操作，等于熟悉了一下基本的文档操作吧。（不小心全给删除清空了，所以记不得到底干过啥了。）</p>
+<p>之前我下载了Mathematica 13.0的中文破解版，然后现在要用它的时候发现我需要的内置函数在13.1版本才出现了，这时候再去搜索一圈，已经找不到免费的资源了，全是加微信公众号关注，xx币购买链接云云，一直就很反感这些东西。。。</p>
+<p>所以我找到了官网，发现新用户可以免费试用15天，但是直接下载电脑版还需要一些操作，就没有下载pc版，发现Mathematica有云空间，也有在线编译网站:<a class="link" target="_blank" rel="noopener" href="https://mathematica.wolframcloud.com/">Wolfram Mathematica (wolframcloud.com)<i class="fas fa-external-link-alt"></i></a>。在线编译已经完全可以满足我的需要了。而且我的运算量也不太大，跑代码基本都是秒出。但是可以帮我省去十几个小时的计算了！</p>
+<h2 id="写代码时碰到的问题"><a href="#写代码时碰到的问题" class="headerlink" title="写代码时碰到的问题"></a>写代码时碰到的问题</h2><h3 id="Mathematica中的矩阵和行向量、列向量"><a href="#Mathematica中的矩阵和行向量、列向量" class="headerlink" title="Mathematica中的矩阵和行向量、列向量"></a>Mathematica中的矩阵和行向量、列向量</h3><p>Mathematica帮助文档里有<a class="link" target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatricesAndLinearAlgebra.html">矩阵和线性代数—Wolfram 语言参考资料<i class="fas fa-external-link-alt"></i></a>。</p>
+<p>Mathematica中定义向量和矩阵的内置函数有Table[],Array[],也可以用来构造向量。但是我一开始却始终搞不清楚他们的维数怎么回事。现在我明白了，<strong>两个花括号<code>&#123;&#123;&#125;&#125;</code>包住的就是矩阵</strong>，<strong>一个花括号<code>&#123;&#125;</code>就是Mathematica里的向量</strong>，Mathematica里的向量<strong>既不是行向量，也不是列向量</strong>，如果向量在运算中放在右边就是列向量，放在左边就是行向量，你使用转置函数Transpose[]也没用。所以这个问题让我一开始搞得一头雾水。算矩阵乘法时不知道哪里出了错。</p>
+<p>如果你需要定义列向量，请这样定义：</p>
+<p><code>T=Array[b,&#123;2,1&#125;]</code></p>
+<p>这样他就是两个花括号包裹了，将其视为$2\times 1$的矩阵，即列向量。</p>
+<p>另一个问题是，在<strong>定义矩阵时不要在后面加上&#x2F;&#x2F;MartixForm</strong>，一般在后面加上这个语句可以让你的输出变成好看的矩阵形式（否则会输出<code>&#123;&#123;&#125;&#125;</code>的列表形式，看起来不方便），但是如果你在定义里加上了这个，后面的矩阵计算会出现各种问题，这是我一开始矩阵运算失败的第二个问题，然后绝望之下在听清华数院的刘思齐老师的一个Mathematica网课中，他提到了这一句：<a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1av411N7Xi?p=9&vd_source=d604f008cde1c2b512c49f045d95e4cd">lecture-2-4_哔哩哔哩_bilibili<i class="fas fa-external-link-alt"></i></a>，在我心里救了Mathematica一命。</p>
+<p>另外用Dimensions[]函数可以查看矩阵（多少个花括号都行）的维数。</p>
+<p>比如$p\times q$的矩阵被Dimensions[]作用之后结果是 <code>&#123;p,q&#125;</code>。</p>
+<h3 id="矩阵张量积"><a href="#矩阵张量积" class="headerlink" title="矩阵张量积"></a>矩阵张量积</h3><p>矩阵张量积(外积，直积)这个在Mathematica里直接有函数KroneckerProduct[]。</p>
+<p>但是一开始我竟然没有搜索到KroneckerProduct[]，先是搜索到了Outer 外积，这个东西是张量外积，两个向量（1个花括号的）可以用这个得到矩阵，但是矩阵和矩阵用这个做外积，虽然形式上是一样的，但是它会出现4个花括号，用Dimensions[]看其维数，会得到类似这样的结果 <code>&#123;2,2,2,2&#125;</code>这已经不是矩阵的维数了。这个是我在计算中遇到的第三个问题，好在最后发现了他有正经的矩阵外积函数KroneckerProduct[]</p>
+<p>所以矩阵张量积积直接用函数KroneckerProduct[]。</p>
+<h3 id="vec算子的定义和交换矩阵-K-p-q-的定义"><a href="#vec算子的定义和交换矩阵-K-p-q-的定义" class="headerlink" title="vec算子的定义和交换矩阵$K_{p,q}$的定义"></a>vec算子的定义和交换矩阵$K_{p,q}$的定义</h3><p>这两个函数的定义，我在一同搜索之后，置换矩阵PermutationMatrix[]的<strong>应用举例</strong>中：<a class="link" target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PermutationMatrix.html">PermutationMatrix—Wolfram 语言参考资料<i class="fas fa-external-link-alt"></i></a>发现了。</p>
+<p><code>vec[m_?MatrixQ] := Flatten[m, &#123;&#123;2, 1&#125;&#125;]</code></p>
+<p>它将矩阵的列堆叠成单个向量。问题是这个向量是Mathematica中的向量，只有一个花括号，既不是行向量也不是列向量，所以这是我后面计算中遇到的第四个问题，但是现在我已经是个成熟的向量使用者了。我搜索了“Mathematica怎么把向量变成矩阵”之类的之后得到了回答。</p>
+<p>只需要在定义外边加上一个花括号即可<code>&#123;&#125;</code>。</p>
+<p><code>vec[m_?MatrixQ] := &#123;Flatten[m, &#123;&#123;2, 1&#125;&#125;]&#125;</code></p>
+<p>交换矩阵的定义可以直接拿他他的代码用，没有奇奇怪怪问题。但是你可以改个简短点的函数名。</p>
+<p><code>vecPermutationMatrix[p_, q_] :=  PermutationMatrix[Flatten[Partition[Range[p q], p], &#123;&#123;2, 1&#125;&#125;]]</code></p>
+<h3 id="比较两个矩阵内积是否相等"><a href="#比较两个矩阵内积是否相等" class="headerlink" title="比较两个矩阵内积是否相等"></a>比较两个矩阵内积是否相等</h3><p>这个是第五个问题，我本来以为直接相减，等于0就是相等就ok了。结果减出来都不是0，可是我可以确保我的计算是正确的。然后我使用了**ExpandAll[]**，讲所有括号去掉，展开，终于得到了0。</p>
+<p>问题可能是这样的，我的矩阵内积，有9个符号、12个符号相乘，然后再相加。它里面有大量合并同类型搞出来的括号之类的东西。比如：</p>
+<p><code>A=a (b+c+d) B=(a b+a c+a d)</code></p>
+<p><code>A-B=a (b+c+d)-(a b +a c+a d) </code></p>
+<p>就是虽然A和B一样，但是他没有展开，有很多括号，减出来他们不会抵消，还是就这样写出来，合并同类项。</p>
+<p>所以需要用ExpandAll[]，展开之后，没有括号了，他就可以合并同类型抵消得到0了。</p>
+<p><code>ExpandAll[A-B]=0</code></p>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="Quit-Kernel"><a href="#Quit-Kernel" class="headerlink" title="Quit Kernel"></a>Quit Kernel</h3><p>还有一个问题也是在刘思齐老师的Mathematica课里听到的，就是如果新建一个文件时，最好要Quit Kernel一下，这个按钮可以把之前的数据全给清楚，避免不必要的错误，有可能你的某个变量赋过了值，结果你把他忘记了。Quit Kernel在Evaluation列表之下。</p>
+<p>一个技巧就是未被赋值的变量是蓝色的，已被赋值的变量颜色是黑色的。</p>
+<h3 id="一键清除输出和导出PDF格式"><a href="#一键清除输出和导出PDF格式" class="headerlink" title="一键清除输出和导出PDF格式"></a>一键清除输出和导出PDF格式</h3><p>在程序编写完成后，为了输出一个好的PDF报告，可以先一键清除输出（Evaluation-&gt;Delete All Outputs），再Quit Kernel。然后计算所有单元（Evaluate All cells），再导出为PDF（File-&gt;Print to PDF）。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Mathematica/">#Mathematica</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%AC%A6%E5%8F%B7%E8%AE%A1%E7%AE%97/">#符号计算</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF/">#矩阵张量积</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/">#克罗内克积</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%A4%96%E7%A7%AF/">#外积</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/KroneckerProduct/">#KroneckerProduct</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%9B%B4%E7%A7%AF/">#直积</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%9F%A9%E9%98%B5%E5%90%91%E9%87%8F%E5%8C%96%E6%93%8D%E4%BD%9C/">#矩阵向量化操作</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/vec/">#vec</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Mathematica%E5%90%91%E9%87%8F%E8%BD%AC%E7%9F%A9%E9%98%B5/">#Mathematica向量转矩阵</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5/">#交换矩阵</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Commutation-Matrix/">#Commutation Matrix</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E5%B7%AE%E6%98%AF%E5%90%A6%E4%B8%BA0/">#表达式之差是否为0</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/10/04/22-10-3%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">22.10.3第二次组会</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;评论
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+            new Valine({
+              el: '#vcomments',
+              appId: 'CwmIxCqOt0k9a7Owzj2CISDT-gzGzoHsz',
+              appKey: '7jDv4i8BXQYhxfYUGB6Jl9vY',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '欢迎留言~',
+              lang: 'zh-CN'.toLowerCase()
+            });
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author';
+                case 'zh-CN':
+                  return '博主';
+                default:
+                  return 'Master';
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+              if (vcards.length > 0) {
+                let author = '陈星宇';
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick');
+                    const vnick = vnick_dom.innerHTML;
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer);
+              } else {
+                clearInterval(getValineDomTimer);
+              }
+            }, 2000);
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine();
+              clearTimeout(loadValineTimeout);
+            }, 1000);
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine);
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%94%B1%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">问题由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%BB%A3%E7%A0%81%E6%97%B6%E7%A2%B0%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">写代码时碰到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathematica%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%92%8C%E8%A1%8C%E5%90%91%E9%87%8F%E3%80%81%E5%88%97%E5%90%91%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">Mathematica中的矩阵和行向量、列向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF"><span class="nav-number">2.2.</span> <span class="nav-text">矩阵张量积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vec%E7%AE%97%E5%AD%90%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5-K-p-q-%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.3.</span> <span class="nav-text">vec算子的定义和交换矩阵$K_{p,q}$的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E7%9F%A9%E9%98%B5%E5%86%85%E7%A7%AF%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89"><span class="nav-number">2.4.</span> <span class="nav-text">比较两个矩阵内积是否相等</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-number">3.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Quit-Kernel"><span class="nav-number">3.1.</span> <span class="nav-text">Quit Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E6%B8%85%E9%99%A4%E8%BE%93%E5%87%BA%E5%92%8C%E5%AF%BC%E5%87%BAPDF%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">一键清除输出和导出PDF格式</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">陈星宇</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
