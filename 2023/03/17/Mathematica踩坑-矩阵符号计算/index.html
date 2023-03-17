@@ -28,11 +28,7 @@
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="陈星宇" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="陈星宇" type="application/atom+xml">
 </head>
 
 
@@ -218,7 +214,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-03-17 21:01:38</span>
+        <span class="pc">2023-03-17 21:36:50</span>
     </span>
     
     
@@ -227,7 +223,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E6%95%B0%E5%AD%A6-%E7%A8%8B%E5%BA%8F/">数学 程序</a>&nbsp;
+                        <a href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a>&nbsp;
                     </li>
                 
             </ul>
@@ -302,7 +298,7 @@
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>9 分钟</span>
         </span>
     
     
@@ -319,15 +315,15 @@
 
             <div class="article-content keep-markdown-body">
                 <h2 id="问题由来"><a href="#问题由来" class="headerlink" title="问题由来"></a>问题由来</h2><p>最近为了推导公式，需要验证一些（20多个，还可以更多）高维的矩阵内积结果（手算1-3h不等，还可以更长），而且需要一个靠谱的帮助我检验计算结果的工具。所以想到了Mathematica。</p>
-<p>我的计算大概是：$k^2\times k^5 $的两个矩阵$A,B$做内积：$&lt;A,B&gt;&#x3D;Tr(A\cdot B^T)$。通过$Tr$的可交换性质可以转化为$1\times k^2$的行向量与$k^2\times k^5$的矩阵与$k^5\times 1$的列向量一个“内积”，所以就是一堆（$k^2\times k^5$）数相加，不过矩阵$A,B$都不是标量矩阵，元素都是符号。</p>
-<p>下面是矩阵大概的形式（还有更长的），其中$Dimensions[\eta_2^{-1}]&#x3D;k\times k,Dimensions[\eta_1]&#x3D;k\times 1$。$I_k$是$k$阶单位阵，$K_{k,k}$是$k^2\times k^2$矩阵，学名叫作交换矩阵（Commutation Matrix），在矩阵向量化操作和矩阵张量积里是一个重要的工具，可以简单看<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39274659/article/details/113747158">交换矩阵 commutation matrix：理论与matlab仿真_B417科研笔记的博客-CSDN博客<i class="fas fa-external-link-alt"></i></a>来了解，要了解更多Commutation Matrix可以搜英文。</p>
-<p>还有这个$vec^T \eta_2^{-1}$中的$vec():\mathbb{R}^{p\times q} \rightarrow \mathbb{R}^{pq\times1}$算子，就是把矩阵重新排序成为列向量，“拉直”，这个是定义矩阵导数的工具。</p>
+<p>我的计算大概是：$ k^2\times k^5 $的两个矩阵$A,B$做内积：$ Tr(A \cdot B^T) $。通过$Tr$的可交换性质可以转化为 $1 \times k^2 $的行向量与$k^2\times k^5$的矩阵与$k^5\times 1$的列向量一个“内积”，所以就是一堆（$ k^2\times k^5 $）数相加，不过矩阵$A,B$都不是标量矩阵，元素都是符号。</p>
+<p>下面是矩阵大概的形式（还有更长的），其中$Dimensions[\eta_2^{-1}]=k\times k,Dimensions[\eta_1]=k\times 1$。$I_k$是$k$阶单位阵，$K_{k,k}$是$k^2\times k^2$矩阵，学名叫作交换矩阵（Commutation Matrix），在矩阵向量化操作和矩阵张量积里是一个重要的工具，可以简单看<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39274659/article/details/113747158">交换矩阵 commutation matrix：理论与matlab仿真_B417科研笔记的博客-CSDN博客<i class="fas fa-external-link-alt"></i></a>来了解，要了解更多Commutation Matrix可以搜英文。</p>
+<script type="math/tex; mode=display">
+vec^{T}(\eta_{2}^{-1}\eta_{1}\eta_{1}^{T}\eta_{2}^{-1})\otimes\eta_{2}^{-1}\otimes\eta_{2}^{-1}\cdot I_{k}\otimes K_{k,k}\otimes I_{k}</script><p>还有这个$vec^T \eta_2^{-1}$中的$vec():\mathbb{R}^{p\times q} \rightarrow \mathbb{R}^{pq\times1}$算子，就是把矩阵重新排序成为列向量，“拉直”，这个是定义矩阵导数的工具。</p>
 <p>（考虑矩阵函数对矩阵变元求导，得到的导数的元素如何排列？一个想法就是把矩阵都拉成向量，这样就化为了向量函数对向量变元求导，这是微积分都很熟悉的，有一些好的排布规则，并且可以证明，这种形式的矩阵导数有比较好的性质，比如简便的链式法则，以及$X$对自己求导时得到的是一个单位阵。另一个想法就是直接像矩阵张量积一样的排布导数，首先你可以想象一下$X$对自己求导的结果，它甚至不是一个单位阵，不过这只是槽点之一，我还没有了解更多。更多信息可以看这本书的$\S1.4$节：<a class="link" target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/1-4020-3419-9">Advanced Multivariate Statistics with Matrices | SpringerLink<i class="fas fa-external-link-alt"></i></a>，本书也介绍了vec和Commutation Matrix的性质，比较全面。）</p>
-<p>具体地，$vec(A)&#x3D;vec([a_1,a_2,…,a_n])&#x3D;[a_1^T,a_2^T,…,a_n^T]^T$.</p>
-<p>矩阵张量积（Tensor Product）是$A\otimes B&#x3D;[a_{i,j}B]_{(i,j)}$.也叫克罗内克积（Kronecker product），外积，直积。</p>
+<p>具体地，$vec(A)=vec([a_1,a_2,…,a_n])=[a_1^T,a_2^T,…,a_n^T]^T$.</p>
+<p>矩阵张量积（Tensor Product）是$A\otimes B=[a_{i,j}B]_{(i,j)}$.也叫克罗内克积（Kronecker product），外积，直积。</p>
 <p>总之我的矩阵里充斥着矩阵张量积，vec操作和交换矩阵$K_{p,q}$。同时我预测出了这些矩阵内积的结果，我希望比较一下他们是否相等，检验我的预测。</p>
-<p>$$<br>vec^{T}(\eta_{2}^{-1}\eta_{1}\eta_{1}^{T}\eta_{2}^{-1})\otimes\eta_{2}^{-1}\otimes\eta_{2}^{-1}\cdot I_{k}\otimes K_{k,k}\otimes I_{k}<br>$$</p>
-<p>我在大一寒假时看过一些Mathematica的文章和视频，之后用它做了一些大学物理实验的一些公式的计算？但是似乎纯粹当计算器用的，没有太多复杂的操作，等于熟悉了一下基本的文档操作吧。（不小心全给删除清空了，所以记不得到底干过啥了。）</p>
+<h3 id="Mathematica"><a href="#Mathematica" class="headerlink" title="Mathematica"></a>Mathematica</h3><p>我在大一寒假时看过一些Mathematica的文章和视频，之后用它做了一些大学物理实验的一些公式的计算？但是似乎纯粹当计算器用的，没有太多复杂的操作，等于熟悉了一下基本的文档操作吧。（不小心全给删除清空了，所以记不得到底干过啥了。）但是我也看过许多他的例子，精美的例子之类的，对他友好的帮助文档印象很深，还有就是清华大学数学科学学院<a class="link" target="_blank" rel="noopener" href="http://blog.siqiliu.com/cn/index.html">刘思齐老师<i class="fas fa-external-link-alt"></i></a>的<a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1av411N7Xi/?spm_id_from=333.999.0.0&amp;vd_source=d604f008cde1c2b512c49f045d95e4cd">Mathematica网课<i class="fas fa-external-link-alt"></i></a>很好。</p>
 <p>之前我下载了Mathematica 13.0的中文破解版，然后现在要用它的时候发现我需要的内置函数在13.1版本才出现了，这时候再去搜索一圈，已经找不到免费的资源了，全是加微信公众号关注，xx币购买链接云云，一直就很反感这些东西。。。</p>
 <p>所以我找到了官网，发现新用户可以免费试用15天，但是直接下载电脑版还需要一些操作，就没有下载pc版，发现Mathematica有云空间，也有在线编译网站:<a class="link" target="_blank" rel="noopener" href="https://mathematica.wolframcloud.com/">Wolfram Mathematica (wolframcloud.com)<i class="fas fa-external-link-alt"></i></a>。在线编译已经完全可以满足我的需要了。而且我的运算量也不太大，跑代码基本都是秒出。但是可以帮我省去十几个小时的计算了！</p>
 <h2 id="写代码时碰到的问题"><a href="#写代码时碰到的问题" class="headerlink" title="写代码时碰到的问题"></a>写代码时碰到的问题</h2><h3 id="Mathematica中的矩阵和行向量、列向量"><a href="#Mathematica中的矩阵和行向量、列向量" class="headerlink" title="Mathematica中的矩阵和行向量、列向量"></a>Mathematica中的矩阵和行向量、列向量</h3><p>Mathematica帮助文档里有<a class="link" target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatricesAndLinearAlgebra.html">矩阵和线性代数—Wolfram 语言参考资料<i class="fas fa-external-link-alt"></i></a>。</p>
@@ -335,7 +331,7 @@
 <p>如果你需要定义列向量，请这样定义：</p>
 <p><code>T=Array[b,&#123;2,1&#125;]</code></p>
 <p>这样他就是两个花括号包裹了，将其视为$2\times 1$的矩阵，即列向量。</p>
-<p>另一个问题是，在<strong>定义矩阵时不要在后面加上&#x2F;&#x2F;MartixForm</strong>，一般在后面加上这个语句可以让你的输出变成好看的矩阵形式（否则会输出<code>&#123;&#123;&#125;&#125;</code>的列表形式，看起来不方便），但是如果你在定义里加上了这个，后面的矩阵计算会出现各种问题，这是我一开始矩阵运算失败的第二个问题，然后绝望之下在听清华数院的刘思齐老师的一个Mathematica网课中，他提到了这一句：<a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1av411N7Xi?p=9&vd_source=d604f008cde1c2b512c49f045d95e4cd">lecture-2-4_哔哩哔哩_bilibili<i class="fas fa-external-link-alt"></i></a>，在我心里救了Mathematica一命。</p>
+<p>另一个问题是，在<strong>定义矩阵时不要在后面加上//MartixForm</strong>，一般在后面加上这个语句可以让你的输出变成好看的矩阵形式（否则会输出<code>&#123;&#123;&#125;&#125;</code>的列表形式，看起来不方便），但是如果你在定义里加上了这个，后面的矩阵计算会出现各种问题，这是我一开始矩阵运算失败的第二个问题，然后绝望之下在听清华数院的刘思齐老师的一个Mathematica网课中，他提到了这一句：<a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1av411N7Xi?p=9&amp;vd_source=d604f008cde1c2b512c49f045d95e4cd">lecture-2-4_哔哩哔哩_bilibili<i class="fas fa-external-link-alt"></i></a>，在我心里救了Mathematica一命。</p>
 <p>另外用Dimensions[]函数可以查看矩阵（多少个花括号都行）的维数。</p>
 <p>比如$p\times q$的矩阵被Dimensions[]作用之后结果是 <code>&#123;p,q&#125;</code>。</p>
 <h3 id="矩阵张量积"><a href="#矩阵张量积" class="headerlink" title="矩阵张量积"></a>矩阵张量积</h3><p>矩阵张量积(外积，直积)这个在Mathematica里直接有函数KroneckerProduct[]。</p>
@@ -348,10 +344,10 @@
 <p><code>vec[m_?MatrixQ] := &#123;Flatten[m, &#123;&#123;2, 1&#125;&#125;]&#125;</code></p>
 <p>交换矩阵的定义可以直接拿他他的代码用，没有奇奇怪怪问题。但是你可以改个简短点的函数名。</p>
 <p><code>vecPermutationMatrix[p_, q_] :=  PermutationMatrix[Flatten[Partition[Range[p q], p], &#123;&#123;2, 1&#125;&#125;]]</code></p>
-<h3 id="比较两个矩阵内积是否相等"><a href="#比较两个矩阵内积是否相等" class="headerlink" title="比较两个矩阵内积是否相等"></a>比较两个矩阵内积是否相等</h3><p>这个是第五个问题，我本来以为直接相减，等于0就是相等就ok了。结果减出来都不是0，可是我可以确保我的计算是正确的。然后我使用了**ExpandAll[]**，讲所有括号去掉，展开，终于得到了0。</p>
+<h3 id="比较两个矩阵内积是否相等"><a href="#比较两个矩阵内积是否相等" class="headerlink" title="比较两个矩阵内积是否相等"></a>比较两个矩阵内积是否相等</h3><p>这个是第五个问题，我本来以为直接相减，等于0就是相等就ok了。结果减出来都不是0，可是我可以确保我的计算是正确的。然后我使用了<strong>ExpandAll[]</strong>，讲所有括号去掉，展开，终于得到了0。</p>
 <p>问题可能是这样的，我的矩阵内积，有9个符号、12个符号相乘，然后再相加。它里面有大量合并同类型搞出来的括号之类的东西。比如：</p>
 <p><code>A=a (b+c+d) B=(a b+a c+a d)</code></p>
-<p><code>A-B=a (b+c+d)-(a b +a c+a d) </code></p>
+<p><code>A-B=a (b+c+d)-(a b +a c+a d)</code></p>
 <p>就是虽然A和B一样，但是他没有展开，有很多括号，减出来他们不会抵消，还是就这样写出来，合并同类项。</p>
 <p>所以需要用ExpandAll[]，展开之后，没有括号了，他就可以合并同类型抵消得到0了。</p>
 <p><code>ExpandAll[A-B]=0</code></p>
@@ -529,7 +525,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%94%B1%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">问题由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%BB%A3%E7%A0%81%E6%97%B6%E7%A2%B0%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">写代码时碰到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathematica%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%92%8C%E8%A1%8C%E5%90%91%E9%87%8F%E3%80%81%E5%88%97%E5%90%91%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">Mathematica中的矩阵和行向量、列向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF"><span class="nav-number">2.2.</span> <span class="nav-text">矩阵张量积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vec%E7%AE%97%E5%AD%90%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5-K-p-q-%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.3.</span> <span class="nav-text">vec算子的定义和交换矩阵$K_{p,q}$的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E7%9F%A9%E9%98%B5%E5%86%85%E7%A7%AF%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89"><span class="nav-number">2.4.</span> <span class="nav-text">比较两个矩阵内积是否相等</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-number">3.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Quit-Kernel"><span class="nav-number">3.1.</span> <span class="nav-text">Quit Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E6%B8%85%E9%99%A4%E8%BE%93%E5%87%BA%E5%92%8C%E5%AF%BC%E5%87%BAPDF%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">一键清除输出和导出PDF格式</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%94%B1%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">问题由来</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathematica"><span class="nav-number">1.1.</span> <span class="nav-text">Mathematica</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%BB%A3%E7%A0%81%E6%97%B6%E7%A2%B0%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">写代码时碰到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathematica%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%92%8C%E8%A1%8C%E5%90%91%E9%87%8F%E3%80%81%E5%88%97%E5%90%91%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">Mathematica中的矩阵和行向量、列向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF"><span class="nav-number">2.2.</span> <span class="nav-text">矩阵张量积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vec%E7%AE%97%E5%AD%90%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5-K-p-q-%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.3.</span> <span class="nav-text">vec算子的定义和交换矩阵$K_{p,q}$的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E7%9F%A9%E9%98%B5%E5%86%85%E7%A7%AF%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89"><span class="nav-number">2.4.</span> <span class="nav-text">比较两个矩阵内积是否相等</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-number">3.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Quit-Kernel"><span class="nav-number">3.1.</span> <span class="nav-text">Quit Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E6%B8%85%E9%99%A4%E8%BE%93%E5%87%BA%E5%92%8C%E5%AF%BC%E5%87%BAPDF%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">一键清除输出和导出PDF格式</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -753,6 +749,22 @@
 </script>
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>
