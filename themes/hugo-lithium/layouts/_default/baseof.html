@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    {{ with .Site.Params.css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{ end }}
+</head>
+<body>
+    <!-- Main content -->
+    <div class="content">
+        {{ block "main" . }}{{ end }}
+    </div>
+
+    <!-- Global music player -->
+    <div id="global-music-player" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div id="song-info" style="margin-bottom: 10px; font-size: 14px;">
+            <span id="song-title" style="font-weight: bold;">Loading...</span>
+        </div>
+        <audio id="audio-player" controls style="width: 250px;">
+            Your browser does not support the audio element.
+        </audio>
+        <div style="margin-top: 10px;">
+            <button id="prev-song" style="margin-right: 5px;">Previous</button>
+            <button id="next-song">Next</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Loading music player...');
+            
+            fetch('/media/music/playlist.json')
+                .then(response => {
+                    console.log('Playlist response:', response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Playlist data:', data);
+                    const player = document.getElementById('audio-player');
+                    const songTitle = document.getElementById('song-title');
+                    let currentSongIndex = Math.floor(Math.random() * data.length);
+
+                    function loadSong(index) {
+                        console.log('Loading song:', data[index]);
+                        player.src = data[index].url;
+                        songTitle.textContent = data[index].title;
+                        player.play().catch(e => console.error('Playback failed:', e));
+                    }
+
+                    document.getElementById('prev-song').addEventListener('click', () => {
+                        currentSongIndex = (currentSongIndex - 1 + data.length) % data.length;
+                        loadSong(currentSongIndex);
+                    });
+
+                    document.getElementById('next-song').addEventListener('click', () => {
+                        currentSongIndex = (currentSongIndex + 1) % data.length;
+                        loadSong(currentSongIndex);
+                    });
+
+                    player.addEventListener('ended', () => {
+                        currentSongIndex = (currentSongIndex + 1) % data.length;
+                        loadSong(currentSongIndex);
+                    });
+
+                    loadSong(currentSongIndex);
+                })
+                .catch(error => console.error('Error loading playlist:', error));
+        });
+    </script>
+</body>
+</html>
