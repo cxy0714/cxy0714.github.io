@@ -3,10 +3,10 @@ date: "2022-08-29T21:48:51-07:00"
 title: About
 ---
 # 2024.11.03
-
+新家正在施工中
 # 2022.08.29
 
-{{<figure src="/media/about_my_photo.jpg" caption=" " width="640">}} 
+{{<figure src="/media/images/about_my_photo.jpg" caption=" " width="640">}} 
 
 我是陈星宇，来自河南许昌，19年入学华科数院，今后希望做统计学的研究。这是我的第一个网站，目前主要放了个人经历相关的文章，今后计划做更多学术方面和个人经历方面的分享。
 
