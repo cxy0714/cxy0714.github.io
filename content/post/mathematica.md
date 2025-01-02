@@ -1,5 +1,5 @@
 ---
-title: Mathematica踩坑-矩阵符号计算 | 陈星宇
+title: Mathematica踩坑-矩阵符号计算
 date: 2023-03-17T18:34:35+08:00
 updated: 2023-04-19T19:11:00+08:00 
 author: 陈星宇

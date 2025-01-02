@@ -1,9 +1,13 @@
 ---
+title: "About"
 date: "2022-08-29T21:48:51-07:00"
-title: About
 ---
-# 2024.11.03
-新家正在施工中
+# 2025.01.02
+I'm Xingyu Chen(陈星宇), a second-year Ph.D. candidate in Statistics at [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index/), [Shanghai Jiao Tong University(SJTU)](https://www.sjtu.edu.cn/), now interested in causal inference, higher order influence function, bootstrap and statistical computing. I am very fortunate to be advised by [Professor Lin Liu (刘林)](https://linliu-stats.github.io/). 
+
+Before joining SJTU, I received my B.S. degree in mathematics and applied mathematics from [School of Mathematical Sciences](https://maths.hust.edu.cn/), [Huazhong University of Science and Technology(HUST)](http://www.hust.edu.cn/). 
+
+⚡ Fun fact: "0714" is the discipline code for Statistics in Chinese Ministry of Education's subject classification system, where "07" represents Science and "0701" represents Mathematics. ([Source](https://www.cdgdc.edu.cn/dslxkpgjggb/))
 # 2022.08.29
 
 {{<figure src="/media/images/about_my_photo.jpg" caption=" " width="640">}} 
