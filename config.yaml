@@ -14,8 +14,7 @@ menu:
       url: /about/
     - name: GitHub
       url: https://github.com/cxy0714
-    - name: Twitter
-      url: https://twitter.com/rstudio
+
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
