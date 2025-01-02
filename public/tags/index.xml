@@ -1,158 +1,158 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on A Hugo website</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on A Hugo website</description>
+    <title>Tags on Xingyu Chen (陈星宇)</title>
+    <link>//localhost:6138/tags/</link>
+    <description>Recent content in Tags on Xingyu Chen (陈星宇)</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 12 Nov 2024 23:42:00 +0800</lastBuildDate>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:6138/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024</title>
-      <link>/tags/2024/</link>
+      <link>//localhost:6138/tags/2024/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/2024/</guid>
+      <guid>//localhost:6138/tags/2024/</guid>
       <description></description>
     </item>
     <item>
       <title>California Dreaming</title>
-      <link>/tags/california-dreaming/</link>
+      <link>//localhost:6138/tags/california-dreaming/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/california-dreaming/</guid>
+      <guid>//localhost:6138/tags/california-dreaming/</guid>
       <description></description>
     </item>
     <item>
       <title>上交</title>
-      <link>/tags/%E4%B8%8A%E4%BA%A4/</link>
+      <link>//localhost:6138/tags/%E4%B8%8A%E4%BA%A4/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/%E4%B8%8A%E4%BA%A4/</guid>
+      <guid>//localhost:6138/tags/%E4%B8%8A%E4%BA%A4/</guid>
       <description></description>
     </item>
     <item>
       <title>上海</title>
-      <link>/tags/%E4%B8%8A%E6%B5%B7/</link>
+      <link>//localhost:6138/tags/%E4%B8%8A%E6%B5%B7/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/%E4%B8%8A%E6%B5%B7/</guid>
+      <guid>//localhost:6138/tags/%E4%B8%8A%E6%B5%B7/</guid>
       <description></description>
     </item>
     <item>
       <title>周二</title>
-      <link>/tags/%E5%91%A8%E4%BA%8C/</link>
+      <link>//localhost:6138/tags/%E5%91%A8%E4%BA%8C/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/%E5%91%A8%E4%BA%8C/</guid>
+      <guid>//localhost:6138/tags/%E5%91%A8%E4%BA%8C/</guid>
       <description></description>
     </item>
     <item>
       <title>情绪</title>
-      <link>/tags/%E6%83%85%E7%BB%AA/</link>
+      <link>//localhost:6138/tags/%E6%83%85%E7%BB%AA/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/%E6%83%85%E7%BB%AA/</guid>
+      <guid>//localhost:6138/tags/%E6%83%85%E7%BB%AA/</guid>
       <description></description>
     </item>
     <item>
       <title>晴天</title>
-      <link>/tags/%E6%99%B4%E5%A4%A9/</link>
+      <link>//localhost:6138/tags/%E6%99%B4%E5%A4%A9/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/%E6%99%B4%E5%A4%A9/</guid>
+      <guid>//localhost:6138/tags/%E6%99%B4%E5%A4%A9/</guid>
       <description></description>
     </item>
     <item>
       <title>秋季</title>
-      <link>/tags/%E7%A7%8B%E5%AD%A3/</link>
+      <link>//localhost:6138/tags/%E7%A7%8B%E5%AD%A3/</link>
       <pubDate>Tue, 12 Nov 2024 23:42:00 +0800</pubDate>
-      <guid>/tags/%E7%A7%8B%E5%AD%A3/</guid>
+      <guid>//localhost:6138/tags/%E7%A7%8B%E5%AD%A3/</guid>
       <description></description>
     </item>
     <item>
       <title>Commutation Matrix</title>
-      <link>/tags/commutation-matrix/</link>
+      <link>//localhost:6138/tags/commutation-matrix/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/commutation-matrix/</guid>
+      <guid>//localhost:6138/tags/commutation-matrix/</guid>
       <description></description>
     </item>
     <item>
       <title>KroneckerProduct</title>
-      <link>/tags/kroneckerproduct/</link>
+      <link>//localhost:6138/tags/kroneckerproduct/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/kroneckerproduct/</guid>
+      <guid>//localhost:6138/tags/kroneckerproduct/</guid>
       <description></description>
     </item>
     <item>
       <title>Mathematica</title>
-      <link>/tags/mathematica/</link>
+      <link>//localhost:6138/tags/mathematica/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/mathematica/</guid>
+      <guid>//localhost:6138/tags/mathematica/</guid>
       <description></description>
     </item>
     <item>
       <title>Mathematica向量转矩阵</title>
-      <link>/tags/mathematica%E5%90%91%E9%87%8F%E8%BD%AC%E7%9F%A9%E9%98%B5/</link>
+      <link>//localhost:6138/tags/mathematica%E5%90%91%E9%87%8F%E8%BD%AC%E7%9F%A9%E9%98%B5/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/mathematica%E5%90%91%E9%87%8F%E8%BD%AC%E7%9F%A9%E9%98%B5/</guid>
+      <guid>//localhost:6138/tags/mathematica%E5%90%91%E9%87%8F%E8%BD%AC%E7%9F%A9%E9%98%B5/</guid>
       <description></description>
     </item>
     <item>
       <title>Vec</title>
-      <link>/tags/vec/</link>
+      <link>//localhost:6138/tags/vec/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/vec/</guid>
+      <guid>//localhost:6138/tags/vec/</guid>
       <description></description>
     </item>
     <item>
       <title>交换矩阵</title>
-      <link>/tags/%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5/</link>
+      <link>//localhost:6138/tags/%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5/</guid>
+      <guid>//localhost:6138/tags/%E4%BA%A4%E6%8D%A2%E7%9F%A9%E9%98%B5/</guid>
       <description></description>
     </item>
     <item>
       <title>克罗内克积</title>
-      <link>/tags/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/</link>
+      <link>//localhost:6138/tags/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/</guid>
+      <guid>//localhost:6138/tags/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>外积</title>
-      <link>/tags/%E5%A4%96%E7%A7%AF/</link>
+      <link>//localhost:6138/tags/%E5%A4%96%E7%A7%AF/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E5%A4%96%E7%A7%AF/</guid>
+      <guid>//localhost:6138/tags/%E5%A4%96%E7%A7%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>直积</title>
-      <link>/tags/%E7%9B%B4%E7%A7%AF/</link>
+      <link>//localhost:6138/tags/%E7%9B%B4%E7%A7%AF/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E7%9B%B4%E7%A7%AF/</guid>
+      <guid>//localhost:6138/tags/%E7%9B%B4%E7%A7%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>矩阵向量化操作</title>
-      <link>/tags/%E7%9F%A9%E9%98%B5%E5%90%91%E9%87%8F%E5%8C%96%E6%93%8D%E4%BD%9C/</link>
+      <link>//localhost:6138/tags/%E7%9F%A9%E9%98%B5%E5%90%91%E9%87%8F%E5%8C%96%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E7%9F%A9%E9%98%B5%E5%90%91%E9%87%8F%E5%8C%96%E6%93%8D%E4%BD%9C/</guid>
+      <guid>//localhost:6138/tags/%E7%9F%A9%E9%98%B5%E5%90%91%E9%87%8F%E5%8C%96%E6%93%8D%E4%BD%9C/</guid>
       <description></description>
     </item>
     <item>
       <title>矩阵张量积</title>
-      <link>/tags/%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF/</link>
+      <link>//localhost:6138/tags/%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF/</guid>
+      <guid>//localhost:6138/tags/%E7%9F%A9%E9%98%B5%E5%BC%A0%E9%87%8F%E7%A7%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>符号计算</title>
-      <link>/tags/%E7%AC%A6%E5%8F%B7%E8%AE%A1%E7%AE%97/</link>
+      <link>//localhost:6138/tags/%E7%AC%A6%E5%8F%B7%E8%AE%A1%E7%AE%97/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E7%AC%A6%E5%8F%B7%E8%AE%A1%E7%AE%97/</guid>
+      <guid>//localhost:6138/tags/%E7%AC%A6%E5%8F%B7%E8%AE%A1%E7%AE%97/</guid>
       <description></description>
     </item>
     <item>
       <title>表达式之差是否为0</title>
-      <link>/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E5%B7%AE%E6%98%AF%E5%90%A6%E4%B8%BA0/</link>
+      <link>//localhost:6138/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E5%B7%AE%E6%98%AF%E5%90%A6%E4%B8%BA0/</link>
       <pubDate>Fri, 17 Mar 2023 18:34:35 +0800</pubDate>
-      <guid>/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E5%B7%AE%E6%98%AF%E5%90%A6%E4%B8%BA0/</guid>
+      <guid>//localhost:6138/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E5%B7%AE%E6%98%AF%E5%90%A6%E4%B8%BA0/</guid>
       <description></description>
     </item>
   </channel>

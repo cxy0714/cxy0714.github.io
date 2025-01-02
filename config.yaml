@@ -1,6 +1,6 @@
 baseurl: /
 languageCode: en-US
-title: A Hugo website
+title: Xingyu Chen (陈星宇)
 theme: hugo-lithium
 ignoreFiles:
   - \.Rmd$
