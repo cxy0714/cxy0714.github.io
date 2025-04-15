@@ -16,7 +16,7 @@ Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics f
 
 When searching online, you may try keywords like "cxy0714 github" or "xingyu statistics" to find me — since unfortunately, the ID “cxy0714” has already been taken by a pro gamer.
 
-## 📬 Contact
+#  Contact
 
 -**Email:**
 
@@ -26,15 +26,15 @@ When searching online, you may try keywords like "cxy0714 github" or "xingyu sta
 
 -**GitHub:** [cxy0714 (Xingyu Chen 0714)](https://github.com/cxy0714)
 
-## 🗞 News
+#  News
 
--**April 19, 2025**在「青年统计学家协会 2025 年年会暨第三届统计理论及其应用国际研讨会」的博士生论坛作口头报告
+-**April 19, 2025** 在「青年统计学家协会 2025 年年会暨第三届统计理论及其应用国际研讨会」的博士生论坛作口头报告
 
-  📍 青岛，山东，中国 🔗 [会议通知（微信推文）](https://mp.weixin.qq.com/s/TSpeKe6CJ3TXSqVWetmQqA)
+  📍 青岛，山东，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/TSpeKe6CJ3TXSqVWetmQqA)
 
 -**April 9, 2025** Poster presentation at **EUROCIM 2025 (European Causal Inference Meeting)**
 
   📍 Ghent, Belgium 🔗 [Conference website](https://www.eurocim.org/) | [View poster (PDF)](media/pdf/poster_ghent.pdf)
 
 
-## 📚 Blog Archive
+# Blog Archive
