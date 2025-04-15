@@ -10,10 +10,25 @@ permalinks:
   post: /:year/:month/:day/:slug/
 menu:
   main:
-    - name: About
-      url: /about/
-    - name: GitHub
-      url: https://github.com/cxy0714
+    - name: "About"
+      url: "/"
+      weight: 0
+    - name: "Blog"
+      url: "/post/"
+      weight: 1
+    - name: "CV"
+      url: "/cv/"
+      weight: 2
+    - name: "Research"
+      url: "/research/"
+      weight: 3
+    - name: "Links"
+      url: "/links/"
+      weight: 4
+    - name: "GitHub"
+      url: "https://github.com/cxy0714"
+      weight: 5
+
 
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs

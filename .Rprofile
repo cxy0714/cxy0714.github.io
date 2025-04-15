@@ -16,8 +16,10 @@ options(
   # to disable knitting Rmd files on save, set this option to FALSE
   blogdown.knit.on_save = TRUE,
   # build .Rmd to .md; to build to .html (via Pandoc), set this option to 'html'
-  blogdown.method = 'markdown'
+  blogdown.method = "markdown"
 )
 
 # fix Hugo version
 options(blogdown.hugo.version = "0.136.5")
+# 设置默认的CRAN镜像
+options(repos = c(CRAN = "https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
