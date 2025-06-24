@@ -34,6 +34,6 @@ When searching online, you may try keywords like "cxy0714 github" or "xingyu sta
 
 - **April 9, 2025** Poster presentation at **EUROCIM 2025 (European Causal Inference Meeting)**
 
-  📍 Ghent, Belgium 🔗 [Conference website](https://www.eurocim.org/) | [View poster (PDF)](media/pdf/poster_250409_ghent.pdf)
+  📍 Ghent, Belgium 🔗 [Conference website](https://eurocim.org/ghent-2025/) | [View poster (PDF)](media/pdf/poster_250409_ghent.pdf)
 
 # Blog Archive
