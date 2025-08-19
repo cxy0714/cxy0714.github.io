@@ -15,19 +15,17 @@ Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics f
 
 When searching online, you may try keywords like "cxy0714 github" or "xingyu statistics" to find me — since unfortunately, the ID “cxy0714” has already been taken by a pro gamer.
 
-# Contact
-
--**Email:**
+# Contact & Links
 
 - xingyuchen0714@sjtu.edu.cn
 - pyrty0714@gmail.com
 - 1225778616@qq.com
-
--**GitHub:** [cxy0714 (Xingyu Chen 0714)](https://github.com/cxy0714)
+- [GitHub: cxy0714](https://github.com/cxy0714)
+- [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ&hl=zh-CN)
 
 # News
 
-- **August 19, 2025** Our paper "*On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly*" has been released on [arXiv:2508.12627](https://arxiv.org/abs/2508.12627), accompanied by the Python package *[u-stats](https://libraries.io/pypi/u-stats)*!
+- **August 19, 2025** Our new paper "*On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly*" has been released on [arXiv:2508.12627](https://arxiv.org/abs/2508.12627), accompanied by the Python package *[u-stats](https://libraries.io/pypi/u-stats)*!
 
 - **2025年5月8日** 在「2025年上海交通大学AI for Math学术论坛」的博士生论坛作口头报告  
   📍 上海，中国 🔗 [会议通知](https://math.sjtu.edu.cn/conference/upload/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C20250507.pdf)｜[幻灯片(PDF)](media/pdf/slides_250508_sjtu.pdf)
