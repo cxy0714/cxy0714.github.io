@@ -1,35 +1,18 @@
+## Newest CV (PDF, English, Updated 2025.09.11)
+
+  can be get [here](/media/pdf/XingyuChen_CV.pdf)
+
 ## Education
 
-- **Sep 2023 – Present**  
-  Ph.D. in Statistics, School of Mathematical Sciences, Shanghai Jiao Tong University  
-  上海交通大学 数学科学学院（统计学 博士）
-
-- **Sep 2019 – Jun 2023**  
-  B.Sc. in Mathematics and Applied Mathematics, School of Mathematics and Statistics, Huazhong University of Science and Technology  
-  华中科技大学 数学与统计学院（数学与应用数学 理学学士）
-
-- **Sep 2016 – Jun 2019**  
-  Yuzhou Senior High School, Henan Province (High School)  
-  河南省禹州市高级中学（高中）
-
-- **Mar 2015 – Jun 2016**  
-  Fanggang Central School, Yuzhou City, Henan Province (Middle School, Grade 8–9)  
-  河南省禹州市方岗镇中心学校（初二下 – 初中毕业）
-
-- **Sep 2012 – Jan 2015**  
-  Shundian Central School, Yuzhou City, Henan Province (Middle School, Grade 6 – Grade 8)  
-  河南省禹州市顺店镇中心学校（六年级 – 初二上）
-
-- **Sep 2011 – Jun 2012**  
-  Nanyuanzhuang Primary School, Shundian Town, Yuzhou City (Grade 5)  
-  河南省禹州市顺店镇南袁庄小学（五年级）
-
-- **Sep 2007 – Jun 2011**  
-  Xiwangzhuang Primary School, Huolong Town, Yuzhou City (Grade 1 – Grade 4)  
+- **Sep 2023 – Present**Ph.D. in Statistics, School of Mathematical Sciences, Shanghai Jiao Tong University上海交通大学 数学科学学院（统计学 博士）
+- **Sep 2019 – Jun 2023**B.Sc. in Mathematics and Applied Mathematics, School of Mathematics and Statistics, Huazhong University of Science and Technology华中科技大学 数学与统计学院（数学与应用数学 理学学士）
+- **Sep 2016 – Jun 2019**Yuzhou Senior High School, Henan Province (High School)河南省禹州市高级中学（高中）
+- **Mar 2015 – Jun 2016**Fanggang Central School, Yuzhou City, Henan Province (Middle School, Grade 8–9)河南省禹州市方岗镇中心学校（初二下 – 初中毕业）
+- **Sep 2012 – Jan 2015**Shundian Central School, Yuzhou City, Henan Province (Middle School, Grade 6 – Grade 8)河南省禹州市顺店镇中心学校（六年级 – 初二上）
+- **Sep 2011 – Jun 2012**Nanyuanzhuang Primary School, Shundian Town, Yuzhou City (Grade 5)河南省禹州市顺店镇南袁庄小学（五年级）
+- **Sep 2007 – Jun 2011**
+  Xiwangzhuang Primary School, Huolong Town, Yuzhou City (Grade 1 – Grade 4)
   河南省禹州市火龙镇西王庄村小学（一年级 – 四年级）
-
-
-
 
 ## 主要经历
 
