@@ -26,10 +26,11 @@ When searching online, you may try keywords like "cxy0714 github" or "xingyu sta
 # News
 
 - **August 19, 2025** Our new paper "*On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly*" has been released on [arXiv:2508.12627](https://arxiv.org/abs/2508.12627), accompanied by the Python package *[u-stats](https://libraries.io/pypi/u-stats)*!
-- **2025年5月8日** 在「2025年上海交通大学AI for Math学术论坛」的博士生论坛作口头报告📍 上海，中国 🔗 [会议通知](https://math.sjtu.edu.cn/conference/upload/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C20250507.pdf)｜[幻灯片(PDF)](media/pdf/slides_250508_sjtu.pdf)
-- **2025年4月19日** 在「青年统计学家协会 2025 年年会暨第三届统计理论及其应用国际研讨会」的博士生论坛作口头报告📍 济南，山东，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/TSpeKe6CJ3TXSqVWetmQqA)｜[幻灯片(PDF)](media/pdf/slides_250419_jinan.pdf)
-- **April 9, 2025** Poster presentation at **EUROCIM 2025 (European Causal Inference Meeting)**
-
+- **2025年5月8日** 在「2025年上海交通大学AI for Math学术论坛」的博士生论坛作口头报告  
+📍 上海，中国 🔗 [会议通知](https://math.sjtu.edu.cn/conference/upload/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C20250507.pdf)｜[幻灯片(PDF)](media/pdf/slides_250508_sjtu.pdf)
+- **2025年4月19日** 在「青年统计学家协会 2025 年年会暨第三届统计理论及其应用国际研讨会」的博士生论坛作口头报告  
+📍 济南，山东，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/TSpeKe6CJ3TXSqVWetmQqA)｜[幻灯片(PDF)](media/pdf/slides_250419_jinan.pdf)
+- **April 9, 2025** Poster presentation at **EUROCIM 2025 (European Causal Inference Meeting)**  
   📍 Ghent, Belgium 🔗 [Conference website](https://eurocim.org/ghent-2025/) | [View poster (PDF)](media/pdf/poster_250409_ghent.pdf)
 
 # Blog Archive
