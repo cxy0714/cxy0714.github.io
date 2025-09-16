@@ -5,15 +5,13 @@ date: "2022-08-29T21:48:51-07:00"
 ---
 {{< figure src="/media/images/about_my_photo.jpg" caption=" " width="640" >}}
 
-I'm **Xingyu Chen (陈星宇)**, a third-year Ph.D. candidate in Statistics at the [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index/), [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).  I’m fortunate to be advised by [Professor **Lin Liu (刘林)**](https://linliu-stats.github.io/).
+I'm **Xingyu Chen (陈星宇)**, a third-year Ph.D. candidate in Statistics at the [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index/), [Shanghai Jiao Tong University (SJTU, 上海交通大学)](https://www.sjtu.edu.cn/).  I’m fortunate to be advised by [Professor **Lin Liu (刘林)**](https://linliu-stats.github.io/).
 
 My research interests include causal inference, semiparametric theory, high-dimensional statistics, higher-order U-statistics and statistical computing.
 
-Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics from the [School of Mathematical Sciences](https://maths.hust.edu.cn/), [Huazhong University of Science and Technology (HUST)](http://www.hust.edu.cn/).
+Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics from the [School of Mathematical Sciences](https://maths.hust.edu.cn/), [Huazhong University of Science and Technology (HUST, 华中科技大学)](http://www.hust.edu.cn/).
 
 ⚡ Fun fact: "0714" is the official subject code for Statistics in the Chinese Ministry of Education’s classification system—“07” represents Science, and “0701” represents Mathematics. ([source](https://www.cdgdc.edu.cn/dslxkpgjggb/))
-
-When searching online, you may try keywords like "cxy0714 github" or "xingyu statistics" to find me — since unfortunately, the ID “cxy0714” has already been taken by a pro gamer.
 
 # Contact & Links
 
