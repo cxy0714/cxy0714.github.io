@@ -21,7 +21,7 @@ tags:
 不过，虽然原理简单，$U$统计量的计算却常常令人头疼。先来看$m$阶$U$统计量的一般形式：  
 
 $$
-  \mathbb{U}(h) = \frac{1}{n(n-1)(n-2)\cdots(n-m-1)}\sum_{1 \le i_1 \neq i_2 \neq \cdots \neq i_m \le n} h(X_{i_1}, X_{i_2}, \cdots, X_{i_m}),\qquad\qquad (1)
+  \mathbb{U}_{m}(h) = \frac{1}{n(n-1)(n-2)\cdots(n-m-1)}\sum_{1 \le i_1 \neq i_2 \neq \cdots \neq i_m \le n} h(X_{i_1}, X_{i_2}, \cdots, X_{i_m}),\qquad\qquad (1)
 $$
 
 其中，$X_1, X_2, \cdots, X_n \in \Omega \subseteq \mathbb{R}^{p}$ 是 $n$ 个独立同分布的样本；$h : \Omega^m \to \mathbb{R}$ 称为核函数；指标条件 $i_1 \neq i_2 \neq \cdots \neq i_m$ 表示取的$m$个样本互不相同因此互相独立。  
@@ -29,14 +29,14 @@ $$
 $U$统计量之所以重要，在于它天然满足无偏性：  
 
 $$
- \mathbb{E} [ \mathbb{U} (h)] = \mathbb{E} [h(X_{1}, X_{2}, \cdots, X_{m}) ],
+ \mathbb{E} [ \mathbb{U}_{m} (h)] = \mathbb{E} [h(X_{1}, X_{2}, \cdots, X_{m}) ],
 $$
 
 其中 $X_{1}, X_{2}, \cdots, X_{m}$ 是相互独立同分布的随机变量。换句话说，$U$统计量就是把所有可能的互不相等的$m$元样本组都带入核函数 $h$ 计算，再取平均值，从而得到一个对目标参数的无偏估计。
 
 $U$统计量常常和它的“双胞胎”-$V$统计量一起提及，$m$阶$V$统计量的定义为：
 $$
-  \mathbb{V}(h) = \frac{1}{n^m}\sum_{1 \le i_1, i_2,\cdots, i_m \le n} h(X_{i_1}, X_{i_2}, \cdots, X_{i_m}).\qquad\qquad (2)
+  \mathbb{V}_{m}(h) = \frac{1}{n^m}\sum_{1 \le i_1, i_2,\cdots, i_m \le n} h(X_{i_1}, X_{i_2}, \cdots, X_{i_m}).\qquad\qquad (2)
 $$
 
 注意$U$和$V$的区别就在于计算中指标是否存在限制，$V$统计量的计算中对指标$(i_1, i_2,\cdots, i_m)$没有任何限制，因此总共有$n^m$个值。
@@ -81,7 +81,7 @@ $$
  h^{HOIF}_{j}(X_1,X_2,\cdots,X_j) = X_1^{\top}X_2 \cdot X_2^{\top}X_3 \cdots X_{j-1}^{\top}X_{j}, \qquad (3)
 $$
 
-由于这个递推规律，我们可以直接关心$h^{HOIF}_{m}$对应的$U$统计量的计算。我们设计了一套新算法。结果令人惊喜：在 $m=3,4,5,6,7$ 时，计算复杂度居然都只是 **$O(n^3)$**(更一般的规律在阅读完本文后你就会明白) ，$n=10000, m=7$时，$\mathbb{U} [h^{HOIF}_{7}]$在一张RTX4090上只需要跑$12$秒。
+由于这个递推规律，我们可以直接关心$h^{HOIF}_{m}$对应的$U$统计量的计算。我们设计了一套新算法。结果令人惊喜：在 $m=3,4,5,6,7$ 时，计算复杂度居然都只是 **$O(n^3)$**(更一般的规律在阅读完本文后你就会明白) ，$n=10000, m=7$时，$\mathbb{U}_{7} [h^{HOIF}_{7}]$在一张RTX4090上只需要跑$12$秒。
 
 更进一步，我们发现这套方法并不局限于 HOIF对应的这一类$U$统计量，而是可以推广到**任意 $U$ 统计量**。借助图论工具，我们能够准确刻画出该算法的“最乐观”复杂度上界。 
 更妙的是，实际实现完全可以依赖Numpy和PyTorch 提供的 **Einsum 函数**，天然支持 GPU 和 CPU 并行，从而在工程上也十分高效。  
@@ -105,6 +105,47 @@ Einsum函数实现的是什么呢？网上已经很多帖子（[比如](https://
 
 像'ij,j -> j'这样的式子叫做einsum表达式，"->"左侧代表了输入张量的指标分布，"->"右侧代表最终的张量剩下来的指标（如果为0，就代表结果为常数），这本来Einstein老爷子（提出该记号时正年轻，1916年）为了方便写公式约定的记号，左侧是全部的指标的分布，右侧是剩余的指标，左侧中出现右侧不出现的指标就是求和求掉了。矩阵的所有运算都可以用Einsum来表示，当需要用3阶以上的张量运算时，Einsum就成了最有效的工具。
 
-读到这里，大家应该已经发现了Einsum和$V$统计量的一致之处了：
+读到这里，大家应该已经发现了Einsum和$V$统计量的一致之处了，所有的V统计量都可以直接通过Einsum来计算，但是需要$V$统计量的核函数$h$有一个乘法分解（分解不了的话，就是一个张量，无法降低复杂度，当然有分解也不一定可以降低复杂度，继续读！我们会有一个答案：什么时候可以降低复杂度，什么时候不可以），$h^{HOIF}_{m}$就有一个分解结构：
 
+$$
+\begin{aligned}
+ h^{HOIF}_{j}(X_1,X_2,\cdots,X_m) & = X_1^{\top}X_2 \cdot X_2^{\top}X_3 \cdots X_{m-1}^{\top}X_{m} \\
+& = f(X_1,X_2) \cdot f(X_2,X_3) \cdots f(X_{m-1},X_{m}).
+\end{aligned}
+$$
 
+这里$f(X,Y) = X^{\top}Y$是标量函数，对于数据$X_1,X_2,\cdots,X_n$,我们可以构造一个$n \times n$矩阵$T$:
+
+$$
+ T_{ij}  = f(X_i,X_j)= X_i^{\top}X_j,
+$$
+这样$h^{HOIF}_{m}$对应的$V$统计量可以用Einsum来表示：
+$$
+\begin{aligned}
+\mathbb{V}_{m}[ h^{HOIF}_{m}] & = \frac{1}{n^m} \sum_{1\le i_1,i_2,\cdots,i_m \le n} T_{i_1,i_2}\cdot T_{i_2,i_3} \cdots T_{i_{m-1},i_{m}} \\
+& = \frac{1}{n^m} \mathsf{Einsum}( ``i_1i_2,i_2i_3,\cdots,i_{m-1}i_m -> ", T,T,\cdots,T ).
+\end{aligned}
+$$
+
+如前所述，只要$U$统计量和$V$统计量有一个可以高效计算，另一个就也可以了，现在感谢Einsum的实现，我们可以做到便捷高效地计算$V$统计量了。在工程上，一个计算$U$统计量的算法就有了，只需要把$U$统计量拆成$V$统计量就好，那么我们能不能找到一个公式呢？
+
+### U拆V
+我们来找一找规律，先来看2阶：
+
+$$
+\begin{aligned}
+ n(n-1)\cdot \mathbb{U}_{2}[h] & = \sum_{1 \le i_1 \neq i_2 \le n} h(X_{i_1},X_{i_2}) \\
+ & = (\sum_{1 \le i_1, i_2 \le n} - \sum_{1 \le i_1=i_2 \le n} ) h(X_{i_1},X_{i_2}) \\
+ & = n^2 \mathbb{V}_{2}[h] - n \mathbb{V}_{1,1=2}[h]
+\end{aligned}
+$$
+
+这里我们暂且用$\mathbb{V}_{1,1=2}[h]$代表求和$\frac{1}{n}\sum_{1 \le i_1=i_2 \le n}  h(X_{i_1},X_{i_2})$, 它变成了一个1阶$V$统计量。然后看看3阶：
+
+$$
+\begin{aligned}
+ n(n-1)(n-2) \cdot \mathbb{U}_{3}[h] & = \sum_{1 \le i_1 \neq i_2 \le n} h(X_{i_1},X_{i_2},X_{i_3}) \\
+ & = (\sum_{1 \le i_1, i_2, i_3 \le n} - \sum_{1 \le i_1=i_2, \ne i_3 \le n} ) h(X_{i_1},X_{i_2}) \\
+ & = n^2 \mathbb{V}_{2}[h] - n \mathbb{V}_{1,1=2}[h]
+\end{aligned}
+$$
