@@ -13,13 +13,15 @@ Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics f
 
 ⚡ Fun fact: "0714" is the official subject code for Statistics in the Chinese Ministry of Education’s classification system—“07” represents Science, and “0701” represents Mathematics. ([source](https://www.cdgdc.edu.cn/dslxkpgjggb/))
 
+
 # Contact & Links
 
-- xingyuchen0714@sjtu.edu.cn
-- pyrty0714@gmail.com
-- 1225778616@qq.com
-- [GitHub: cxy0714](https://github.com/cxy0714)
-- [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ&hl=zh-CN)
+- <i class="fas fa-envelope"></i> xingyuchen0714@sjtu.edu.cn
+- <i class="fas fa-envelope"></i> pyrty0714@gmail.com
+- <i class="fab fa-qq"></i> 1225778616@qq.com
+- <i class="fab fa-github"></i> [GitHub: cxy0714](https://github.com/cxy0714)
+- <i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ&hl=zh-CN)
+- <i class="fab fa-orcid"></i> [ORCID](https://orcid.org/0009-0008-0823-4406)
 
 # News
 
