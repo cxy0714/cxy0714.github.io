@@ -25,6 +25,10 @@ Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics f
 
 # News
 
+- **2025年9月20日** 在「中国现场统计研究会统计交叉科学研究分会和全国工业统计学教学研究会民族统计与数据科学分会2025联合年会」作口头报告  
+📍 上海，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/sG7wi3bYeIVD0CvmP3vHfA)｜[幻灯片(PDF)](media/pdf/computing_U_slides_250920.pdf)
+
+
 - **August 19, 2025** Our new paper "*On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly*" has been released on [arXiv:2508.12627](https://arxiv.org/abs/2508.12627), accompanied by the Python package *[u-stats](https://libraries.io/pypi/u-stats)*!
 - **2025年5月8日** 在「2025年上海交通大学AI for Math学术论坛」的博士生论坛作口头报告  
 📍 上海，中国 🔗 [会议通知](https://math.sjtu.edu.cn/conference/upload/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C20250507.pdf)｜[幻灯片(PDF)](media/pdf/slides_250508_sjtu.pdf)
