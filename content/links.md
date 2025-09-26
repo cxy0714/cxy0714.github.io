@@ -6,6 +6,7 @@ type: page
 
 - [Statistical Modeling, Causal Inference, and Social Science](https://statmodeling.stat.columbia.edu/) — Andrew Gelman's blog
 - [COS论坛 | 统计之都](https://cosx.org/archives/)
+- [The blog of Young Statisticians Europe](https://youngstats.github.io/)-欧洲青年统计学家博客
 
 ## 📦 R Resources
 
