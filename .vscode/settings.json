@@ -1,0 +1,5 @@
+{
+  "triggerTaskOnSave.tasks": {
+    "**/notes/*.typ": "Auto Update Notes"
+  }
+}

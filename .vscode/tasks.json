@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Auto Update Notes",
+      "type": "shell",
+      "command": "./update-notes.sh",
+      "args": ["auto update"],
+      "problemMatcher": []
+    }
+  ]
+}
