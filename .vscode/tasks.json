@@ -2,10 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Auto Update Notes",
+      "label": "Update Notes",
       "type": "shell",
       "command": "./update-notes.sh",
-      "args": ["auto update"],
+      "isBackground": false,
+      "presentation": {
+        "reveal": "silent",
+        "panel": "new"
+      },
       "problemMatcher": []
     }
   ]
