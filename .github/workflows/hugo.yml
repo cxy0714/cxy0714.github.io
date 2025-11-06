@@ -46,18 +46,6 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
-      # -------------------------------
-      # ✅ Add Typst build here
-      # -------------------------------
-      - name: Install Typst
-        uses: typst-community/setup-typst@v3
-
-      - name: Build Typst notes
-        run: |
-          mkdir -p static/notes
-          typst html notes/main.typ --output static/notes/index.html
-      # -------------------------------
-
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
