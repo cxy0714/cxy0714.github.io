@@ -42,6 +42,26 @@ fi
 
 echo "✅ PDF 已输出到: $OUT_FILE"
 
+# === 避免 10 分钟内重复 push ===
+TIMESTAMP_FILE=".last_push_time"
+
+if [ -f "$TIMESTAMP_FILE" ]; then
+    LAST_PUSH=$(cat "$TIMESTAMP_FILE")
+else
+    LAST_PUSH=0
+fi
+
+NOW=$(date +%s)
+DIFF=$(( NOW - LAST_PUSH ))
+
+if [ $DIFF -lt 600 ]; then
+    echo "⏳ 上次 push 距离现在仅 $DIFF 秒 (<600 秒)，跳过 push。"
+    git add "$TYP_FILE" "$OUT_FILE"
+    git commit -m "$COMMIT_MSG" >/dev/null 2>&1
+    exit 0
+fi
+
+
 # === Git 操作 ===
 echo "📦 执行 git add/commit/push"
 
@@ -55,7 +75,7 @@ fi
 
 git push
 if [ $? -eq 0 ]; then
+    echo "$NOW" > "$TIMESTAMP_FILE"
     echo "✅ Push 完成！GitHub Pages 将自动部署。"
 else
     echo "❌ Push 失败，请检查网络或权限。"
-fi
