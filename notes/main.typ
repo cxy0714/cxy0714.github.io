@@ -132,7 +132,7 @@ This example is  the reason why the sharp null hypothesis can not be tested in r
 
 @wu2025promises talk about the identification of joint distribution of potential outcomes under some assumptions.
 
-= on cluster analysis
+= On the cluster analysis
 
 = Numerical calcaulation of influence function
 @mukhinkernel
