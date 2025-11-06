@@ -50,7 +50,7 @@ jobs:
       # ✅ Add Typst build here
       # -------------------------------
       - name: Install Typst
-        uses: typst/typst-action@v2
+        uses: typst-community/setup-typst@v3
 
       - name: Build Typst notes
         run: |
