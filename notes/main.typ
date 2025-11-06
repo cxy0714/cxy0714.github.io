@@ -34,6 +34,11 @@
   // text-args-title: text-args-title,
 )
 
+
+#outline()
+
+#pagebreak()
+
 = Tpyst symbols
 
 #link("https://typst.app/docs/reference/symbols/sym/")[`Tpyst symbols`].
