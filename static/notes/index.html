@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .notice { background: #f0f0f0; padding: 20px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="notice">
+        <h1>📝 Notes</h1>
+        <p>Typst 文档需要手动编译或使用 Tinymist 导出 HTML。</p>
+        <p>当前时间: <span id="datetime"></span></p>
+        <p>源文件: <code>notes/main.typ</code></p>
+    </div>
+    <script>
+        document.getElementById('datetime').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
