@@ -1,6 +1,10 @@
 #import "@preview/clean-math-paper:0.2.4": *
 #set par(first-line-indent: 1em)
-
+#set page(margin: 1.75in)
+#set par(leading: 0.55em, first-line-indent: 1.8em, justify: true)
+#set text(font: "New Computer Modern")
+#show par: set par(spacing: 0.55em)
+#show heading: set block(above: 1.4em, below: 1em)
 
 #let date = datetime.today().display("[month repr:long] [day], [year]")
 
@@ -19,7 +23,7 @@
   //   (id: 1, name: ""),
   // ),
   date: date,
-  heading-color: rgb("#0000ff"),
+  heading-color: rgb("#000000"),
   link-color: rgb("#008002"),
   // Insert your abstract after the colon, wrapped in brackets.
   // Example: `abstract: [This is my abstract...]`
@@ -33,6 +37,7 @@
   // Pass text-args-title to change title text settings
   // text-args-title: text-args-title,
 )
+
 
 
 #outline()
@@ -113,22 +118,21 @@ In a word, two models $cal(P)_1$ and $cal(P)_2$ as two distribution calsses are 
 
 The potential outcome model is an example of latent structure model. The observed random variable is determined by some unobservable/latent variable is in this calss.
 
-#definition("The Latent structure model")
-The observed random variable $X$ is determined by a high dimensional latent variable $Z$ by a map $X = f(Z)$.
+#definition("The Latent structure model")[
+  The observed random variable $X$ is determined by a high dimensional latent variable $Z$ by a map $X = f(Z)$.]
 
-#example("Fisher sharp null hypothesis in randomized experiment of causal inference")
-
-- The observed random variable is $(A, Y)$ determined by three independent latent variable $(A, Y(0), Y(1)), A in {0,1}, Y = A Y(1) + (1-A) Y(0)$, consider two submodels:
+#example("Fisher sharp null hypothesis in randomized experiment of causal inference")[
+  The observed random variable is $(A, Y)$ determined by three latent variable $(A, Y(0), Y(1)), A in {0,1}, Y = A Y(1) + (1-A) Y(0)$, consider two submodels:
   - $cal(P)_1$: $Y(1) - Y(0) = 0, Y(1) perp A, Y(0) perp A$
   - $cal(P)_2$: $Y(1) - Y(0) = Z eq.not 0$, but $Y(1) =^d Y(0), Y(1) perp A, Y(0) perp A$.
 
-The model 2 is not empty, take
-$ Y(0), epsilon ~ cal(N)(0,1), Y(0) perp epsilon , Z = -1 /2 Y(0) + sqrt(3)/2 epsilon $
-then $Y(1) ~ cal(N)(0,1)$ and $Y(1) =^d Y(0)$.
+  The model 2 is not empty, take
+  $ Y(0), epsilon ~ cal(N)(0,1), Y(0) perp epsilon , Z = -1 /2 Y(0) + sqrt(3)/2 epsilon $
+  then $Y(1) ~ cal(N)(0,1)$ and $Y(1) =^d Y(0)$.
 
-On the observed data level, we can not distinguish these two models since they both have  the same conditional distribution of $Y|A$, therefore they are undistinguishable in modeling stage.
+  On the observed data level, we can not distinguish these two models since they both have  the same conditional distribution of $Y|A$, therefore they are undistinguishable in modeling stage.
 
-This example is  the reason why the sharp null hypothesis can not be tested in randomized experiment, and also the joint distribution of $(Y(0),Y(1))$ is not identifiable.
+  This example is  the reason why the sharp null hypothesis can not be tested in randomized experiment, and also the joint distribution of $(Y(0),Y(1))$ is not identifiable. ]
 
 @wu2025promises talk about the identification of joint distribution of potential outcomes under some assumptions.
 
@@ -138,6 +142,6 @@ This example is  the reason why the sharp null hypothesis can not be tested in r
 @mukhinkernel
 
 
-= References
+
 
 #bibliography("Master.bib")
