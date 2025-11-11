@@ -78,8 +78,9 @@ The winning probability can then be computed as:
 $ Pr(theta > 0.5 | Y). $
 
 
+= Writing
 
-= Good title: The unreasonable effectiveness of XX in/of YY
+== Good title: The unreasonable effectiveness of XX in/of YY
 
 Good title form #link("https://en.wikipedia.org/wiki/The_Unreasonable_Effectiveness_of_Mathematics_in_the_Natural_Sciences")[`The unreasonable effectiveness of mathematics in the natural sciences`] by Eugene Wigner in 1960 @wigner1990unreasonable.
 
@@ -94,7 +95,7 @@ Vela Velupillai in economics, "The Unreasonable Ineffectiveness of Mathematics i
 Terrence Joseph Sejnowski in Artificial Intelligence: The Unreasonable Effectiveness of Deep Learning in Artificial Intelligence".
 
 
-= Good title: Rebel With a Cause
+== Good title: Rebel With a Cause
 
 Form the famous movie #link("https://en.wikipedia.org/wiki/Rebel_Without_a_Cause")[`Rebel Without a Cause`].
 
@@ -138,8 +139,61 @@ The potential outcome model is an example of latent structure model. The observe
 
 = On the cluster analysis
 
-= Numerical calcaulation of influence function
+
+
+
+= Causal Inference
+
+== Causal Example
+
+=== Yule–Simpson’s Paradox
+
+==== Healty worker effect
+
+=== Smoke cause lung cancer
+
+==== Mediation analysis
+
+==== Sensitivity analysis
+
+== G-formula
+
+== The euqivalence between DAG and potential outcome framework
+
+=== The equivalence between nonparametric structural equation model(NPSEM) and potential outcome framework
+
+=== The equivalence between SWIG and FFRCISTG
+
+== ADMG : the inequility constraints
+
+=== Bell inequality
+
+= Semiparametric theory
+
+== Parametric theory
+
+=== Efficiency
+
+==== Convolution theorem
+
+== nonparametric theory
+
+== Regularity
+
+== Influence function
+
+=== Numerical calcaulation of influence function
 @mukhinkernel
+
+=== Von mise representation
+
+=== Tangent space
+S8 in @graham2024towards
+
+Formulation in @van1991differentiable
+
+
+=== Higher order influence function
 
 
 
