@@ -156,9 +156,25 @@ The potential outcome model is an example of latent structure model. The observe
 
 ==== Sensitivity analysis
 
-== G-formula
+== Identification
 
-== The euqivalence between DAG and potential outcome framework
+=== G-formula
+
+=== Joint distribution of potential outcomes
+
+@wu2025promises consider a case with multiple randomized controlled trials(RCTs), where data are $(G,A,Y)$, $G$ is the indicator of RCTs, $A$ is the treatment, $Y$ is the outcome.
+
+Under consistency, positivity, and exchangeability. Adding one assumption called "transportability":
+$ Y(1) perp G | Y(0) $
+
+We can then identify the conditional distribution $Y(1) | Y(0)$.
+
+$ serif(Pr)(Y(1) = b | G = g) & = sum_(a) serif(Pr)(Y(1) = b, Y(0) = a | G = g) serif(Pr)(Y(0) = a | G = g  ) \
+&  = sum_(a) serif(Pr)(Y(1) = b |  Y(0) = a) serif(Pr)( Y(0) = a | G = g) $
+
+Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be identified form data by the consistency assumption, using them to solve the above equation system, we can identify $serif(Pr)(Y(1) = b |  Y(0) = a)$.
+
+== The equivalence between DAG and potential outcome framework
 
 === The equivalence between nonparametric structural equation model(NPSEM) and potential outcome framework
 
