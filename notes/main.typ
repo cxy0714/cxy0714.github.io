@@ -168,6 +168,26 @@ The potential outcome model is an example of latent structure model. The observe
 
 === Bell inequality
 
+
+== Instrumental variable
+
+@levis2025covariate 
+- data are $(X,A,Z,Y)$ only assume consistency, positivity, unconfounder, exculusion, no monotonicity, provide a bound estimation on ATE.
+
+- The identification assumption of IV:
+#quote([ Critically, under the four assumptions introduced in the previous section, the ATE is not point
+identified. Analysts typically take one of two approaches for point identification. The first
+approach invokes some type of homogeneity assumptions and places various restrictions on
+how the effects of A and Z vary from unit to unit in the study population. See Hernan and
+Robins (2019) and Wang and Tchetgen Tchetgen (2018) for prominent examples. However,
+homogeneity assumptions are often implausible or difficult to verify in specific applications.
+The second approach invokes an assumption known as monotonicity, which has the following
+form: A(z = 1) ≥ A(z = 0), i.e., if A(z = 0) = 1 then A(z = 1) = 1 (Imbens and Angrist,
+1994). Under monotonicity, the target estimand is no longer the ATE, but instead is the local
+average treatment effect (LATE):])
+
+- The lower bound and upper bound is not a differentiable functional, thus an assumption is invoked to make the bound functional differentiable and thus have inference function to faster convergence rate.
+
 = Semiparametric theory
 
 == Parametric theory

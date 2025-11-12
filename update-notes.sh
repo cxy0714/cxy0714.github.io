@@ -12,8 +12,10 @@ TYP_FILE="notes/main.typ"
 OUT_DIR="static/notes"
 OUT_FILE="${OUT_DIR}/notes.pdf"
 
-# === Windows 下 Typst 可执行文件 ===
-TYPST_WIN_PATH="/c/Users/thinkbook-cxy/AppData/Local/Microsoft/WinGet/Packages/Typst.Typst_Microsoft.Winget.Source_8wekyb3d8bbwe/typst-x86_64-pc-windows-msvc/typst.exe"
+
+# === Windows 下 Typst 可执行文件（更稳健版本）===
+TYPST_WIN_PATH="$(cygpath "${APPDATA}/../Local/Microsoft/WinGet/Packages/Typst.Typst_Microsoft.Winget.Source_8wekyb3d8bbwe/typst-x86_64-pc-windows-msvc/typst.exe")"
+
 
 # === 检查 Typst ===
 if [ -f "$TYPST_WIN_PATH" ]; then
