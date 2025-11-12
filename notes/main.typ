@@ -164,15 +164,38 @@ The potential outcome model is an example of latent structure model. The observe
 
 @wu2025promises consider a case with multiple randomized controlled trials(RCTs), where data are $(G,A,Y)$, $G$ is the indicator of RCTs, $A$ is the treatment, $Y$ is the outcome.
 
-Under consistency, positivity, and exchangeability. Adding one assumption called "transportability":
+Under consistency, positivity, and exchangeability, Adding one assumption called "transportability":
 $ Y(1) perp G | Y(0) $
 
 We can then identify the conditional distribution $Y(1) | Y(0)$.
 
-$ serif(Pr)(Y(1) = b | G = g) & = sum_(a) serif(Pr)(Y(1) = b, Y(0) = a | G = g) serif(Pr)(Y(0) = a | G = g  ) \
-&  = sum_(a) serif(Pr)(Y(1) = b |  Y(0) = a) serif(Pr)( Y(0) = a | G = g) $
+$
+  serif(Pr)(Y(1) = b | G = g) & = sum_(a) serif(Pr)(Y(1) = b, Y(0) = a | G = g) serif(Pr)(Y(0) = a | G = g ) \
+                              & = sum_(a) serif(Pr)(Y(1) = b | Y(0) = a) serif(Pr)( Y(0) = a | G = g)
+$
 
-Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be identified form data by the consistency assumption, using them to solve the above equation system, we can identify $serif(Pr)(Y(1) = b |  Y(0) = a)$.
+Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be identified form data by the consistency, positivity and unconfounder assumption, using them to solve the above equation system, we can identify $serif(Pr)(Y(1) = b | Y(0) = a)$.
+
+
+=== Instrumental variable
+
+@levis2025covariate
+- data are $(X,A,Z,Y)$ only assume consistency, positivity, unconfounder, exculusion, no monotonicity, provide a bound estimation on ATE.
+
+- The identification assumption of IV:
+#quote([ Critically, under the four assumptions introduced in the previous section, the ATE is not point
+  identified. Analysts typically take one of two approaches for point identification. The first
+  approach invokes some type of homogeneity assumptions and places various restrictions on
+  how the effects of A and Z vary from unit to unit in the study population. See Hernan and
+  Robins (2019) and Wang and Tchetgen Tchetgen (2018) for prominent examples. However,
+  homogeneity assumptions are often implausible or difficult to verify in specific applications.
+  The second approach invokes an assumption known as monotonicity, which has the following
+  form: A(z = 1) ≥ A(z = 0), i.e., if A(z = 0) = 1 then A(z = 1) = 1 (Imbens and Angrist,
+  1994). Under monotonicity, the target estimand is no longer the ATE, but instead is the local
+  average treatment effect (LATE):])
+
+- The lower bound and upper bound is not a differentiable functional, thus an assumption is invoked to make the bound functional differentiable and thus have inference function to faster convergence rate.
+
 
 == The equivalence between DAG and potential outcome framework
 
@@ -184,25 +207,6 @@ Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be ide
 
 === Bell inequality
 
-
-== Instrumental variable
-
-@levis2025covariate 
-- data are $(X,A,Z,Y)$ only assume consistency, positivity, unconfounder, exculusion, no monotonicity, provide a bound estimation on ATE.
-
-- The identification assumption of IV:
-#quote([ Critically, under the four assumptions introduced in the previous section, the ATE is not point
-identified. Analysts typically take one of two approaches for point identification. The first
-approach invokes some type of homogeneity assumptions and places various restrictions on
-how the effects of A and Z vary from unit to unit in the study population. See Hernan and
-Robins (2019) and Wang and Tchetgen Tchetgen (2018) for prominent examples. However,
-homogeneity assumptions are often implausible or difficult to verify in specific applications.
-The second approach invokes an assumption known as monotonicity, which has the following
-form: A(z = 1) ≥ A(z = 0), i.e., if A(z = 0) = 1 then A(z = 1) = 1 (Imbens and Angrist,
-1994). Under monotonicity, the target estimand is no longer the ATE, but instead is the local
-average treatment effect (LATE):])
-
-- The lower bound and upper bound is not a differentiable functional, thus an assumption is invoked to make the bound functional differentiable and thus have inference function to faster convergence rate.
 
 = Semiparametric theory
 
