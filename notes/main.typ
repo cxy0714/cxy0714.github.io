@@ -231,7 +231,19 @@ Formulation in @van1991differentiable
 
 === Higher order influence function
 
+= U statistics
+
+== Computation
+
+=== Motif counts
 
 
+- For GPU:
+  - Gunrock @wang2016gunrock
+  - Cugraph @fender2022rapids
+
+- For CPU:
+  - Peregrine @jamshidi2020peregrine
+  - Automine @mawhirter2019automine
 
 #bibliography("Master.bib")
