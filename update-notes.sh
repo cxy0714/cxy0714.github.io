@@ -9,6 +9,7 @@ fi
 
 # === 路径 ===
 TYP_FILE="notes/main.typ"
+BIB_FILE="notes/Master.bib"  # 新增 Bib 文件路径
 OUT_DIR="static/notes"
 OUT_FILE="${OUT_DIR}/notes.pdf"
 
@@ -58,7 +59,7 @@ DIFF=$(( NOW - LAST_PUSH ))
 
 if [ $DIFF -lt 600 ]; then
     echo "⏳ 上次 push 距离现在仅 $DIFF 秒 (<600 秒)，跳过 push。"
-    git add "$TYP_FILE" "$OUT_FILE"
+    git add "$TYP_FILE" "$BIB_FILE" "$OUT_FILE"  # 添加 Bib 文件
     git commit -m "$COMMIT_MSG" >/dev/null 2>&1
     exit 0
 fi
@@ -67,7 +68,8 @@ fi
 # === Git 操作 ===
 echo "📦 执行 git add/commit/push"
 
-git add "$TYP_FILE" "$OUT_FILE"
+# 添加所有相关文件，包括 Bib 文件
+git add "$TYP_FILE" "$BIB_FILE" "$OUT_FILE"
 
 git commit -m "$COMMIT_MSG"
 if [ $? -ne 0 ]; then
@@ -81,3 +83,4 @@ if [ $? -eq 0 ]; then
     echo "✅ Push 完成！GitHub Pages 将自动部署。"
 else
     echo "❌ Push 失败，请检查网络或权限。"
+fi
