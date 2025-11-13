@@ -224,7 +224,7 @@ Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be ide
 
 === Numerical calcaulation of influence function
 @mukhinkernel
-
+@jordan2022empirical
 === Von mise representation
 
 === Tangent space
@@ -257,9 +257,33 @@ Formulation in @van1991differentiable
 
 See #link("https://statmodeling.stat.columbia.edu/2025/11/12/belief-in-the-law-of-small-numbers-as-a-way-to-understand-the-replication-crisis-and-silly-researchers-who-continue-to-cite-discredited-behavioral-research/")[`Belief in the law of small numbers as a way to understand the replication crisis and silly researchers who continue to cite discredited behavioral research`] by Andrew Gelman, but I just see the paper involved a title "umbrella review" @lin2025role, so I search more about umbrella review.
 
-Umbrella review consider the evidence form multiple meta-analysis and system review studies on the same topic. 
+Umbrella review consider the evidence form multiple meta-analysis and system review studies on the same topic.
 
 using @shea2017amstar(10K+ citation!) to assess the quality of included meta-analysis/system review studies, but they did not provide a way to aggregate the quality scores and just give a subjective criteria, the overall confidence is rating as "high", "moderate", "low", "critically low". Produce an conclusion such that "In the 60 meta-analyses/systematic reviews included on the treatment for type 2 diabetes, treatments A have 5 strong evidence to support its effectiveness, while treatment B has only 1 moderate evidence to support its effectiveness..."
 
+= multiple testing
 
+== Varibale selection
+
+A talk given by Zhong Wei: #link("https://www.cmstatistics.org/RegistrationsV2/EcoSta2025/viewSubmission.php?in=1158&token=472n51nsro843q0p0s3sn1663po5rsrr")[` A unified stability approach to false discovery rate control`]
+
+Knockoff is a randomized method for variable selection controlling false discovery rate(FDR) @barber2015controlling. The key idea is to construct knockoff variables $tilde(X) in R^p$ that mimic the correlation structure of the original variables $X in R^p$, such that for any subset $S subset {1, ..., p}$, swapping the variables in $S$ with their knockoffs does not change the joint distribution of $(X, tilde(X))$, while also ensuring that the knockoff variables are conditionally independent of the response variable $Y$ given the original variables $X$.
+
+randomized method have a problem in reproduciblity, e-value developed by @vovk2021values is a way to solve this problem, the e-value is a function of data that has an expected value at most 1 under the null hypothesis, thus can be used to control type I error in multiple testing, it can combine evidence from multiple independent tests easily, by running the knockoff procedure multiple times and averaging the resulting e-values for each variable, we can obtain a more stable measure of evidence against the null hypothesis for each variable, that's the work in @ren2024derandomised.
+
+Zhong Wei proposed a general framework of stability for FDR control, which includes derandomized knockoff as a special case, and provide theoretical guarantee for FDR control under this framework.
+
+Their another work is consider the inference after variable selection, using the same sample for variable selection and inference will lead to selection bias @zrnic2023post.
+
+#question(
+  "Criteria for variable selection controlling FDR",
+)[A quesition is deose there have some minimax optimal method or other criteria for variable selection controlling FDR? e-value BH method or p-value BH method? or here derandomized knockoff BH method? Which is best?]
+
+#link("https://rinafb.github.io/")[Rina Foygel Barber]是2025年新任美国科学院院士，今年统计方向的两位美国科学院（National Academy of Sciences）院士，另一位是刘军，Rina Foygel Barber是2020年COPSS总统奖（12年phd毕业 at U of Chicago，postdoc under Emmanuel Candès）获得者，颁奖理由是：
+
+#quote(
+  "For fundamental contributions to statistical sparsity and selective inference in high-dimensional problems, for the creative and novel knockoff filter to cope with correlated coefficients, for contributions to compressed sensing, the jackknife, and conformal predictive inference; for the encouragement and training of graduate and undergraduate students.",
+)
+
+e-valuede 的#link("https://sas.uwaterloo.ca/~wang/")[王若度]（U of Waterloo，  Chair profess） 曾经是星际争霸职业选手。
 #bibliography("Master.bib")
