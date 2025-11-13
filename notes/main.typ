@@ -250,4 +250,16 @@ Formulation in @van1991differentiable
   - Peregrine @jamshidi2020peregrine
   - Automine @mawhirter2019automine
 
+
+= Applications
+
+== Umbrella review
+
+See #link("https://statmodeling.stat.columbia.edu/2025/11/12/belief-in-the-law-of-small-numbers-as-a-way-to-understand-the-replication-crisis-and-silly-researchers-who-continue-to-cite-discredited-behavioral-research/")[`Belief in the law of small numbers as a way to understand the replication crisis and silly researchers who continue to cite discredited behavioral research`] by Andrew Gelman, but I just see the paper involved a title "umbrella review" @lin2025role, so I search more about umbrella review.
+
+Umbrella review consider the evidence form multiple meta-analysis and system review studies on the same topic. 
+
+using @shea2017amstar(10K+ citation!) to assess the quality of included meta-analysis/system review studies, but they did not provide a way to aggregate the quality scores and just give a subjective criteria, the overall confidence is rating as "high", "moderate", "low", "critically low". Produce an conclusion such that "In the 60 meta-analyses/systematic reviews included on the treatment for type 2 diabetes, treatments A have 5 strong evidence to support its effectiveness, while treatment B has only 1 moderate evidence to support its effectiveness..."
+
+
 #bibliography("Master.bib")
