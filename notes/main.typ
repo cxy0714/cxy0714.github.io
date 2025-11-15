@@ -116,14 +116,10 @@ Statistician: That’s a lot of predictors for not many elections, we are going 
 Student: I also own an almanac.
 Statistician: Oh. Sorry, I can’t help you, your problem is impossible.")
 
-10 data points and  7 predictors, there are somthing to do, with a almanac, 1000+ predictors, the problem is impossible since the model is overparameterized and can not give any prediction power for future.
+With only 10 data points and 7 predictors, there is still some room for analysis. However, when using an almanac with over 1,000 predictors, the problem becomes unsolvable: the model is overparameterized and loses all predictive power for future observations.
 
-Thus, in tiny sample point, give too much useless predictors may indeed polute the data and make the problem impossible. 
+Therefore, in scenarios with extremely small sample sizes, an excess of irrelevant predictors can contaminate the data—rather than enriching it—and render meaningful analysis impossible.
 
-#question("Dense and lower high dimensional model")[
-  In dense high dimensional model, and number of samples $n$ is not so big,
-  $ EE[ Y | X] = rho ( X^top beta),  beta_j ~ O(1/p), j = 1,dots,p,  p/n arrow.r (0, infinity) $ 
-  If the model is misspecified, it just like the above example, may too many useless predictors and give a useless prediction. "Is there an example of such dense high dimensional model?]
 
 = On the undistinguishable or identification of statistical models
 
