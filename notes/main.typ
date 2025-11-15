@@ -124,7 +124,17 @@ But it now an empirical observation, can we theoretically explain this phenomeno
 
 #question("Theoretical explanation for overparameterized models with small sample size")[For sample siez $n = 200$, outcome $Y in RR$ and predictors $X in RR^(p)$, $p / n = c in (0, infinity)$, $Y$ is independent of $X$, under what condition? We will see that a machine learning algorithm can still predict $Y$ well from $X$?.]
 
-Well, this is just the global null hypothesis testing problem in high dimension generalized linear model.
+Well, this is just the global null hypothesis testing problem in high dimension models. We can use a nonparametric regression view to see this problem.
+
+$ Y = f(X) + epsilon, f in cal(H) $
+
+$ "H"_0 : f = 0 , "H"_1 : f eq.not 0 $
+
+Using a base function of $cal(H)$ and truncating at $k$ terms, it should be answered well as a hypothesis testing problem, the signal noise ratio, sparsity and the constant $p/n$ will give the detection boundary, also the local minimax rate.
+
+Well, that's asymptotic theory, there still is the question for tiny $n$, say $n = 10$ or $20$. Can we give any answer for this? Can we know anything useful form so tiny sample size? This case may be called #link("https://en.wikipedia.org/wiki/Knightian_uncertainty")[Knightian uncertainty]? 
+
+#quote("In economics, Knightian uncertainty is a lack of any quantifiable knowledge about some possible occurrence, as opposed to the presence of quantifiable risk (e.g., that in statistical noise or a parameter's confidence interval). The concept acknowledges some fundamental degree of ignorance, a limit to knowledge, and an essential unpredictability of future events.")
 
 = On the undistinguishable or identification of statistical models
 
