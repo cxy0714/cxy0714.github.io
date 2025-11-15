@@ -104,7 +104,7 @@ Issue of #emph("Observational Studies") titleed #link("https://en.wikipedia.org/
 
 == Fun example
 
-=== on overparameterized models
+=== On overparameterized models
 
 Form comment in #link("https://statmodeling.stat.columbia.edu/2025/11/14/how-is-it-that-this-problem-with-its-21-data-points-is-so-much-easier-to-handle-with-1-predictor-than-with-16-predictors/")[`Impossible statistical problems`] of Andrew Gelman by Phil, November 14, 2024.
 
@@ -120,6 +120,11 @@ With only 10 data points and 7 predictors, there is still some room for analysis
 
 Therefore, in scenarios with extremely small sample sizes, an excess of irrelevant predictors can contaminate the data—rather than enriching it—and render meaningful analysis impossible.
 
+But it now an empirical observation, can we theoretically explain this phenomenon? 
+
+#question("Theoretical explanation for overparameterized models with small sample size")[For sample siez $n = 200$, outcome $Y in RR$ and predictors $X in RR^(p)$, $p / n = c in (0, infinity)$, $Y$ is independent of $X$, under what condition? We will see that a machine learning algorithm can still predict $Y$ well from $X$?.]
+
+Well, this is just the global null hypothesis testing problem in high dimension generalized linear model.
 
 = On the undistinguishable or identification of statistical models
 
