@@ -102,6 +102,28 @@ Form the famous movie #link("https://en.wikipedia.org/wiki/Rebel_Without_a_Cause
 The special issue Volume 8, Issue 2, 2022
 Issue of #emph("Observational Studies") titleed #link("https://en.wikipedia.org/wiki/Rebel_with_a_Cause_(book)")[`Rebel With a Cause`]
 
+== Fun example
+
+=== on overparameterized models
+
+Form comment in #link("https://statmodeling.stat.columbia.edu/2025/11/14/how-is-it-that-this-problem-with-its-21-data-points-is-so-much-easier-to-handle-with-1-predictor-than-with-16-predictors/")[`Impossible statistical problems`] of Andrew Gelman by Phil, November 14, 2024.
+
+#quote("I’m imagining a political science student coming in for statistical advice:
+Student: I’m trying to predict the Democratic percentage of the two-party vote in U.S. Presidential elections, six months before Election Day. I want to use just the past ten elections because I think the political landscape was too different before that.
+Statistician: Sounds interesting. What predictive variables do you have?
+Student: I’ve got the Democratic share in the last election, and the change in unemployment rate over the past year and the past three years, and the inflation rate over the past year and the past three years, and the change in median income over the past year and past three years.
+Statistician: That’s a lot of predictors for not many elections, we are going to have some issues, but maybe we can use lasso or a regularization scheme or something. Let’s get started.
+Student: I also own an almanac.
+Statistician: Oh. Sorry, I can’t help you, your problem is impossible.")
+
+10 data points and  7 predictors, there are somthing to do, with a almanac, 1000+ predictors, the problem is impossible since the model is overparameterized and can not give any prediction power for future.
+
+Thus, in tiny sample point, give too much useless predictors may indeed polute the data and make the problem impossible. 
+
+#question("Dense and lower high dimensional model")[
+  In dense high dimensional model, and number of samples $n$ is not so big,
+  $ EE[ Y | X] = rho ( X^top beta),  beta_j ~ O(1/p), j = 1,dots,p,  p/n arrow.r (0, infinity) $ 
+  If the model is misspecified, it just like the above example, may too many useless predictors and give a useless prediction. "Is there an example of such dense high dimensional model?]
 
 = On the undistinguishable or identification of statistical models
 
