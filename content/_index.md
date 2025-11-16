@@ -26,6 +26,9 @@ Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics f
 
 # News
 
+- **2025年11月16日** 在「上海交大首届全国高层次博士生学术论坛启动」作口头报告  
+📍 上海，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/Meootw-2cfGiPAujS2P-4A)｜[幻灯片(PDF)](media/pdf/slides_251116.pdf)
+
 - **2025年11月02日** 在「第六届京津冀数学与统计学研讨会暨研究生学术论坛」作口头报告  
 📍 保定，河北，中国 🔗 [会议通知](media/pdf/251102_procedure.pdf)｜[幻灯片(PDF)](media/pdf/slides_251102.pdf)
 
