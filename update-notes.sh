@@ -59,7 +59,7 @@ DIFF=$(( NOW - LAST_PUSH ))
 
 if [ $DIFF -lt 600 ]; then
     echo "⏳ 上次 push 距离现在仅 $DIFF 秒 (<600 秒)，跳过 push。"
-    git add "$TYP_FILE" "$BIB_FILE" "$OUT_FILE"  # 添加 Bib 文件
+    git add "$TYP_FILE" "$BIB_FILE" "$OUT_FILE" "notes/media"  # 添加 Bib 文件和 notes/media
     git commit -m "$COMMIT_MSG" >/dev/null 2>&1
     exit 0
 fi
@@ -69,7 +69,7 @@ fi
 echo "📦 执行 git add/commit/push"
 
 # 添加所有相关文件，包括 Bib 文件
-git add "$TYP_FILE" "$BIB_FILE" "$OUT_FILE"
+git add "$TYP_FILE" "$BIB_FILE" "$OUT_FILE" "notes/media"
 
 git commit -m "$COMMIT_MSG"
 if [ $? -ne 0 ]; then
