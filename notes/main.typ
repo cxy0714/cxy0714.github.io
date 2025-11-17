@@ -102,6 +102,11 @@ Form the famous movie #link("https://en.wikipedia.org/wiki/Rebel_Without_a_Cause
 The special issue Volume 8, Issue 2, 2022
 Issue of #emph("Observational Studies") titleed #link("https://en.wikipedia.org/wiki/Rebel_with_a_Cause_(book)")[`Rebel With a Cause`]
 
+== Words
+
+#quote("Nonparametric identification and estimation of the ATE with non-binary IVs are more  involved.") in @dong2025marginal. #emph("involved") means complicated, difficult, complex.
+
+
 == Fun example
 
 === On overparameterized models
@@ -229,6 +234,44 @@ Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be ide
 
 - The lower bound and upper bound is not a differentiable functional, thus an assumption is invoked to make the bound functional differentiable and thus have inference function to faster convergence rate.
 
+@dong2025marginal
+
+- talk about the indenfication of ATE with continuous or multiple-category IVs with binary treatment. 
+ 
+
+- data are $(X,D,Z,Y)$
+#image("media/image.png")
+
+- The identification assumption:
+  + Stable Unit Treatment Value  Assumption (SUTVA) for potential outcomes: 
+    - Consistency and no interference between units: 
+    $ Y = Y (D) & = D Y(1) + (1-D) Y(0) \
+     D & = D(Z) $
+  + [IV relevance (version 1): $ Z cancel(perp) D | X$ almost surely. ] 
+  + IV independence : $ Z perp U | X$
+  + IV exclusion restriction : $Z perp Y | D, X$
+  + Unconfounderness/d-separation : $ (Z, D) perp Y(d) | X, U$ for $d = 0,1$
+
+As @levis2025covariate mentioned, under these assumptions, the ATE is not point identified, homogeneity assumptions are :
+  + Version 1, for binary $Z$ : Either $ EE[D | Z = 1, X , U] - EE[D | Z = 0, X , U] $ or $ EE[ Y(1) - Y(0) | X , U] $ does not depend on $U$.
+    -  #quote("Assumption 5′ rules out additive effect modification by U of the Z-D relationship or d-Y (d)  relationship within levels of X. A weaker alternative is the no unmeasured common  effect modifier assumption (Cui and Tchetgen Tchetgen, 2021, Hartwig et al., 2023), which  stipulates that no unmeasured confounder acts as a common effect modifier of both the  additive effect of the IV on the treatment and the additive treatment effect on the outcome:")
+  + Version 2, for binary $Z$, following equation holds almost surely:
+   $ "Cov"(EE(D| Z= 1, X, U)- EE(D|Z=0, X, U), EE(Y(1) - Y(0) | X,U) | X ) = 0  $
+  + Final version, for continuous or multiple-category $Z$, for any $z$ in the support of $Z$, following equation holds almost surely:
+   $ "Cov"(EE(D| Z= z, X, U)- EE(D| X, U), EE(Y(1) - Y(0) | X,U) | X ) = 0 $
+   for any $z, z'$ in the support of $Z$.
+
+
+- The real-data applicationis combine many genetic variants as weak IVs to a strong and continuous IV to solve the "obesity paradox" in oncology.
+  - #quote("Obesity is typically associated with poorer oncology outcomes. Paradoxically, however,  many observational studies have reported that non-small cell lung cancer (NSCLC) patients  with higher body mass index (BMI) experience lower mortality, a phenomenon often referred  to as the “obesity paradox” (Zhang et al., 2017).")
+
+- Using the ratio of conditional weighted average treatment effect, for multiple-category(CWATE) or conditional weighted average derivative effect (CWADE) to identify the ATE.
+
+  - Using semiparametric theory to provide the efficient influence function and build a triply robust estimator.
+
+  - The tangent space is strange such that second-order parametric submodels are needed to validate the efficient influence function.
+
+@chen2025identification
 
 == The equivalence between DAG and potential outcome framework
 
@@ -283,6 +326,11 @@ Formulation in @van1991differentiable
   - Peregrine @jamshidi2020peregrine
   - Automine @mawhirter2019automine
 
+== Occurrence
+
+=== Energy function in N particle system
+
+The interaction energy function in N particle system can be written as a U statistic.
 
 = Applications
 
