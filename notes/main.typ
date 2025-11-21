@@ -296,7 +296,12 @@ As @levis2025covariate mentioned, under these assumptions, the ATE is not point 
 
 == Regularity
 
+
 == Influence function
+
+=== The smoothness needed for influence function
+
+Formulation in @van1991differentiable
 
 === Numerical calcaulation of influence function
 @mukhinkernel
@@ -306,7 +311,9 @@ As @levis2025covariate mentioned, under these assumptions, the ATE is not point 
 === Tangent space
 S8 in @graham2024towards
 
-Formulation in @van1991differentiable
+==== Nuisance tangent space
+
+
 
 
 === Higher order influence function
