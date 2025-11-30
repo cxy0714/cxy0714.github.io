@@ -113,21 +113,25 @@ Issue of #emph("Observational Studies") titleed #link("https://en.wikipedia.org/
 
 Form comment in #link("https://statmodeling.stat.columbia.edu/2025/11/14/how-is-it-that-this-problem-with-its-21-data-points-is-so-much-easier-to-handle-with-1-predictor-than-with-16-predictors/")[`Impossible statistical problems`] of Andrew Gelman by Phil, November 14, 2024.
 
-#quote("I’m imagining a political science student coming in for statistical advice:
+#quote(
+  "I’m imagining a political science student coming in for statistical advice:
 Student: I’m trying to predict the Democratic percentage of the two-party vote in U.S. Presidential elections, six months before Election Day. I want to use just the past ten elections because I think the political landscape was too different before that.
 Statistician: Sounds interesting. What predictive variables do you have?
 Student: I’ve got the Democratic share in the last election, and the change in unemployment rate over the past year and the past three years, and the inflation rate over the past year and the past three years, and the change in median income over the past year and past three years.
 Statistician: That’s a lot of predictors for not many elections, we are going to have some issues, but maybe we can use lasso or a regularization scheme or something. Let’s get started.
 Student: I also own an almanac.
-Statistician: Oh. Sorry, I can’t help you, your problem is impossible.")
+Statistician: Oh. Sorry, I can’t help you, your problem is impossible.",
+)
 
 With only 10 data points and 7 predictors, there is still some room for analysis. However, when using an almanac with over 1,000 predictors, the problem becomes unsolvable: the model is overparameterized and loses all predictive power for future observations.
 
 Therefore, in scenarios with extremely small sample sizes, an excess of irrelevant predictors can contaminate the data—rather than enriching it—and render meaningful analysis impossible.
 
-But it now an empirical observation, can we theoretically explain this phenomenon? 
+But it now an empirical observation, can we theoretically explain this phenomenon?
 
-#question("Theoretical explanation for overparameterized models with small sample size")[For sample siez $n = 200$, outcome $Y in RR$ and predictors $X in RR^(p)$, $p / n = c in (0, infinity)$, $Y$ is independent of $X$, under what condition? We will see that a machine learning algorithm can still predict $Y$ well from $X$?.]
+#question(
+  "Theoretical explanation for overparameterized models with small sample size",
+)[For sample siez $n = 200$, outcome $Y in RR$ and predictors $X in RR^(p)$, $p / n = c in (0, infinity)$, $Y$ is independent of $X$, under what condition? We will see that a machine learning algorithm can still predict $Y$ well from $X$?.]
 
 Well, this is just the global null hypothesis testing problem in high dimension models. We can use a nonparametric regression view to see this problem.
 
@@ -137,9 +141,11 @@ $ "H"_0 : f = 0 , "H"_1 : f eq.not 0 $
 
 Using a base function of $cal(H)$ and truncating at $k$ terms, it should be answered well as a hypothesis testing problem, the signal noise ratio, sparsity and the constant $p/n$ will give the detection boundary, also the local minimax rate.
 
-Well, that's asymptotic theory, there still is the question for tiny $n$, say $n = 10$ or $20$. Can we give any answer for this? Can we know anything useful form so tiny sample size? This case may be called #link("https://en.wikipedia.org/wiki/Knightian_uncertainty")[Knightian uncertainty]? 
+Well, that's asymptotic theory, there still is the question for tiny $n$, say $n = 10$ or $20$. Can we give any answer for this? Can we know anything useful form so tiny sample size? This case may be called #link("https://en.wikipedia.org/wiki/Knightian_uncertainty")[Knightian uncertainty]?
 
-#quote("In economics, Knightian uncertainty is a lack of any quantifiable knowledge about some possible occurrence, as opposed to the presence of quantifiable risk (e.g., that in statistical noise or a parameter's confidence interval). The concept acknowledges some fundamental degree of ignorance, a limit to knowledge, and an essential unpredictability of future events.")
+#quote(
+  "In economics, Knightian uncertainty is a lack of any quantifiable knowledge about some possible occurrence, as opposed to the presence of quantifiable risk (e.g., that in statistical noise or a parameter's confidence interval). The concept acknowledges some fundamental degree of ignorance, a limit to knowledge, and an essential unpredictability of future events.",
+)
 
 = On the undistinguishable or identification of statistical models
 
@@ -236,34 +242,40 @@ Here $serif(Pr)(Y(1) = b | G = g)$ and $serif(Pr)( Y(0) = a | G = g)$ can be ide
 
 @dong2025marginal
 
-- talk about the indenfication of ATE with continuous or multiple-category IVs with binary treatment. 
- 
+- talk about the indenfication of ATE with continuous or multiple-category IVs with binary treatment.
+
 
 - data are $(X,D,Z,Y)$
 #image("media/image.png")
 
 - The identification assumption:
-  + Stable Unit Treatment Value  Assumption (SUTVA) for potential outcomes: 
-    - Consistency and no interference between units: 
-    $ Y = Y (D) & = D Y(1) + (1-D) Y(0) \
-     D & = D(Z) $
-  + IV relevance (version 1): $ Z cancel(perp) D | X$ almost surely. 
-  + IV independence : $ Z perp U | X$
+  + Stable Unit Treatment Value  Assumption (SUTVA) for potential outcomes:
+    - Consistency and no interference between units:
+    $
+      Y = Y (D) & = D Y(1) + (1-D) Y(0) \
+              D & = D(Z)
+    $
+  + IV relevance (version 1): $Z cancel(perp) D | X$ almost surely.
+  + IV independence : $Z perp U | X$
   + IV exclusion restriction : $Z perp Y | D, X$
-  + Unconfounderness/d-separation : $ (Z, D) perp Y(d) | X, U$ for $d = 0,1$
+  + Unconfounderness/d-separation : $(Z, D) perp Y(d) | X, U$ for $d = 0,1$
 
 As @levis2025covariate mentioned, under these assumptions, the ATE is not point identified, homogeneity assumptions are :
-  + Version 1, for binary $Z$ : Either $ EE[D | Z = 1, X , U] - EE[D | Z = 0, X , U] $ or $ EE[ Y(1) - Y(0) | X , U] $ does not depend on $U$.
-    -  #quote([Assumption 5′ rules out additive effect modification by $U$ of the $Z-D$ relationship or $d-Y (d)$  relationship within levels of $X$. A weaker alternative is the no unmeasured common  effect modifier assumption (Cui and Tchetgen Tchetgen, 2021, Hartwig et al., 2023), which  stipulates that no unmeasured confounder acts as a common effect modifier of both the  additive effect of the IV on the treatment and the additive treatment effect on the outcome:])
-  + Version 2, weaker alternative for binary $Z$, following equation holds almost surely:
-   $ "Cov"(EE(D| Z= 1, X, U)- EE(D|Z=0, X, U), EE(Y(1) - Y(0) | X,U) | X ) = 0  $
-  + Final version, for continuous or multiple-category $Z$, for any $z$ in the support of $Z$, following equation holds almost surely:
-   $ "Cov"(EE(D| Z= z, X, U)- EE(D| X, U), EE(Y(1) - Y(0) | X,U) | X ) = 0 $
-   for any $z, z'$ in the support of $Z$.
++ Version 1, for binary $Z$ : Either $ EE[D | Z = 1, X , U] - EE[D | Z = 0, X , U] $ or $ EE[ Y(1) - Y(0) | X , U] $ does not depend on $U$.
+  - #quote(
+      [Assumption 5′ rules out additive effect modification by $U$ of the $Z-D$ relationship or $d-Y (d)$  relationship within levels of $X$. A weaker alternative is the no unmeasured common  effect modifier assumption (Cui and Tchetgen Tchetgen, 2021, Hartwig et al., 2023), which  stipulates that no unmeasured confounder acts as a common effect modifier of both the  additive effect of the IV on the treatment and the additive treatment effect on the outcome:],
+    )
++ Version 2, weaker alternative for binary $Z$, following equation holds almost surely:
+  $ "Cov"(EE(D| Z= 1, X, U)- EE(D|Z=0, X, U), EE(Y(1) - Y(0) | X, U) | X ) = 0 $
++ Final version, for continuous or multiple-category $Z$, for any $z$ in the support of $Z$, following equation holds almost surely:
+  $ "Cov"(EE(D| Z= z, X, U)- EE(D| X, U), EE(Y(1) - Y(0) | X, U) | X ) = 0 $
+  for any $z, z'$ in the support of $Z$.
 
 
 - The real-data applicationis combine many genetic variants as weak IVs to a strong and continuous IV to solve the "obesity paradox" in oncology.
-  - #quote("Obesity is typically associated with poorer oncology outcomes. Paradoxically, however,  many observational studies have reported that non-small cell lung cancer (NSCLC) patients  with higher body mass index (BMI) experience lower mortality, a phenomenon often referred  to as the “obesity paradox” (Zhang et al., 2017).")
+  - #quote(
+      "Obesity is typically associated with poorer oncology outcomes. Paradoxically, however,  many observational studies have reported that non-small cell lung cancer (NSCLC) patients  with higher body mass index (BMI) experience lower mortality, a phenomenon often referred  to as the “obesity paradox” (Zhang et al., 2017).",
+    )
 
 - Using the ratio of conditional weighted average treatment effect, for multiple-category (CWATE) or conditional weighted average derivative effect (CWADE) to identify the ATE.
 
@@ -274,6 +286,8 @@ As @levis2025covariate mentioned, under these assumptions, the ATE is not point 
 @chen2025identification
 
 == The equivalence between DAG and potential outcome framework
+
+@wang2025causal
 
 === The equivalence between nonparametric structural equation model(NPSEM) and potential outcome framework
 
