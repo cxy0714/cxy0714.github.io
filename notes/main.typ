@@ -328,7 +328,21 @@ S8 in @graham2024towards
 ==== Nuisance tangent space
 
 
+== Neyman orthogonality
 
+@wang2024multi used a little different neyman orthogonality. Their problem can be summarized by following:
+
+When the model is $X ~ PP_( theta, overline(eta))$ where $overline(eta)$ is the (nuisance) parameter and $theta$ is the finite dimensional parameter of interest and $ theta = R( overline(eta) ) = limits("max")_(eta) R( eta )$ where $ R(eta) = EE_(X)L(X;eta)$ and $L$ is a loss function.
+
+$ theta =   EE_(X) L(X; overline(eta) )  = limits("max")_(eta) EE_(X) L(X; eta) $
+
+Then $ psi (X;eta) :=  L(X;eta)$ naturally satisfies that the Gâteaux derivative of $eta$ is always zero in $overline(eta)$:
+
+$ & frac(partial EE_(X) [psi (X; eta_0 + t(eta - eta_0))] , partial t) |_(t = 0) =0, forall eta. \ $
+
+The parameterization need to check, if in above setting, $theta$ is totally determined by $overline(eta)$.
+
+Their paper mentioned the indenfication of $theta$, need to check.
 
 === Higher order influence function
 
@@ -388,4 +402,22 @@ Their another work is consider the inference after variable selection, using the
 )
 
 e-valuede 的#link("https://sas.uwaterloo.ca/~wang/")[王若度]（U of Waterloo，  Chair profess） 曾经是星际争霸职业选手。
+
+
+= Machine Learning
+
+== Why named black box model?
+
+#link("https://slds-lmu.github.io/iml_methods_limitations/introduction.html")[Introduction of #emph("Limitations of ML Interpretability")] give a good review to ML Interpretability. Black box model is because the model is based algorithm not as generalized linear model have a simple representation. As @breiman2001statistical saying, two cultures of modeling.
+
+== Varibale importance
+
+=== Leave-One-Covariate-Out(LOCO) 
+
+@lei2018distribution give a measure named loco:
+$ I_x = l( y, f(x,z) ) - l( y, f(z) ) $
+to measure the importance of variable $x$ by comparing the loss when including $x$ versus excluding $x$.
+
+@wang2024multi proposed an extension of LOCO under multiple source data and using semiparametric theory to provide the inference of their measure.
+
 #bibliography("Master.bib")
