@@ -320,6 +320,14 @@ Formulation in @van1991differentiable
 === Numerical calcaulation of influence function
 @mukhinkernel
 @jordan2022empirical
+@agrawal2024automated
+
+
+Automatic differentiation is remarkable! By building in all basic differentiable operations such as addition, multiplication, sine, and exponential functions, it calculates every derivative value and uses the chain rule to combine them, yielding derivatives equivalent to those computed by exact formulas.
+@paszke2017automatic @baydin2018automatic
+
+A conversation with #link("https://chat.qwen.ai/s/91761ba1-a011-4804-8f3d-38eadcc90472?fev=0.1.10")[Qwen]. The delta method used to estimate the variance of coefficients in our work @chen2024method requires computing numerical derivatives of a complex mapping involving nonlinear function solving and integration. This can be made differentiable using "AD"-friendly functions in the implementation. Therefore, #link("https://github.com/cxy0714/Method-of-Moments-Inference-for-GLMs/blob/main/demo_glm_MoM/function_of_glm_mom.R")[our R code] could be replaced with more powerful Python code.
+
 === Von mise representation
 
 === Tangent space
@@ -332,13 +340,13 @@ S8 in @graham2024towards
 
 @wang2024multi used a little different neyman orthogonality. Their problem can be summarized by following:
 
-When the model is $X ~ PP_( theta, overline(eta))$ where $overline(eta)$ is the (nuisance) parameter and $theta$ is the finite dimensional parameter of interest and $ theta = R( overline(eta) ) = limits("max")_(eta) R( eta )$ where $ R(eta) = EE_(X)L(X;eta)$ and $L$ is a loss function.
+When the model is $X ~ PP_( theta, overline(eta))$ where $overline(eta)$ is the (nuisance) parameter and $theta$ is the finite dimensional parameter of interest and $theta = R( overline(eta) ) = limits("max")_(eta) R( eta )$ where $R(eta) = EE_(X)L(X;eta)$ and $L$ is a loss function.
 
-$ theta =   EE_(X) L(X; overline(eta) )  = limits("max")_(eta) EE_(X) L(X; eta) $
+$ theta = EE_(X) L(X; overline(eta) ) = limits("max")_(eta) EE_(X) L(X; eta) $
 
-Then $ psi (X;eta) :=  L(X;eta)$ naturally satisfies that the Gâteaux derivative of $eta$ is always zero in $overline(eta)$:
+Then $psi (X;eta) := L(X;eta)$ naturally satisfies that the Gâteaux derivative of $eta$ is always zero in $overline(eta)$:
 
-$ & frac(partial EE_(X) [psi (X; eta_0 + t(eta - eta_0))] , partial t) |_(t = 0) =0, forall eta. \ $
+$ & frac(partial EE_(X) [psi (X; eta_0 + t(eta - eta_0))], partial t) |_(t = 0) =0, forall eta. \ $
 
 The parameterization need to check, if in above setting, $theta$ is totally determined by $overline(eta)$.
 
@@ -412,7 +420,7 @@ e-valuede 的#link("https://sas.uwaterloo.ca/~wang/")[王若度]（U of Waterloo
 
 == Varibale importance
 
-=== Leave-One-Covariate-Out(LOCO) 
+=== Leave-One-Covariate-Out(LOCO)
 
 @lei2018distribution give a measure named loco:
 $ I_x = l( y, f(x,z) ) - l( y, f(z) ) $
