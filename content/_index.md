@@ -27,7 +27,7 @@ Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics f
 # News
 
 - **2026年01月02日** 在「2026年RMTA与SNAB联合研讨会」作海报展示  
-📍 南京，江苏，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/XDNOK-FvAGxzmZvvt2lC7A)｜[幻灯片(PDF)](media/pdf/poster_250409_ghent.pdf)
+📍 南京，江苏，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/XDNOK-FvAGxzmZvvt2lC7A)｜[幻灯片(PDF)](media/pdf/poster_260102.pdf)
 
 - **2025年11月16日** 在「上海交大首届全国高层次博士生学术论坛」作口头报告  
 📍 上海，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/Meootw-2cfGiPAujS2P-4A)｜[幻灯片(PDF)](media/pdf/slides_251116.pdf)
