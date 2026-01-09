@@ -428,4 +428,36 @@ to measure the importance of variable $x$ by comparing the loss when including $
 
 @wang2024multi proposed an extension of LOCO under multiple source data and using semiparametric theory to provide the inference of their measure.
 
+
+
+== Ensemble learning
+
+Ensemble learning, as the name suggests, combines multiple basde models to improve prediction performance. Common ensemble learning methods include bagging, boosting, and stacking.
+
+=== Bagging
+BoostrapAggregating (bagging) is proposed by Leo Breiman @breiman1996bagging (4 w + citations). The key idea is to generate multiple boostrap samples from the original data and train the base model on each boostrap sample then aggragate the predictions from all models, such as by averaging for regression or majority voting for classification.
+
+==== Theory properties of bagging
+
+- @breiman1996bagging Bagging can reduce the variance of unstable base models.
+- Peter Bühlmann and Bin Yu @buhlmann2002analyzing (1.2 k + citations) give some convergence rate analysis for bagging.
+- In the 2000s, many works on the theoretical understanding of bagging, seems no more work needed now.
+
+==== Random forest
+
+- Leo Breiman @breiman2001random (17 w + citations) proposed random forest, an ensemble learning method that builds multiple decision trees and merges their results to improve accuracy.
+
+==== Causal forest
+
+- @athey2016recursive(2.5 k + citations) proposed causal tree to estimate heterogeneous treatment effects namely the conditional average treatment effect (CATE) by extending decision tree, then @wager2018estimation(4.3 k + citations) using random forest to improve the estimation accuracy and provide asymptotic normality for inference.
+
+- @cattaneo2025honest establishes an inconsistency lower bound on the point wise convergence rate of causal tree, and challenges the $alpha$-regularity condition (each split leaves at least a fraction $alpha$ of available samples on each side) needed to establish the convergence rate in @wager2018estimation.
+
+=== Boosting
+
+- XGBoost 
+
+=== Stacking
+
+
 #bibliography("Master.bib")
