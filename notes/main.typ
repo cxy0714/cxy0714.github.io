@@ -204,6 +204,10 @@ The potential outcome model is an example of latent structure model. The observe
 
 === G-formula
 
+=== ATT ATU
+
+
+
 === Joint distribution of potential outcomes
 
 @wu2025promises consider a case with multiple randomized controlled trials(RCTs), where data are $(G,A,Y)$, $G$ is the indicator of RCTs, $A$ is the treatment, $Y$ is the outcome.
