@@ -206,8 +206,40 @@ The potential outcome model is an example of latent structure model. The observe
 
 === ATT ATU
 
+=== Mediation
+
+@xu2022deepmed, @tchetgen2012semiparametric
+(X,D,M,Y), $D$ and $Y$ are binary, $X in bb(R)^(p)$ is high-dimensional covariates, $M in bb(R)$ is mediator, estimating the natural direct effect(NDE) and natural indirect effect(NIE) can be reduced to estimate  $theta(d,d') = EE[ Y(d, M(d')] $ for $d, d' in {0,1}$.
+
+The influence function of $theta(d,d')$ is:
+
+$ serif("EIF")_(theta(d,d')) & = Phi(d,d') - theta(d,d') \
+ Phi(d,d')  & = underbrace(frac( bb(1){ D = d} f(M|X, d'), a(d|X) f(M|X,d)) (Y - mu(X,d,M)), A(d,d'))\
+ & + underbrace((1 - frac(bb(1){D = d'}, a(d' | X) ) ) integral_(m in cal(M)) mu(X,d,m) f(m|X,d') dif m, B(d,d')) \
+ & + underbrace(frac(bb(1)(D = d'), a(d'|X) ) mu(X,d,M), C(d,d')). $
 
 
+Let’s verify that $EE[ serif("EIF")_(theta_(d,d')) ] = 0$.
+
+$ EE[A(d,d') ] & = EE[ \#(X,M) bb(1){D = d}(Y - mu(X,d,M) )] \
+& = EE[EE[ \#(X,M) bb(1){D = d}(Y - mu(X,d,M) )| X, D = d, M]] \
+& = EE[\#(X,M)  EE[ bb(1){D = d}(Y - mu(X,d,M) )| X, D = d, M]] \
+& = EE[\#(X,M) (integral_(D) bb(1){D = d} integral_(Y) Y frac(p(X,D,M,Y), p(X,D,M)) dif D dif Y - mu(X,d,M)) ] \
+& = EE[\#(X,M) dot 0] \
+& = 0 . $
+
+$ EE[B(d,d') ] &= EE[ ( 1 - frac(bb(1){ D= d'}, a(d' | X))) \#(X)] \
+& = EE[ ( 1 - frac(bb(1){ D= d'}, a(d' | X))) \#(X) | X] \
+& = EE[\#(X) EE[ ( 1 - frac(bb(1){ D= d'}, a(d' | X)))  | X] ] \
+& = EE[\#(X) (1 - frac(1, a(d' | X)) integral_(D) bb(1){ D= d'} frac(p(D,X), p(X)))] \
+& = EE[\#(X) (1 - frac(a(d' | X), a(d' | X)) )] \
+& = 0. $
+
+$ EE[C(d, d')] & = EE[ frac(bb(1)(D = d'), a(d'|X) ) mu(X,d,M) ] \
+& = integral_(X,D,M) frac(bb(1)(D = d'), a(d'|X) ) mu(X,d,M) p(X,D,M) dif (X,D,M) \
+& = integral_(X,M) frac(1, a(d'|X) ) mu(X,d,M) p(X,d',M) dif (X,M) \ 
+& = integral_(X,M) mu(X,d,M) f(M|X,d')p(X) dif (X,M) \
+& = theta(d, d'). $
 === Joint distribution of potential outcomes
 
 @wu2025promises consider a case with multiple randomized controlled trials(RCTs), where data are $(G,A,Y)$, $G$ is the indicator of RCTs, $A$ is the treatment, $Y$ is the outcome.
