@@ -219,7 +219,7 @@ $ serif("EIF")_(theta(d,d')) & = Phi(d,d') - theta(d,d') \
  & + underbrace(frac(bb(1)(D = d'), a(d'|X) ) mu(X,d,M), C(d,d')). $
 
 
-Let’s verify that $EE[ serif("EIF")_(theta_(d,d')) ] = 0$.
+Let us verify that $bb(E)[ serif("EIF")_(theta(d,d')) ] = 0$, here $\#( dot )$ means the function unimportant in the calcaulation that only depends on the variable in the bracket.
 
 $ EE[A(d,d') ] & = EE[ \#(X,M) bb(1){D = d}(Y - mu(X,d,M) )] \
 & = EE[EE[ \#(X,M) bb(1){D = d}(Y - mu(X,d,M) )| X, D = d, M]] \
@@ -393,6 +393,11 @@ Their paper mentioned the indenfication of $theta$, need to check.
 = U statistics
 
 == Computation
+
+== The lower bound of the complexity of computing U statistics
+
+=== Testing statistics
+
 
 === Motif counts
 
