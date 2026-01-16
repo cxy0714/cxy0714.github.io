@@ -240,6 +240,18 @@ $ EE[C(d, d')] & = EE[ frac(bb(1)(D = d'), a(d'|X) ) mu(X,d,M) ] \
 & = integral_(X,M) frac(1, a(d'|X) ) mu(X,d,M) p(X,d',M) dif (X,M) \ 
 & = integral_(X,M) mu(X,d,M) f(M|X,d')p(X) dif (X,M) \
 & = theta(d, d'). $
+
+Let $Q_(P,1 - gamma)$ be the $(1 - gamma)$-quantile risk function under distribution $P$, functional $theta(P)$ and estimator $hat(theta)$,
+
+$ Q_(P,1 - gamma)( | hat(theta) - theta(P) |^2 ) = inf_(c) { c : P( | hat(theta) - theta(P) |^2 <= c ) >= 1 - gamma } . $
+
+To show the lower bound under this risk function, we have the following sufficient condition:
+
+$ & P(| hat(theta) - theta(P) |^2 >= s^2) >= 1 - r \
+  arrow.r.double.long & P(| hat(theta) - theta(P) |^2 < s^2) < r \
+  arrow.r.double.long & forall epsilon: 0 < epsilon < s^2, P(| hat(theta) - theta(P) |^2 < s^2 - epsilon ) < r  \
+  arrow.r.double.long & forall epsilon: 0 < epsilon < s^2, s^2 - epsilon in.not { c:|P( hat(theta) - theta(P)|^2 ) <= c >= 1 - gamma } \
+  arrow.r.double.long & Q_(P,1 - gamma)( | hat(theta) - theta(P) |^2 ) >= s^2. $
 === Joint distribution of potential outcomes
 
 @wu2025promises consider a case with multiple randomized controlled trials(RCTs), where data are $(G,A,Y)$, $G$ is the indicator of RCTs, $A$ is the treatment, $Y$ is the outcome.
