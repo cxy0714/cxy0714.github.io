@@ -11,7 +11,7 @@ My research interests focus on causal inference and mathematical statistics, inc
 
 Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics in 2023 from the [School of Mathematical Sciences](https://maths.hust.edu.cn/), [Huazhong University of Science and Technology (HUST, 华中科技大学)](http://www.hust.edu.cn/).
 
-⚡ Fun fact: "0714" is the official subject code for Statistics in the Chinese Ministry of Education’s classification system—“07” represents Science, and “0701” represents Mathematics. ([source](https://www.cdgdc.edu.cn/dslxkpgjggb/))
+⚡ Fun fact: "0714" in my ID "cxy0714" is the official subject code for Statistics in the Chinese Ministry of Education’s classification system—“07” represents Science, and “0701” represents Mathematics. ([source](https://www.cdgdc.edu.cn/dslxkpgjggb/))
 
 
 # Buttons
