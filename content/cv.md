@@ -1,4 +1,4 @@
-## [Newest CV](/media/pdf/XingyuChen_CV.pdf) (PDF, English, Updated 2025.09)
+## [Newest CV](/media/pdf/XingyuChen_CV.pdf) (PDF, English)
 
 A more chatty version in Chinese is listed below:
 
