@@ -20,7 +20,7 @@
     (name: "Xingyu Chen", affiliation-id: 1, orcid: "https://orcid.org/0009-0008-0823-4406"),
   ),
   affiliations: (
-    (id: 1, name: "School of Mathematical Sciencei, Shanghai Jiao Tong University, China"),
+    (id: 1, name: "School of Mathematical Sciences, Shanghai Jiao Tong University, China"),
   ),
   // affiliations: (
   //   (id: 1, name: ""),
