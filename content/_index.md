@@ -29,6 +29,9 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 # News
 
+- **January 30, 2026** — We released the R interface **[`ustats-R`](https://github.com/cxy0714/U-Statistics-R)** for our paper *“On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly”* ([arXiv:2508.12627](https://arxiv.org/abs/2508.12627)), extending our existing Python package **[`u-stats`](https://libraries.io/pypi/u-stats)**.
+
+
 - **2026年01月02日** 在「2026年RMTA与SNAB联合研讨会」作海报展示  
 📍 南京，江苏，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/XDNOK-FvAGxzmZvvt2lC7A)｜[幻灯片(PDF)](media/pdf/poster_260102.pdf)
 
@@ -45,6 +48,7 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 📍 上海，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/sG7wi3bYeIVD0CvmP3vHfA)｜[幻灯片(PDF)](media/pdf/computing_U_slides_250920.pdf)
 
 - **August 19, 2025** Our new paper "*On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly*" has been released on [arXiv:2508.12627](https://arxiv.org/abs/2508.12627), accompanied by the Python package *[u-stats](https://libraries.io/pypi/u-stats)*!
+
 - **2025年5月8日** 在「2025年上海交通大学AI for Math学术论坛」的博士生论坛作口头报告  
 📍 上海，中国 🔗 [会议通知](https://math.sjtu.edu.cn/conference/upload/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C20250507.pdf)｜[幻灯片(PDF)](media/pdf/slides_250508_sjtu.pdf)
 - **2025年4月19日** 在「青年统计学家协会 2025 年年会暨第三届统计理论及其应用国际研讨会」的博士生论坛作口头报告  
