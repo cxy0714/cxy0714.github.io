@@ -25,7 +25,8 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 - <i class="fab fa-github"></i> [GitHub: cxy0714](https://github.com/cxy0714)
 - <i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ&hl=zh-CN)
 - <i class="fab fa-orcid"></i> [ORCID](https://orcid.org/0009-0008-0823-4406)
-- <i class="fas fa-file-pdf"></i> [CV](/media/pdf/XingyuChen_CV.pdf)  
+- <i class="fas fa-file-pdf"></i> [CV](/media/pdf/XingyuChen_CV.pdf)
+- <i class="ai ai-arxiv"></i> [arXiv](https://arxiv.org/a/chen_x_14.html)
 
 # News
 
