@@ -30,6 +30,8 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 # News
 
+- **February 1, 2026** — We released the R interface **[`HOIF`](https://github.com/cxy0714/HOIF)** for the implementation of Higher-Order Influence Function (HOIF) estimators for the Average Treatment Effect (ATE).
+
 - **January 30, 2026** — We released the R interface **[`ustats-R`](https://github.com/cxy0714/U-Statistics-R)** for our paper *“On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly”* ([arXiv:2508.12627](https://arxiv.org/abs/2508.12627)), extending our existing Python package **[`u-stats-Python`](https://libraries.io/pypi/u-stats)**.
 
 
