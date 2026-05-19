@@ -50,6 +50,18 @@ params:
     height: 50
     url: favicon.ico
     width: 50
+  # giscus 评论配置：到 https://giscus.app 生成后把下面的占位值替换掉
+  giscus:
+    repo: "cxy0714/cxy0714.github.io"
+    repoId: "REPLACE_WITH_REPO_ID"
+    category: "Announcements"
+    categoryId: "REPLACE_WITH_CATEGORY_ID"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    inputPosition: "bottom"
+    theme: "light"
+    lang: "zh-CN"
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:

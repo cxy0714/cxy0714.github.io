@@ -1,0 +1,21 @@
+{{ if and .Site.Params.giscus.repo (not .Params.disable_comments) }}
+<section id="comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="{{ .Site.Params.giscus.repo }}"
+          data-repo-id="{{ .Site.Params.giscus.repoId }}"
+          data-category="{{ .Site.Params.giscus.category }}"
+          data-category-id="{{ .Site.Params.giscus.categoryId }}"
+          data-mapping="{{ .Site.Params.giscus.mapping | default "pathname" }}"
+          data-strict="{{ .Site.Params.giscus.strict | default "0" }}"
+          data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled | default "1" }}"
+          data-emit-metadata="0"
+          data-input-position="{{ .Site.Params.giscus.inputPosition | default "bottom" }}"
+          data-theme="{{ .Site.Params.giscus.theme | default "light" }}"
+          data-lang="{{ .Site.Params.giscus.lang | default "zh-CN" }}"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <noscript>请启用 JavaScript 以查看 <a href="https://giscus.app">giscus</a> 评论。</noscript>
+</section>
+{{ end }}
