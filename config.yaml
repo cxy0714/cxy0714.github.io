@@ -28,6 +28,9 @@ menu:
     - name: "GitHub"
       url: "https://github.com/cxy0714"
       weight: 5
+    - name: "Research News"
+      url: "https://cxy0714.github.io/research-news/"
+      weight: 6
 
 
 
