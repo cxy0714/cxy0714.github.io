@@ -7,7 +7,7 @@ date: "2022-08-29T21:48:51-07:00"
 
 I'm **Xingyu Chen (陈星宇)**, a third-year Ph.D. candidate in Statistics at the [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index/), [Shanghai Jiao Tong University (SJTU, 上海交通大学)](https://www.sjtu.edu.cn/).  I’m fortunate to be advised by [Professor **Lin Liu (刘林)**](https://linliu-stats.github.io/).
 
-My research interests focus on causal inference and mathematical statistics, including high-dimensional statistics, higher-order U-statistics, statistical computing, semiparametric and nonparametric theory, inverse problems, and efficiency theory.
+My research interests focus on causal inference and mathematical statistics, including high-dimensional statistics, higher-order U-statistics, statistical computing, statistical-computational tradeoff, semiparametric and nonparametric theory, inverse problems, and efficiency theory.
 
 Before joining SJTU, I received my B.S. in Mathematics and Applied Mathematics in 2023 from the [School of Mathematical and Statistics](https://maths.hust.edu.cn/), [Huazhong University of Science and Technology (HUST, 华中科技大学)](http://www.hust.edu.cn/).
 
