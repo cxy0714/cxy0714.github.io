@@ -67,5 +67,15 @@ markup:
   goldmark:
     renderer:
       unsafe: yes
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ['$$', '$$']
+            - ['\[', '\]']
+          inline:
+            - ['$', '$']
+            - ['\(', '\)']
   highlight:
     codeFences: no
