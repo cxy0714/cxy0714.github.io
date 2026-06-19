@@ -30,7 +30,7 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 # News
 
-- **June 18, 2026** — Our R package **[`ustats`](https://cran.r-project.org/package=ustats)** is now available on **[CRAN](https://cran.r-project.org/web/packages/ustats/index.html)**! It implements our paper *“On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly”* ([arXiv:2508.12627](https://arxiv.org/abs/2508.12627)), extending our existing Python package **[`u-stats-Python`](https://libraries.io/pypi/u-stats)**.
+- **June 18, 2026** — Our R package **[`ustats`](https://github.com/cxy0714/U-Statistics-R)** is now available on **[CRAN](https://cran.r-project.org/web/packages/ustats/index.html)**! It implements our paper *“On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly”* ([arXiv:2508.12627](https://arxiv.org/abs/2508.12627)), extending our existing Python package **[`u-stats-Python`](https://libraries.io/pypi/u-stats)**.
 
 - **2026年05月23日** 在「华中科技大学数学与统计学院第二届科技学术月之博士论坛」作口头报告  
 📍 武汉，湖北，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/-glEPtIxW85xbIaOAiCrMg)｜[幻灯片(PDF)](media/pdf/slides_mom_glm_2605.pdf)
