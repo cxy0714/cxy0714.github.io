@@ -30,6 +30,8 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 # News
 
+- **June 24, 2026** — Our R package **[`HOIF`](https://github.com/cxy0714/HOIF)** is now available on **[CRAN](https://CRAN.R-project.org/package=HOIF)**! It implements Higher-Order Influence Function (HOIF) estimators for the Average Treatment Effect (ATE).
+
 - **June 18, 2026** — Our R package **[`ustats`](https://github.com/cxy0714/U-Statistics-R)** is now available on **[CRAN](https://CRAN.R-project.org/package=ustats)**! It implements our paper *“On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly”* ([arXiv:2508.12627](https://arxiv.org/abs/2508.12627)), extending our existing Python package **[`u-stats-Python`](https://libraries.io/pypi/u-stats)**.
 
 - **2026年05月23日** 在「华中科技大学数学与统计学院第二届科技学术月之博士论坛」作口头报告  
