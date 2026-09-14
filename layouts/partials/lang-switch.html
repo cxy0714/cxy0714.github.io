@@ -1,0 +1,20 @@
+{{/* 语言切换器：作为主导航 <ul> 里的最后一个 li
+     - 本页有对应译文时，链接到该译文页面
+     - 没有译文时，退回到另一语言的首页
+*/}}
+{{ $cur := . }}
+{{ if .IsTranslated }}
+  {{ range .AllTranslations }}
+    {{ if eq .Language.Lang $cur.Language.Lang }}
+    <li class="lang-switch"><span class="lang-current">{{ .Language.LanguageName }}</span></li>
+    {{ else }}
+    <li class="lang-switch"><a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a></li>
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ range $cur.Sites }}
+    {{ if ne .Language.Lang $cur.Language.Lang }}
+    <li class="lang-switch"><a href="{{ .Home.RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a></li>
+    {{ end }}
+  {{ end }}
+{{ end }}

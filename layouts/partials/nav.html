@@ -1,0 +1,22 @@
+<nav class="nav">
+  <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo">
+    <img src="{{ print "images/" .Site.Params.logo.url | relURL }}"
+         width="{{ .Site.Params.logo.width }}"
+         height="{{ .Site.Params.logo.height }}"
+         alt="{{ .Site.Params.logo.alt }}">
+  </a>
+
+  <ul class="nav-links">
+    {{/* 菜单 URL 走 relLangURL，这样英文站点会指向 /en/...；
+         外链（http/https/mailto）原样输出 */}}
+    {{ range .Site.Menus.main }}
+    {{ $url := .URL }}
+    {{ if not (or (hasPrefix $url "http://") (hasPrefix $url "https://") (hasPrefix $url "mailto:")) }}
+      {{ $url = $url | relLangURL }}
+    {{ end }}
+    <li><a href="{{ $url }}">{{ .Name }}</a></li>
+    {{ end }}
+
+    {{ partial "lang-switch.html" . }}
+  </ul>
+</nav>

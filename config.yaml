@@ -1,43 +1,112 @@
 baseurl: /
-languageCode: en-US
 title: Xingyu Chen (陈星宇)
 theme: hugo-lithium
+
+# ── 多语言设置 ──────────────────────────────────────────────
+# 中文为默认语言，保持挂在根路径（/），现有 URL 完全不变；
+# 英文版挂在 /en/ 下。两语言共用同一个 content/ 目录，
+# 用「同名 + 语言后缀」配对，例如：
+#   content/post/example.zh.md  <->  content/post/example.en.md
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: false
+
 ignoreFiles:
   - \.Rmd$
   - \.Rmarkdown$
   - _cache$
 permalinks:
   post: /:year/:month/:day/:slug/
-menu:
-  main:
-    - name: "About"
-      url: "/"
-      weight: 0
-    - name: "Blog"
-      url: "/post/"
-      weight: 1
-    - name: "CV"
-      url: "/cv/"
-      weight: 2
-    - name: "Research"
-      url: "/research/"
-      weight: 3
-    - name: "Links"
-      url: "/links/"
-      weight: 4
-    - name: "GitHub"
-      url: "https://github.com/cxy0714"
-      weight: 5
-    - name: "Research News"
-      url: "https://cxy0714.github.io/research-news/"
-      weight: 6
 
+languages:
+  zh:
+    languageName: 中文
+    languageCode: zh-CN
+    weight: 1
+    title: 陈星宇 (Xingyu Chen)
+    params:
+      description: "陈星宇的个人主页与博客：统计、因果推断、数学与随笔。"
+      giscus:
+        repo: "cxy0714/cxy0714.github.io"
+        repoId: "R_kgDONJyIJQ"
+        category: "Announcements"
+        categoryId: "DIC_kwDONJyIJc4C9ZgE"
+        mapping: "pathname"
+        strict: "0"
+        reactionsEnabled: "1"
+        inputPosition: "bottom"
+        theme: "preferred_color_scheme"
+        lang: "zh-CN"
+    menu:
+      main:
+        - name: 关于
+          url: "/"
+          weight: 1
+        - name: 博客
+          url: "/post/"
+          weight: 2
+        - name: 简历
+          url: "/cv/"
+          weight: 3
+        - name: 研究
+          url: "/research/"
+          weight: 4
+        - name: 链接
+          url: "/links/"
+          weight: 5
+        - name: GitHub
+          url: "https://github.com/cxy0714"
+          weight: 6
+        - name: 研究动态
+          url: "https://cxy0714.github.io/research-news/"
+          weight: 7
 
+  en:
+    languageName: English
+    languageCode: en-US
+    weight: 2
+    title: Xingyu Chen
+    params:
+      description: "Personal site and blog of Xingyu Chen: statistics, causal inference, mathematics, and essays."
+      giscus:
+        repo: "cxy0714/cxy0714.github.io"
+        repoId: "R_kgDONJyIJQ"
+        category: "Announcements"
+        categoryId: "DIC_kwDONJyIJc4C9ZgE"
+        mapping: "pathname"
+        strict: "0"
+        reactionsEnabled: "1"
+        inputPosition: "bottom"
+        theme: "preferred_color_scheme"
+        lang: "en"
+    menu:
+      main:
+        - name: About
+          url: "/"
+          weight: 1
+        - name: Blog
+          url: "/post/"
+          weight: 2
+        - name: CV
+          url: "/cv/"
+          weight: 3
+        - name: Research
+          url: "/research/"
+          weight: 4
+        - name: Links
+          url: "/links/"
+          weight: 5
+        - name: GitHub
+          url: "https://github.com/cxy0714"
+          weight: 6
+        - name: News
+          url: "https://cxy0714.github.io/research-news/"
+          weight: 7
 
+# ── 两种语言共用的参数 ──────────────────────────────────────
+# 注意：语言级 params 会覆盖（顶层同名键）；共用参数留在这一层。
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
-  description: A website built through Hugo and blogdown.
   favicon: favicon.ico
   highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
   highlightjsLang:
@@ -50,18 +119,9 @@ params:
     height: 50
     url: favicon.ico
     width: 50
-  # giscus 评论配置：到 https://giscus.app 生成后把下面的占位值替换掉
-  giscus:
-    repo: "cxy0714/cxy0714.github.io"
-    repoId: "R_kgDONJyIJQ"
-    category: "Announcements"
-    categoryId: "DIC_kwDONJyIJc4C9ZgE"
-    mapping: "pathname"
-    strict: "0"
-    reactionsEnabled: "1"
-    inputPosition: "bottom"
-    theme: "preferred_color_scheme"
-    lang: "zh-CN"
+  customCSS:
+    - css/i18n.css
+
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:

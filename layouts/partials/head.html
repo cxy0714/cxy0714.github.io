@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ hugo.Generator }}
+
+{{ if eq .RelPermalink "/" }}
+<title>{{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:type" content="website">
+{{ else }}
+<title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+{{ end }}
+{{ with .Site.Params.favicon }}
+  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
+{{ end }}
+
+{{ if eq .RelPermalink "/" }}
+<meta property="description" content="{{ .Site.Params.description }}">
+{{ else }}
+  {{ if .Description }}
+  <meta property="description" content="{{ .Description }}">
+  {{ end }}
+{{ end }}
+
+{{ if .Keywords }}
+<meta property="keywords" content ="{{ delimit .Keywords ", " }}">
+{{ end }}
+
+{{ with .OutputFormats.Get "RSS" }}
+<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+{{/* ── SEO：中英版本互链 ─────────────────────────────────────
+     .Permalink 在正式构建时是绝对地址（CI 里传了 --baseURL）。
+     x-default 指向默认语言（config 里 weight 最小的那种语言）的版本。
+*/}}
+<meta property="og:locale" content="{{ replace .Site.Language.LanguageCode "-" "_" }}">
+{{ if .IsTranslated }}
+{{ $defaultLang := (index .Site.Languages 0).Lang }}
+{{ range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
+{{ if eq .Language.Lang $defaultLang }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{ partial "head_highlightjs" . }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="all">
+<link rel="stylesheet" href="{{ "css/main.css" | relURL }}" media="all">
+{{ range .Site.Params.customCSS }}
+<link rel="stylesheet" href="{{ . | relURL }}">
+{{ end }}
+{{ partial "head_custom" . }}

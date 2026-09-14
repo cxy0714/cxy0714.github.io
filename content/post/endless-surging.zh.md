@@ -12,6 +12,8 @@ tags:
   - 情绪
   - 2024
   - California Dreaming
+slug: "无数反复的涌动"
+translationKey: endless-surging
 ---
 
 <audio controls autoplay loop>

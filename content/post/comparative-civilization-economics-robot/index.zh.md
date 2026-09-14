@@ -5,6 +5,7 @@ date: 2026-05-14
 slug: comparative-civilization-economics-robot
 categories: [科幻]
 tags: [科幻, 设定, 机器人, 经济学]
+translationKey: comparative-civilization-economics-robot
 ---
 
 > "机器人文明是我们已知的所有子代文明中，经济结构最简洁的一个。它的简洁不是因为原始，而是因为它的造物主——我们——为它移除了几乎所有让经济学成为必要的条件。"

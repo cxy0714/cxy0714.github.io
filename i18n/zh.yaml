@@ -1,0 +1,6 @@
+# 中文界面词条
+readingTime:
+  one: "{{ . }} 分钟阅读"
+  other: "{{ . }} 分钟阅读"
+alsoAvailableIn: "本文另有"
+otherLanguageHome: "本站的"

@@ -2,6 +2,8 @@
 title: 我的精神食粮
 date: 2022-11-12T01:46:35+08:00
 author: 陈星宇
+slug: "我的精神食粮"
+translationKey: my-intellectual-diet
 ---
 
 *中午看了[马督工《睡前消息440：用了十年才修改，谁在乎教科书？》](https://www.bilibili.com/video/BV1LZ4y1t7K4/?spm_id_from=333.999.0.0)有些感想。发在了睡前消息的评论区和私信。*

@@ -19,6 +19,8 @@ tags:
   - 交换矩阵
   - Commutation Matrix
   - 表达式之差是否为0
+slug: "mathematica踩坑-矩阵符号计算"
+translationKey: mathematica-matrix-symbolic
 ---
 
 ## 问题由来

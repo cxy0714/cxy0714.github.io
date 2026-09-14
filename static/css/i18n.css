@@ -1,0 +1,31 @@
+/* 中英双语站点的小补充样式（语言切换器 + 译文提示） */
+
+.lang-switch {
+  margin-left: 15px;
+  color: #ccc;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: #111;
+}
+
+.lang-switch a:hover {
+  color: #000;
+}
+
+.lang-switch .lang-current {
+  color: #bbb;
+}
+
+.translation-note {
+  font-size: 14px;
+  color: #888;
+  border-left: 3px solid #e5e5e5;
+  padding-left: 10px;
+  margin: 18px 0 0;
+}
+
+.translation-note a {
+  color: #555;
+}

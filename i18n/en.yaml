@@ -1,0 +1,6 @@
+# English UI strings
+readingTime:
+  one: "{{ . }} min read"
+  other: "{{ . }} min read"
+alsoAvailableIn: "This post is also available in"
+otherLanguageHome: "Go to the"
