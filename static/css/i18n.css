@@ -1,8 +1,14 @@
 /* 中英双语站点的小补充样式（语言切换器 + 译文提示） */
 
+/* 语言切换器：单个 li，位于导航最前 */
 .lang-switch {
-  margin-left: 15px;
+  margin-right: 4px;
   color: #ccc;
+}
+
+.lang-switch .lang-sep {
+  color: #ddd;
+  margin: 0 4px;
 }
 
 .lang-switch a {

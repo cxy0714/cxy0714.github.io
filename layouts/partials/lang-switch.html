@@ -1,20 +1,25 @@
-{{/* 语言切换器：作为主导航 <ul> 里的最后一个 li
-     - 本页有对应译文时，链接到该译文页面
-     - 没有译文时，退回到另一语言的首页
+{{/* 语言切换器：合并成单个 li，放在主导航最前面。
+     顺序固定按语言权重（中文在前），不随当前页面跳动。
+     - 本页有译文：链接到该译文页
+     - 本页无译文：退回另一语言首页
+     - 当前语言不做成链接，只显示为灰色
 */}}
 {{ $cur := . }}
-{{ if .IsTranslated }}
-  {{ range .AllTranslations }}
-    {{ if eq .Language.Lang $cur.Language.Lang }}
-    <li class="lang-switch"><span class="lang-current">{{ .Language.LanguageName }}</span></li>
-    {{ else }}
-    <li class="lang-switch"><a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a></li>
-    {{ end }}
-  {{ end }}
-{{ else }}
-  {{ range $cur.Sites }}
-    {{ if ne .Language.Lang $cur.Language.Lang }}
-    <li class="lang-switch"><a href="{{ .Home.RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a></li>
-    {{ end }}
-  {{ end }}
-{{ end }}
+<li class="lang-switch">
+{{- if .IsTranslated -}}
+  {{- range $i, $p := .AllTranslations -}}
+    {{- if $i -}}<span class="lang-sep">/</span>{{- end -}}
+    {{- if eq $p.Language.Lang $cur.Language.Lang -}}
+      <span class="lang-current">{{ $p.Language.LanguageName }}</span>
+    {{- else -}}
+      <a href="{{ $p.RelPermalink }}" lang="{{ $p.Language.Lang }}" hreflang="{{ $p.Language.LanguageCode }}">{{ $p.Language.LanguageName }}</a>
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range $cur.Sites -}}
+    {{- if ne .Language.Lang $cur.Language.Lang -}}
+      <a href="{{ .Home.RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+</li>

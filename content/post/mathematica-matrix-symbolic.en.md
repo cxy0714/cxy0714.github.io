@@ -28,7 +28,7 @@ Lately, in order to derive some formulas, I needed to verify the inner-product r
 
 My computation was roughly this: take two $k^2\times k^5$ matrices $A,B$ and compute their inner product $Tr(A \cdot B^T)$. Using the cyclic property of $Tr$, this can be turned into a sort of "inner product" between a $1 \times k^2$ row vector, a $k^2\times k^5$ matrix and a $k^5\times 1$ column vector — that is, adding up a pile of ($k^2\times k^5$) numbers. But $A$ and $B$ are not scalar matrices: their entries are all symbolic, and the dimensions grow with the order of the formula.
 
-Below is roughly what the matrices look like (there are longer ones), where $Dimensions[\eta_2^{-1}]=k\times k,Dimensions[\eta_1]=k\times 1$. $I_k$ is the $k$-th order identity matrix, and $K_{k,k}$ is a $k^2\times k^2$ matrix whose technical name is the commutation matrix — an important tool in matrix vectorisation and matrix tensor products. For a quick introduction you can have a look at [交换矩阵 commutation matrix：理论与matlab仿真_B417科研笔记的博客-CSDN博客](https://blog.csdn.net/weixin_39274659/article/details/113747158); to learn more about the commutation matrix, search in English.
+Below is roughly what the matrices look like (there are longer ones), where $Dimensions[\eta_2^{-1}]=k\times k,Dimensions[\eta_1]=k\times 1$. $I_k$ is the $k$-th order identity matrix, and $K_{k,k}$ is a $k^2\times k^2$ matrix whose technical name is the commutation matrix — an important tool in matrix vectorisation and matrix tensor products. For a quick introduction you can have a look at [ commutation matrix-CSDN](https://blog.csdn.net/weixin_39274659/article/details/113747158); to learn more about the commutation matrix, search in English.
 
 $$vec^{T}(\eta_{2}^{-1}\eta_{1}\eta_{1}^{T}\eta_{2}^{-1})\otimes\eta_{2}^{-1}\otimes\eta_{2}^{-1}\cdot I_{k}\otimes K_{k,k}\otimes I_{k}$$
 
@@ -64,7 +64,7 @@ If you need to define a column vector, define it like this:
 
 Now it is wrapped in two braces, so it is treated as a $2\times 1$ matrix, i.e. a column vector.
 
-Another problem: **do not append //MatrixForm when defining a matrix.** Normally appending that statement makes your output render as a nice matrix (otherwise you get the `{{}}` list form, which is awkward to read), but if you include it in the definition, every subsequent matrix computation goes wrong. That was the second reason my matrix operations failed at first. Then, in desperation, while listening to a Mathematica video course by Professor Liu Siqi of Tsinghua's school of mathematics, I heard him mention exactly this: [lecture-2-4_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1av411N7Xi?p=9&vd_source=d604f008cde1c2b512c49f045d95e4cd) — which, in my heart, saved Mathematica's life.
+Another problem: **do not append //MatrixForm when defining a matrix.** Normally appending that statement makes your output render as a nice matrix (otherwise you get the `{{}}` list form, which is awkward to read), but if you include it in the definition, every subsequent matrix computation goes wrong. That was the second reason my matrix operations failed at first. Then, in desperation, while listening to a Mathematica video course by Professor Liu Siqi of Tsinghua's school of mathematics, I heard him mention exactly this: [lecture-2-4_bilibili](https://www.bilibili.com/video/BV1av411N7Xi?p=9&vd_source=d604f008cde1c2b512c49f045d95e4cd) — which, in my heart, saved Mathematica's life.
 
 Also, the Dimensions[] function tells you the dimensions of a matrix (however many braces it has).
 
