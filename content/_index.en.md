@@ -65,5 +65,3 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 - **April 9, 2025** — Poster presentation at **EUROCIM 2025 (European Causal Inference Meeting)**  
   📍 Ghent, Belgium 🔗 [Conference website](https://eurocim.org/ghent-2025/) | [View poster (PDF)](/media/pdf/poster_250409_ghent.pdf)
-
-# Blog Archive

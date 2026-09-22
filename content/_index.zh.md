@@ -65,5 +65,3 @@ date: "2022-08-29T21:48:51-07:00"
 
 - **2025年4月9日** 在 **EUROCIM 2025（European Causal Inference Meeting，欧洲因果推断会议）** 作海报展示  
   📍 根特，比利时 🔗 [会议网站](https://eurocim.org/ghent-2025/)｜[海报(PDF)](/media/pdf/poster_250409_ghent.pdf)
-
-# 博客归档
