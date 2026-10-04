@@ -9,8 +9,8 @@ type: page
 
 ### 统计计算
 
-- **Xingyu Chen**, Lin Liu, Ruiqi Zhang. **On computing and the complexity of computing higher-order U-statistics, exactly**. 已被 *Statistics and Computing* 接收，2026.<br>
-  🔗 [arXiv](https://arxiv.org/abs/2508.12627) 💻 [软件-Python](https://github.com/Amedar-Asterisk/U-Statistics-python) 💻 [软件-R](https://github.com/cxy0714/U-Statistics-R) 💻 [软件-HOIF](https://github.com/cxy0714/HOIF) 💻 [复现代码](https://github.com/cxy0714/U-Statistics-Experiments) 🎞 [幻灯片](/media/pdf/slides_251116.pdf)
+- **Xingyu Chen**, Lin Liu, Ruiqi Zhang. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**第 36 卷第 5 期，文章号 223（2026）**。在期刊转为完全开放获取（fully OA）之前录用。<br>
+  🔗 [期刊版本](https://doi.org/10.1007/s11222-026-10974-x) 🔗 [arXiv](https://arxiv.org/abs/2508.12627) 💻 [软件-Python](https://github.com/Amedar-Asterisk/U-Statistics-python) 💻 [软件-R](https://github.com/cxy0714/U-Statistics-R) 💻 [软件-HOIF](https://github.com/cxy0714/HOIF) 💻 [复现代码](https://github.com/cxy0714/U-Statistics-Experiments) 🎞 [幻灯片](/media/pdf/slides_251116.pdf)
 
 ### 教学讲义
 
