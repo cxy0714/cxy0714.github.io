@@ -22,7 +22,7 @@ type: page
 
 ## 论文
 
-- **陈星宇**、刘林、张瑞琦. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**第 36 卷第 5 期，文章号 223（2026）**。[期刊版本](https://doi.org/10.1007/s11222-026-10974-x)[arXiv:2508.12627](https://arxiv.org/abs/2508.12627)
+- **陈星宇**、刘林、张瑞琦. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**36(5): 223, 2026**。[期刊版本](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)
 
 ## 预印本
 

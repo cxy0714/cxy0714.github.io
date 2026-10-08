@@ -27,7 +27,7 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 # News
 
-- **September 23, 2026** — Our paper [*"On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly"*](https://doi.org/10.1007/s11222-026-10974-x) is now published online in *Statistics and Computing*, **36(5), Article 223 (2026)**. It was accepted before the journal's transition to fully open access (fully OA).
+- **September 23, 2026** — Our paper [*"On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly"*](https://doi.org/10.1007/s11222-026-10974-x) is now published online in *Statistics and Computing*, **36(5): 223, 2026**. It was accepted before the journal's transition to fully open access (fully OA).
 
 - **August 26, 2026** — Our paper [*"On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly"*](https://arxiv.org/pdf/2508.12627) has been accepted by *Statistics and Computing*.
 

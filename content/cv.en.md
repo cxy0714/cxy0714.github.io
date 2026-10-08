@@ -18,7 +18,7 @@ High-dimensional statistics; statistical computing; higher-order U-statistics; c
 
 ## Publications
 
-- **Xingyu Chen**, Lin Liu, and Ruiqi Zhang. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*, **36(5), Article 223 (2026)**. [Journal](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)
+- **Xingyu Chen**, Lin Liu, and Ruiqi Zhang. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*, **36(5): 223, 2026**. [Journal](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)
 
 ## Preprints
 
