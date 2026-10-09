@@ -27,6 +27,9 @@ date: "2022-08-29T21:48:51-07:00"
 
 # 动态
 
+- **2026年10月18日** 在「2026 X-AGI Conference」（原中国R会议）作海报展示<br>
+  📍 北京，中国 🔗 [会议网站](https://www.x-agi.cc/)｜[海报(PDF)](/media/pdf/poster_u_statistics.pdf)
+
 - **2026年9月23日** — 我们的论文 [*"On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly"*](https://doi.org/10.1007/s11222-026-10974-x) 已在 *Statistics and Computing* 在线发表，**第 36 卷第 5 期，文章号 223（2026）**。论文在期刊转为完全开放获取（fully OA）之前录用。
 
 - **2026年8月26日** — 我们的论文 [*"On Computing and the Complexity of Computing Higher-Order U-Statistics, Exactly"*](https://arxiv.org/pdf/2508.12627) 已被 *Statistics and Computing* 接收。
