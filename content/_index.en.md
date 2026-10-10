@@ -27,6 +27,9 @@ In February 2011, the Academic Degrees Committee of the State Council approved a
 
 # News
 
+- **October 24, 2026** — Oral presentation at the “Jiao Chuang” 1st Global High-Level Doctoral Student Academic Forum, Shanghai Jiao Tong University (formerly the “Jiao Chuang” National High-Level Doctoral Student Academic Forum, Shanghai Jiao Tong University; fun: spot the difference)<br>
+  📍 Shanghai, China | [Slides (PDF)](/media/pdf/slides_xingyu_261024.pdf)
+
 - **October 18, 2026** — Poster presentation at the 2026 X-AGI Conference (formerly China R Conference)<br>
   📍 Beijing, China 🔗 [Conference website](https://www.x-agi.cc/) | [Poster (PDF)](/media/pdf/poster_u_statistics.pdf)
 
