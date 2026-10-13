@@ -18,7 +18,7 @@ type: page
 
 ## 研究兴趣
 
-高维统计；统计计算；高阶 U 统计量；因果推断；半参数理论；非参数理论。
+高维统计；因果推断；半参数理论；非参数理论。
 
 ## 论文
 
@@ -30,7 +30,7 @@ type: page
 
 ## 软件
 
-- **2025、2026** — [`u-stats`（Python 包)](https://github.com/Amedar-Asterisk/U-Statistics-python) 与 [`ustats`（R 包）](https://github.com/cxy0714/U-Statistics-R)——计算高阶 U 统计量。已在 [PyPI](https://libraries.io/pypi/u-stats) / [CRAN](https://CRAN.R-project.org/package=ustats) 发布。
+- **2025、2026** — [`u-stats`（Python 包)](https://github.com/zrq1706/U-Statistics-python) 与 [`ustats`（R 包）](https://github.com/cxy0714/U-Statistics-R)——计算高阶 U 统计量。已在 [PyPI](https://libraries.io/pypi/u-stats) / [CRAN](https://CRAN.R-project.org/package=ustats) 发布。
 - **2026** — [`HOIF`（R 包)](https://github.com/cxy0714/HOIF)——计算平均处理效应（ATE）的高阶影响函数（HOIF）估计。已在 [CRAN](https://CRAN.R-project.org/package=HOIF) 发布。
 
 
@@ -83,7 +83,7 @@ type: page
 
 R、Python、Mathematica、C++、Matlab
 
-*最后更新：2026年9月14日*
+*最后更新：2026年10月13日*
 
 ## 大学经历
 

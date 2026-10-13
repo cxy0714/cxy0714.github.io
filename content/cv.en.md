@@ -14,7 +14,7 @@ type: page
 
 ## Research Interests
 
-High-dimensional statistics; statistical computing; higher-order U-statistics; causal inference; semiparametric theory; nonparametric theory.
+High-dimensional statistics; causal inference; semiparametric theory; nonparametric theory.
 
 ## Publications
 
@@ -26,7 +26,7 @@ High-dimensional statistics; statistical computing; higher-order U-statistics; c
 
 ## Software
 
-- **2025, 2026** — [`u-stats` (Python package)](https://github.com/Amedar-Asterisk/U-Statistics-python) and [`ustats` (R package)](https://github.com/cxy0714/U-Statistics-R) — computing higher-order U-statistics. Available on [PyPI](https://libraries.io/pypi/u-stats) / [CRAN](https://CRAN.R-project.org/package=ustats). 
+- **2025, 2026** — [`u-stats` (Python package)](https://github.com/zrq1706/U-Statistics-python) and [`ustats` (R package)](https://github.com/cxy0714/U-Statistics-R) — computing higher-order U-statistics. Available on [PyPI](https://libraries.io/pypi/u-stats) / [CRAN](https://CRAN.R-project.org/package=ustats).
 - **2026** — [`HOIF` (R package)](https://github.com/cxy0714/HOIF) — computing Higher-Order Influence Function (HOIF) estimators for the average treatment effect (ATE). Available on [CRAN](https://CRAN.R-project.org/package=HOIF).
 
 
@@ -70,4 +70,4 @@ High-dimensional statistics; statistical computing; higher-order U-statistics; c
 
 R, Python, Mathematica, C++, Matlab
 
-*Last updated: September 14, 2026*
+*Last updated: October 13, 2026*
