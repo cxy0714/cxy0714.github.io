@@ -21,8 +21,3 @@ type: page
 - [Yihui Xie (R, blogging, Capital of Statistics)](https://yihui.org/cn/)
 - [Yuan Fan (R, blogging, Capital of Statistics)](https://yuanfan.rbind.io/posts/)
 - [Xiangyun Huang (R, blogging, Capital of Statistics)](https://xiangyun.rbind.io/)
-
-## 🛠 Tools & Utilities
-
-- [Z-Library channel (X/Twitter)](https://x.com/z_lib_official)
-- [Turn a GitHub repo into a single text file, ready to feed to an LLM](https://www.r-bloggers.com/2024/12/turn-a-github-repo-into-a-single-text-file-for-llm-friendly-input-repost/)

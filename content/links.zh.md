@@ -21,8 +21,3 @@ type: page
 - [谢益辉（R，博客，统计之都）](https://yihui.org/cn/)
 - [袁凡（R，博客，统计之都）](https://yuanfan.rbind.io/posts/)
 - [黄湘云（R，博客，统计之都）](https://xiangyun.rbind.io/)
-
-## 🛠 工具与实用链接
-
-- [Z-Library 频道（X/Twitter）](https://x.com/z_lib_official)
-- [把 GitHub 仓库变成单个纯文本文件，方便喂给 LLM](https://www.r-bloggers.com/2024/12/turn-a-github-repo-into-a-single-text-file-for-llm-friendly-input-repost/)
