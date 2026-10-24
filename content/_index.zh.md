@@ -28,7 +28,7 @@ date: "2022-08-29T21:48:51-07:00"
 # 动态
 
 - **2026年10月24日** 在「“交∙创”上海交通大学首届全球高层次博士生学术论坛」（原“交·创”上海交通大学全国高层次博士生学术论坛；fun：找不同）作口头报告<br>
-  📍 上海，中国｜[幻灯片(PDF)](/media/pdf/slides_xingyu_261024.pdf)
+  📍 上海，中国 🔗 [会议网站](https://gsjc.sjtu.edu.cn/forum/)｜[幻灯片(PDF)](/media/pdf/slides_xingyu_261024.pdf)
 
 - **2026年10月18日** 在「2026 X-AGI Conference」（原中国R会议）作海报展示<br>
   📍 北京，中国 🔗 [会议网站](https://www.x-agi.cc/)｜[海报(PDF)](/media/pdf/poster_u_statistics.pdf)
@@ -58,7 +58,7 @@ date: "2022-08-29T21:48:51-07:00"
   📍 保定，河北，中国 🔗 [会议通知](/media/pdf/251102_procedure.pdf)｜[幻灯片(PDF)](/media/pdf/slides_251102.pdf)
 
 - **2025年11月1日** 在「北京大学数学学院第三届全国数学前沿博士生学术交流论坛」作口头报告  
-  📍 北京，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/j7ChUnGmef5N1cjoCTbf_Q)｜[幻灯片(PDF)](/media/pdf/slides_251101.pdf)
+  📍 北京，中国 🔗 [会议网站](https://gsjc.sjtu.edu.cn/forum/)｜[幻灯片(PDF)](/media/pdf/slides_251101.pdf)
 
 - **2025年9月20日** 在「中国现场统计研究会统计交叉科学研究分会和全国工业统计学教学研究会民族统计与数据科学分会2025联合年会」作口头报告  
   📍 上海，中国 🔗 [会议通知](https://mp.weixin.qq.com/s/sG7wi3bYeIVD0CvmP3vHfA)｜[幻灯片(PDF)](/media/pdf/computing_U_slides_250920.pdf)
