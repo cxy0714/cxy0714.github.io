@@ -1,5 +1,6 @@
 ---
 title: 比较文明经济学：机器人文明
+description: "从机器人文明出发的比较文明经济学思想实验：探讨在共享目标与信息的条件下，生产协调、资源稀缺、能源计量、货币与市场是否仍然必要。"
 author: 陈星宇 Claude
 date: 2026-05-14
 slug: comparative-civilization-economics-robot

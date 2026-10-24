@@ -9,17 +9,31 @@
 {{ else }}
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+{{ if .IsPage }}
+<meta property="og:type" content="article">
+{{ else }}
+<meta property="og:type" content="website">
 {{ end }}
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
 {{ with .Site.Params.favicon }}
   <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
 {{ end }}
 
-{{ if eq .RelPermalink "/" }}
-<meta property="description" content="{{ .Site.Params.description }}">
-{{ else }}
-  {{ if .Description }}
-  <meta property="description" content="{{ .Description }}">
+{{ $description := .Description }}
+{{ if not $description }}
+  {{ $description = .Summary | plainify | htmlUnescape | replaceRE "\\s+" " " | truncate 160 }}
+{{ end }}
+{{ if not $description }}
+  {{ if eq .RelPermalink "/" }}
+    {{ $description = .Site.Params.description }}
+  {{ else }}
+    {{ $description = printf "%s — %s" .Title .Site.Params.description | truncate 160 }}
   {{ end }}
+{{ end }}
+{{ with $description }}
+<meta name="description" content="{{ . }}">
+<meta property="og:description" content="{{ . }}">
 {{ end }}
 
 {{ if .Keywords }}

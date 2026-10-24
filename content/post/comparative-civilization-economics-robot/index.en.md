@@ -1,5 +1,6 @@
 ---
 title: "Comparative Civilisation Economics: The Robot Civilisation"
+description: "A thought experiment in comparative civilisation economics: how a robot civilization might coordinate production and scarce energy and materials without money, prices, or markets."
 author: "Xingyu Chen, Claude"
 date: 2026-05-14
 slug: comparative-civilization-economics-robot
