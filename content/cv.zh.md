@@ -60,7 +60,7 @@ type: page
   <dt><a href="https://github.com/cxy0714/social_news">social_news</a></dt>
   <dd>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。</dd>
   <dt><a href="https://github.com/cxy0714/beancount-auto-bookkeeping">beancount-auto-bookkeeping</a></dt>
-  <dd>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。</dd>
+  <dd>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人自 7 年前高中毕业至今的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益等。</dd>
   <dt><a href="https://github.com/cxy0714/usa_polotical_election">usa_polotical_election</a></dt>
   <dd>近期启动的项目，用于系统化分析美国选举候选人。</dd>
   <dt><a href="https://github.com/cxy0714/Auto-Subtitle-Generator">Auto-Subtitle-Generator</a></dt>
