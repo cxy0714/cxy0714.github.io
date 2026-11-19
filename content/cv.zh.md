@@ -4,21 +4,16 @@ type: page
 ---
 **陈星宇** — [个人主页](/) · [GitHub](https://github.com/cxy0714) · [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ) · [ORCID](https://orcid.org/0009-0008-0823-4406) · xingyuchen0714@sjtu.edu.cn
 
-📄 [下载 PDF 版简历](/media/pdf/XingyuChen_CV.pdf)
+📄 [下载 PDF 版简历](/media/pdf/XingyuChen_CV_zh.pdf)
 
 ## 教育经历
 
 - **2023年9月 – 至今** — 上海交通大学 数学科学学院（闵行），上海 200240。统计学 博士研究生。导师：[刘林教授](https://linliu-stats.github.io/)
 - **2019年9月 – 2023年6月** — 华中科技大学 数学与统计学院（洪山），武汉 430074。数学与应用数学 理学学士
-- **2016年9月 – 2019年6月** — 河南省禹州市高级中学（高中）
-- **2015年3月 – 2016年6月** — 河南省禹州市方岗镇中心学校（初二下 – 初中毕业）
-- **2012年9月 – 2015年1月** — 河南省禹州市顺店镇中心学校（六年级 – 初二上）
-- **2011年9月 – 2012年6月** — 河南省禹州市顺店镇南袁庄小学（五年级）
-- **2007年9月 – 2011年6月** — 河南省禹州市火龙镇西王庄村小学（一年级 – 四年级）
 
 ## 研究兴趣
 
-高维统计；因果推断；半参数理论；非参数理论。
+统计计算，因果推断，非参数统计与半参数统计，高维统计
 
 ## 论文
 
@@ -38,7 +33,7 @@ type: page
 
 **博士期间**
 
-- **2026** — Mitacs Globalink Research Award (GRA)，Mitacs，加拿大。访问研究实习（多伦多大学，2027 年，共 24 周）。合作导师：[Linbo Wang 教授](https://sites.google.com/site/linbowangpku/home)；本校导师：[刘林教授](https://linliu-stats.github.io/)
+- **2026** — Mitacs Globalink Research Award (GRA)，Mitacs，加拿大。计划于 2027 年赴多伦多大学访问 12 周（资助金额 6,000 加元）。<br>访问导师：[Linbo&nbsp;Wang&nbsp;教授](https://sites.google.com/site/linbowangpku/home)；本校导师：[刘林教授](https://linliu-stats.github.io/)
 - **2025年5月** — 最佳论文奖，上海交通大学 AI for Math 学术论坛，中国上海
 - **2025年4月** — 旅行资助，青年统计学家协会 2025 年年会，中国济南
 
@@ -57,6 +52,17 @@ type: page
 - **2020年4月** — 华中科技大学 2019–2020 学年新生社会公益奖学金
 - **2020年4月** — 华中科技大学 2019–2020 学年新生学习优秀奖学金
 
+## GitHub 个人项目
+
+- [research-news](https://github.com/cxy0714/research-news)<br>长期维护的 LLM 论文追踪系统，每日追踪 arXiv 和 Hexagon，按季度和年度追踪期刊与会议。
+- [social_news](https://github.com/cxy0714/social_news)<br>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。
+- [beancount-auto-bookkeeping](https://github.com/cxy0714/beancount-auto-bookkeeping)<br>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。
+- [usa_polotical_election](https://github.com/cxy0714/usa_polotical_election)<br>近期启动的项目，用于系统化分析美国选举候选人。
+- [play_in_shanghai](https://github.com/cxy0714/play_in_shanghai)<br>长期维护上海及全国的历史文物展览、话剧与音乐剧演出资讯。
+- [Auto-Subtitle-Generator](https://github.com/cxy0714/Auto-Subtitle-Generator)<br>批量为 YouTube 视频生成中英双语字幕。
+- [live-jp-subtitle](https://github.com/cxy0714/live-jp-subtitle)<br>本地离线运行的日语实时字幕工具，面向在线日本综艺。采集系统音频，用 Whisper 识别日语，再将中文译文实时显示在屏幕底部。
+- [english-pdf-book-to-epub](https://github.com/cxy0714/english-pdf-book-to-epub)<br>自动翻译英文 PDF 和 EPUB 图书，并输出为 EPUB。
+
 ## 学术报告
 
 - **2026年5月** — [口头报告](/media/pdf/slides_mom_glm_2605.pdf)，华中科技大学数学与统计学院第二届科技学术月之博士论坛，中国武汉
@@ -72,16 +78,6 @@ type: page
 ## 统计社区服务
 
 - **2022年12月** — 担任「Fernholz, L. T., and S. Morgenthaler. A conversation with John W. Tukey and Elizabeth Tukey. *Statistical Science*, 15(1): 79–94, 2000.」一文[中文翻译](https://cosx.org/2022/12/interview-of-john-tukey/)的主要贡献者，发表于[统计之都（COS）](https://cosx.org/)。
-
-## 助教经历
-
-- **2025年秋** — 助教，高等数理统计（博士课程），上海交通大学数学科学学院。授课教师：[刘林](https://linliu-stats.github.io/)
-- **2025年春** — 助教，概率论与数理统计（本科课程），上海交通大学数学科学学院。授课教师：[罗鹏](https://pengluomath.github.io/)
-- **2024年秋** — 助教，线性代数（本科课程），上海交通大学数学科学学院。授课教师：崔振
-
-## 计算技能
-
-R、Python、Mathematica、C++、Matlab
 
 *最后更新：2026年10月13日*
 
