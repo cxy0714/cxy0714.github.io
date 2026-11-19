@@ -17,11 +17,11 @@ type: page
 
 ## 论文
 
-- **陈星宇**、刘林、张瑞琦. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**第 36 卷第 5 期，文章号 223（2026）**。[期刊版本](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)
+- **陈星宇**、刘林、张瑞琦. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**第 36 卷第 5 期，文章号 223（2026）**。[期刊版本](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)<br>将高阶 U 统计量分解为 V 统计量的线性组合，利用张量收缩加速乘积可分解核下的精确计算，并用关联图的树宽分析时间复杂度。
 
 ## 预印本
 
-- **陈星宇**、刘林、Rajarshi Mukherjee. **Method-of-moments inference for GLMs and doubly robust functionals under proportional asymptotics**. arXiv 预印本 [arXiv:2408.06103](https://arxiv.org/abs/2408.06103)，2024。
+- **陈星宇**、刘林、Rajarshi Mukherjee. **Method-of-moments inference for GLMs and doubly robust functionals under proportional asymptotics**. arXiv 预印本 [arXiv:2408.06103](https://arxiv.org/abs/2408.06103)，2024。<br>在维度与样本量成比例增长的情形下，构造广义线性模型回归系数、信噪比及平均处理效应等目标的矩估计量，并在相应条件下证明其一致性与渐近正态性。该方法无需估计高维干扰函数或调参。
 
 ## 软件
 
@@ -33,7 +33,7 @@ type: page
 
 **博士期间**
 
-- **2026** — Mitacs Globalink Research Award (GRA)，Mitacs，加拿大。计划于 2027 年赴多伦多大学访问 12 周（资助金额 6,000 加元）。<br>访问导师：[Linbo&nbsp;Wang&nbsp;教授](https://sites.google.com/site/linbowangpku/home)；本校导师：[刘林教授](https://linliu-stats.github.io/)
+- **2026** — Mitacs Globalink Research Award (GRA)，Mitacs，加拿大。计划于 2027 年赴多伦多大学访问 12–24 周。<br>访问导师：[Linbo&nbsp;Wang&nbsp;教授](https://sites.google.com/site/linbowangpku/home)；本校导师：[刘林教授](https://linliu-stats.github.io/)
 - **2025年5月** — 最佳论文奖，上海交通大学 AI for Math 学术论坛，中国上海
 - **2025年4月** — 旅行资助，青年统计学家协会 2025 年年会，中国济南
 
@@ -58,9 +58,7 @@ type: page
 - [social_news](https://github.com/cxy0714/social_news)<br>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。
 - [beancount-auto-bookkeeping](https://github.com/cxy0714/beancount-auto-bookkeeping)<br>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。
 - [usa_polotical_election](https://github.com/cxy0714/usa_polotical_election)<br>近期启动的项目，用于系统化分析美国选举候选人。
-- [play_in_shanghai](https://github.com/cxy0714/play_in_shanghai)<br>长期维护上海及全国的历史文物展览、话剧与音乐剧演出资讯。
 - [Auto-Subtitle-Generator](https://github.com/cxy0714/Auto-Subtitle-Generator)<br>批量为 YouTube 视频生成中英双语字幕。
-- [live-jp-subtitle](https://github.com/cxy0714/live-jp-subtitle)<br>本地离线运行的日语实时字幕工具，面向在线日本综艺。采集系统音频，用 Whisper 识别日语，再将中文译文实时显示在屏幕底部。
 - [english-pdf-book-to-epub](https://github.com/cxy0714/english-pdf-book-to-epub)<br>自动翻译英文 PDF 和 EPUB 图书，并输出为 EPUB。
 
 ## 学术报告
