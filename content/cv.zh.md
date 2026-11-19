@@ -1,10 +1,9 @@
 ---
 title: "简历"
 type: page
+draft: true
 ---
 **陈星宇** — [个人主页](/) · [GitHub](https://github.com/cxy0714) · [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ) · [ORCID](https://orcid.org/0009-0008-0823-4406) · xingyuchen0714@sjtu.edu.cn
-
-📄 [下载 PDF 版简历](/media/pdf/XingyuChen_CV_zh.pdf)
 
 ## 教育经历
 
@@ -28,62 +27,6 @@ type: page
 - **2025、2026** — [`u-stats`（Python 包)](https://github.com/zrq1706/U-Statistics-python) 与 [`ustats`（R 包）](https://github.com/cxy0714/U-Statistics-R)——计算高阶 U 统计量。已在 [PyPI](https://libraries.io/pypi/u-stats) / [CRAN](https://CRAN.R-project.org/package=ustats) 发布。
 - **2026** — [`HOIF`（R 包)](https://github.com/cxy0714/HOIF)——计算平均处理效应（ATE）的高阶影响函数（HOIF）估计。已在 [CRAN](https://CRAN.R-project.org/package=HOIF) 发布。
 
-
-## 获奖情况
-
-**博士期间**
-
-- **2026** — Mitacs Globalink Research Award (GRA)，Mitacs，加拿大。计划于 2027 年赴多伦多大学访问 12–24 周。<br>访问导师：[Linbo&nbsp;Wang&nbsp;教授](https://sites.google.com/site/linbowangpku/home)；本校导师：[刘林教授](https://linliu-stats.github.io/)
-- **2025年5月** — 最佳论文奖，上海交通大学 AI for Math 学术论坛，中国上海
-- **2025年4月** — 旅行资助，青年统计学家协会 2025 年年会，中国济南
-
-**本科期间**
-
-- **2023年6月** — 华中科技大学优秀毕业生
-- **2022年12月** — 2021–2022 学年度本专科生国家励志奖学金
-- **2022年5月** — 2022 年美国大学生数学建模竞赛 H 奖
-- **2021年12月** — 第十三届全国大学生数学竞赛（数学 A 类）一等奖【省赛】
-- **2021年12月** — 华中科技大学 2020–2021 学年度优秀学生干部
-- **2021年12月** — 2020–2021 学年度本专科生国家励志奖学金
-- **2021年6月** — 华中科技大学 2021 年第三届体育课堂学生运动竞赛二等奖
-- **2020年12月** — 2019–2020 学年度本专科生国家奖学金
-- **2020年12月** — 第十二届全国大学生数学竞赛（数学 A 类）三等奖【省赛】
-- **2020年12月** — 华中科技大学 2019–2020 学年三好学生
-- **2020年4月** — 华中科技大学 2019–2020 学年新生社会公益奖学金
-- **2020年4月** — 华中科技大学 2019–2020 学年新生学习优秀奖学金
-
-## GitHub 个人项目
-
-<dl class="cv-projects">
-  <dt><a href="https://github.com/cxy0714/research-news">research-news</a></dt>
-  <dd>长期维护的 LLM 论文追踪系统，每日追踪 arXiv 和 Hexagon，按季度和年度追踪期刊与会议。</dd>
-  <dt><a href="https://github.com/cxy0714/social_news">social_news</a></dt>
-  <dd>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。</dd>
-  <dt><a href="https://github.com/cxy0714/beancount-auto-bookkeeping">beancount-auto-bookkeeping</a></dt>
-  <dd>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人自 7 年前高中毕业至今的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益等。</dd>
-  <dt><a href="https://github.com/cxy0714/usa_polotical_election">usa_polotical_election</a></dt>
-  <dd>近期启动的项目，用于系统化分析美国选举候选人。</dd>
-  <dt><a href="https://github.com/cxy0714/Auto-Subtitle-Generator">Auto-Subtitle-Generator</a></dt>
-  <dd>批量为 YouTube 视频生成中英双语字幕。</dd>
-  <dt><a href="https://github.com/cxy0714/english-pdf-book-to-epub">english-pdf-book-to-epub</a></dt>
-  <dd>自动翻译英文 PDF 和 EPUB 图书，并输出为 EPUB。</dd>
-</dl>
-
-## 学术报告
-
-- **2026年5月** — [口头报告](/media/pdf/slides_mom_glm_2605.pdf)，华中科技大学数学与统计学院第二届科技学术月之博士论坛，中国武汉
-- **2026年1月** — [海报展示](/media/pdf/poster_260102.pdf)，2026 年 RMTA 与 SNAB 联合研讨会（随机矩阵理论及其应用；统计网络分析及其拓展），中国南京
-- **2025年11月** — [口头报告](/media/pdf/slides_251116.pdf)，上海交通大学首届全国高层次博士生学术论坛，中国上海
-- **2025年11月** — [口头报告](/media/pdf/slides_251102.pdf)，第六届京津冀数学与统计学研讨会暨研究生学术论坛，中国保定
-- **2025年11月** — [口头报告](/media/pdf/slides_251101.pdf)，北京大学数学科学学院第三届全国数学前沿博士生学术交流论坛，中国北京
-- **2025年9月** — [口头报告](/media/pdf/computing_U_slides_250920.pdf)，中国现场统计研究会统计交叉科学研究分会与全国工业统计学教学研究会民族统计与数据科学分会 2025 联合年会，中国上海
-- **2025年5月** — [口头报告](/media/pdf/slides_250508_sjtu.pdf)，上海交通大学 AI for Math 学术论坛，中国上海
-- **2025年4月** — [口头报告](/media/pdf/slides_250419_jinan.pdf)，青年统计学家协会 2025 年年会，中国济南
-- **2025年4月** — [海报展示](/media/pdf/poster_250409_ghent.pdf)，2025 年欧洲因果推断会议（EUROCIM），比利时根特
-
-## 统计社区服务
-
-- **2022年12月** — 担任「Fernholz, L. T., and S. Morgenthaler. A conversation with John W. Tukey and Elizabeth Tukey. *Statistical Science*, 15(1): 79–94, 2000.」一文[中文翻译](https://cosx.org/2022/12/interview-of-john-tukey/)的主要贡献者，发表于[统计之都（COS）](https://cosx.org/)。
 
 *最后更新：2026年10月13日*
 

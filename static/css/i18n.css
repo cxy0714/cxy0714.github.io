@@ -35,12 +35,3 @@
 .translation-note a {
   color: #555;
 }
-
-.cv-projects dt {
-  font-weight: bold;
-  overflow-wrap: anywhere;
-}
-
-.cv-projects dd {
-  margin: 0 0 0.5em 1em;
-}

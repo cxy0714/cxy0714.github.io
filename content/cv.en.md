@@ -1,6 +1,8 @@
 ---
 title: "CV"
 type: page
+aliases:
+  - /cv/
 ---
 **Xingyu Chen** — [Website](/) · [GitHub](https://github.com/cxy0714) · [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ) · [ORCID](https://orcid.org/0009-0008-0823-4406) · xingyuchen0714@sjtu.edu.cn
 

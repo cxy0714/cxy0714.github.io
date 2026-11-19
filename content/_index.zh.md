@@ -22,7 +22,7 @@ date: "2022-08-29T21:48:51-07:00"
 - <i class="fab fa-github"></i> [GitHub: cxy0714](https://github.com/cxy0714)
 - <i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ&hl=zh-CN)
 - <i class="fab fa-orcid"></i> [ORCID](https://orcid.org/0009-0008-0823-4406)
-- <i class="fas fa-file-pdf"></i> [简历](/media/pdf/XingyuChen_CV_zh.pdf)
+- <i class="fas fa-file-pdf"></i> [英文简历](/media/pdf/XingyuChen_CV.pdf)
 - <i class="ai ai-arxiv"></i> [arXiv](https://arxiv.org/a/chen_x_14.html)
 
 # 动态
