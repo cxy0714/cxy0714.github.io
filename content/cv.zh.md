@@ -54,12 +54,20 @@ type: page
 
 ## GitHub 个人项目
 
-- [research-news](https://github.com/cxy0714/research-news)<br>长期维护的 LLM 论文追踪系统，每日追踪 arXiv 和 Hexagon，按季度和年度追踪期刊与会议。
-- [social_news](https://github.com/cxy0714/social_news)<br>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。
-- [beancount-auto-bookkeeping](https://github.com/cxy0714/beancount-auto-bookkeeping)<br>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。
-- [usa_polotical_election](https://github.com/cxy0714/usa_polotical_election)<br>近期启动的项目，用于系统化分析美国选举候选人。
-- [Auto-Subtitle-Generator](https://github.com/cxy0714/Auto-Subtitle-Generator)<br>批量为 YouTube 视频生成中英双语字幕。
-- [english-pdf-book-to-epub](https://github.com/cxy0714/english-pdf-book-to-epub)<br>自动翻译英文 PDF 和 EPUB 图书，并输出为 EPUB。
+<dl class="cv-projects">
+  <dt><a href="https://github.com/cxy0714/research-news">research-news</a></dt>
+  <dd>长期维护的 LLM 论文追踪系统，每日追踪 arXiv 和 Hexagon，按季度和年度追踪期刊与会议。</dd>
+  <dt><a href="https://github.com/cxy0714/social_news">social_news</a></dt>
+  <dd>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。</dd>
+  <dt><a href="https://github.com/cxy0714/beancount-auto-bookkeeping">beancount-auto-bookkeeping</a></dt>
+  <dd>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。</dd>
+  <dt><a href="https://github.com/cxy0714/usa_polotical_election">usa_polotical_election</a></dt>
+  <dd>近期启动的项目，用于系统化分析美国选举候选人。</dd>
+  <dt><a href="https://github.com/cxy0714/Auto-Subtitle-Generator">Auto-Subtitle-Generator</a></dt>
+  <dd>批量为 YouTube 视频生成中英双语字幕。</dd>
+  <dt><a href="https://github.com/cxy0714/english-pdf-book-to-epub">english-pdf-book-to-epub</a></dt>
+  <dd>自动翻译英文 PDF 和 EPUB 图书，并输出为 EPUB。</dd>
+</dl>
 
 ## 学术报告
 
