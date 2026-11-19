@@ -56,7 +56,7 @@ type: page
 
 - [research-news](https://github.com/cxy0714/research-news)<br>长期维护的 LLM 论文追踪系统，每日追踪 arXiv 和 Hexagon，按季度和年度追踪期刊与会议。
 - [social_news](https://github.com/cxy0714/social_news)<br>长期维护的 LLM 社会新闻追踪系统，生成日报、周报和未来技术专题报告。
-- [beancount-auto-bookkeeping](https://github.com/cxy0714/beancount-auto-bookkeeping)<br>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。
+- [beancount-auto-bookkeeping](https://github.com/cxy0714/beancount-auto-bookkeeping)<br>基于 Beancount 的个人复式记账系统，记账流程约 98% 自动化，覆盖本人高中毕业以来 7 年的全部电子财务记录。导入银行卡、信用卡、支付宝和微信等账单后自动归类交易，并分析投资收益。
 - [usa_polotical_election](https://github.com/cxy0714/usa_polotical_election)<br>近期启动的项目，用于系统化分析美国选举候选人。
 - [play_in_shanghai](https://github.com/cxy0714/play_in_shanghai)<br>长期维护上海及全国的历史文物展览、话剧与音乐剧演出资讯。
 - [Auto-Subtitle-Generator](https://github.com/cxy0714/Auto-Subtitle-Generator)<br>批量为 YouTube 视频生成中英双语字幕。
