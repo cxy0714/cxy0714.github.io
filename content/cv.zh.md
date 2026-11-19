@@ -1,9 +1,10 @@
 ---
 title: "简历"
 type: page
-draft: true
 ---
 **陈星宇** — [个人主页](/) · [GitHub](https://github.com/cxy0714) · [Google Scholar](https://scholar.google.com/citations?user=y_sQ5jMAAAAJ) · [ORCID](https://orcid.org/0009-0008-0823-4406) · xingyuchen0714@sjtu.edu.cn
+
+📄 [下载 PDF 版简历（英文）](/media/pdf/XingyuChen_CV.pdf)
 
 ## 教育经历
 

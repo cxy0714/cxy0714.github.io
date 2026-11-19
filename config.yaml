@@ -45,7 +45,7 @@ languages:
           url: "/post/"
           weight: 2
         - name: 简历
-          url: "/en/cv/"
+          url: "/cv/"
           weight: 3
         - name: 研究
           url: "/research/"
