@@ -17,11 +17,11 @@ type: page
 
 ## 论文
 
-- **陈星宇**、刘林、张瑞琦. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**第 36 卷第 5 期，文章号 223（2026）**。[期刊版本](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)<br>将高阶 U 统计量分解为 V 统计量的线性组合，利用张量收缩加速乘积可分解核下的精确计算，并用关联图的树宽分析时间复杂度。
+- **陈星宇**、刘林、张瑞琦. **On computing and the complexity of computing higher-order U-statistics, exactly**. *Statistics and Computing*，**第 36 卷第 5 期，文章号 223（2026）**。[期刊版本](https://doi.org/10.1007/s11222-026-10974-x) [arXiv:2508.12627](https://arxiv.org/abs/2508.12627)
 
 ## 预印本
 
-- **陈星宇**、刘林、Rajarshi Mukherjee. **Method-of-moments inference for GLMs and doubly robust functionals under proportional asymptotics**. arXiv 预印本 [arXiv:2408.06103](https://arxiv.org/abs/2408.06103)，2024。<br>在维度与样本量成比例增长的情形下，构造广义线性模型回归系数、信噪比及平均处理效应等目标的矩估计量，并在相应条件下证明其一致性与渐近正态性。该方法无需估计高维干扰函数或调参。
+- **陈星宇**、刘林、Rajarshi Mukherjee. **Method-of-moments inference for GLMs and doubly robust functionals under proportional asymptotics**. arXiv 预印本 [arXiv:2408.06103](https://arxiv.org/abs/2408.06103)，2024。
 
 ## 软件
 
